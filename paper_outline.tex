@@ -1,0 +1,218 @@
+%\documentclass[aps,floatfix,11pt,twocolumn]{revtex4-1}
+\documentclass[aps,floatfix,11pt]{revtex4-1}
+\usepackage{bm}%bold math
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{epstopdf}
+\usepackage{scalerel}
+\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+\linespread{1}
+\usepackage[export]{adjustbox}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+    \begin{itemize}
+        \item Topological Order that can not be described with Landau symmetry breaking.
+        \item Robust ground state degeneracy.
+        \item Fractional excitations.
+        \item Toric code is a well studied exactly solvable model exhibitying topological order.
+        \item Dimer models $\rightarrow$ more physical and some display topological order.
+        \item Dimer models must be studied numerically.
+    \end{itemize}
+
+    \subsection{In this paper we... }
+        \begin{itemize}
+            \item In this paper we study the quantum dimer pentamer model (QDPM) on the square
+                lattice at the RK point.
+            \item Believe it may exhibit $Z_3$ topological order.
+            \item Different than $Z_3$ toric code because only Ising degrees of freedom on the links.
+            \item Study dimer correlations showing a liquid dimer pentamer phase at RK point with
+                exponentially decaying dimer correlations.
+            \item Estimate the dimer and vison gap.
+        \end{itemize}
+
+
+\section{Backround}
+
+    \subsection{$Z_2$ Toric Code on Square Lattice}
+        \begin{itemize}
+        \item Hamiltonian.
+        \item All terms commute $\rightarrow$ can solve exactly.
+        \item Ground state is uniquely determined. 
+        \item String operators.
+        \item On torus conserved numbers, winding numbers $\rightarrow$ write in terms of string
+            operators.
+        \item 4 fold degenerate ground state.
+        \item broken string operators give you electric and magnetic excitations.
+        \item Exact local gauge symmetry on square lattice.
+        \item $Z_2$ topological order $\rightarrow$ known exactly. 
+        \end{itemize}
+
+    \subsection{$Z_3$ Toric Code}
+        \subsubsection{Hamiltonian Gauge symmetry }
+            \begin{itemize}
+                \item $Z_3$ algebra.
+                \item Hamiltonian. Write the Hamiltonian in terms of $P$ and $Q$ operators. 
+                \item \textcolor{red}{Figure} of vertex and plaquette labeling.
+                \item Hamiltonian has local symmetry. 
+                \item Specifically Hamiltonian obeys this local $Z_3$ gauge symmetry. Define the gauge operator. 
+                \item Discus gauge symmetry connection to the Hilbert space.
+                %\item express gauge operator in terms of electric flux $G_i =
+                %    exp{[\frac{i2\pi}{3}\sum_{l\in v}\mathrm{sign}(l)E_l]}$
+            \end{itemize}
+        \subsubsection{String operators}
+            \begin{itemize}
+                \item String net $E$, $Q$ and $P$ operators and how they operate on links with three degrees of
+                    freedom.
+                \item Define string operators.
+            \end{itemize}
+    
+        \subsubsection{properties of $Z_3$ string operators}
+            \begin{itemize}
+                \item \textcolor{red}{Figure} of the magnetic and electric string operator 
+                    acting on a configuration (open ends).
+                \item Use figure to highlight the fact that the $Z_3$ electric string operator with open ends
+                    has a positive charge at one end and a negative charge at the other.
+                \item Visons live at the ends of magnetic string with open ends.
+                \item $Z_3$ vison $\rightarrow$ three values.
+                \item Discuss $Z_3$ vison phase change when a closed electric string operator encloses a vison.
+                \item Visons are the most ``physical'' excitations $\rightarrow$ explain. 
+            \end{itemize}
+
+        \subsubsection{Winding Numbers}
+                \begin{itemize}
+                    \item Winding operator in terms of magnetic string operator $\rightarrow$ commutes
+                        with Hamiltonian.
+                    \item Changing the topological sector with a non-trivial electric
+                        string.
+                    \item On a torus 9-fold degenerate ground state, each corresponding to a
+                        different topological sector.
+                \end{itemize}
+
+    \subsection{QDM on Square lattice}
+        \begin{itemize}
+            \item Hamiltonian.
+            \item RK point and Hilbert space.
+            \item Dimer correlation's algebraic decay.
+            \item Gapless.
+            \item Discus $U(1)$ symmetry of QDM on square lattice.
+            \item Winding number.
+            \item Dimers as flux lines.
+            \item Introduction of dynamical charges reduces $U(1) \rightarrow Z_N$ where $N$ is
+                charge of itinerant objects.
+        \end{itemize}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Quantum Dimer Pentamer Model}
+
+    \subsection{How to get local $Z_3$ symmetry in square lattice dimer model}
+        \begin{itemize}
+            \item Define pentamer.
+            \item When charge 3 is introduced pentamers are the flux from the vertices with
+                additional charge 3.
+            \item $U(1) \rightarrow Z_3$ through the relaxation of constraints.
+            \item \textit{Exact} local gauge symmetry.
+        \end{itemize}
+
+    \subsection{QDPM Hamiltonian}
+        \begin{itemize}
+            \item QDM Hamiltonian + pentamer terms.
+            \item Like the QDM pentamer terms will consist of the smallest local moves that conserve
+                the constraints.
+            \item Introduce the pentamer terms. \textcolor{red}{Figure} of pentamer dynamics.
+            \item We study this model at the RK point $t/v = 1$ where the wave function is just the
+                equal weighted superposition of all classical dimer pentamer configurations.
+        \end{itemize}
+
+    \subsection{Winding operators}
+        \begin{itemize}
+            \item Make conection with $Z_3$ toric code. Can use same string operators $\rightarrow$
+                all QDPM configurations can be written as $Z_3$ toric code configurations (but not
+                the other way around).
+            \item QDPM winding operator in terms of magnetic string operator $\rightarrow$ commutes
+                with Hamiltonian.
+            \item QDPM simplified winding operator (mod 3).
+            \item In QDPM model the QDM winding operator is no longer conserved and does not commute with the
+                Hamiltonian.
+            \item In QDPM on a torus 9-fold degenerate ground state, each corresponding to a
+                different topological sector.
+        \end{itemize}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dimer Correlation Results}
+    \subsection{Correlation functions}
+        \begin{itemize}
+            \item By measuring the dimer correlations between the link at the origin and all other
+                links on the lattice we find no obvious broken symmetries.
+            \item List all of the correlation functions measured. Such as: parallel dimers along
+                horizontal and vertical directions, perpendicular dimers along horizontal and
+                vertical directions ...
+            \item \textcolor{red}{Figure} of the correlation functions. If possible, one figure
+                containing all of the important ones. Log linear plot with a linear linear inset.
+        \end{itemize}
+
+    \subsection{Liquid}
+        \begin{itemize}
+            \item The exponential decaying correlations mean a liquid state with a finite gap.
+            \item The correlation length is...
+        \end{itemize}
+
+    \subsection{Comparison to other models}
+        \begin{itemize}
+            \item Take the parallel dimer correlation function and compare these results in the QDM,
+                the QDPM, and the toric code.
+            \item \textcolor{red}{Figure} with the dimer correlations of the three models listed
+                above.
+        \end{itemize}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estimating the Gap}
+    \subsection{Imaginary time vison correlations}
+        \begin{itemize}
+            \item The $Z_3$ Vison gap should be the smallest if there is $Z_3$ topological order.
+            \item We can estimate the vison gap by calculating the imaginary time correlation
+                functions - present correlation function formally.
+            \item Should we discuss the subtleties of the imaginary time vison correlation function?
+            \item We investigate three particular points $\rightarrow$ origin, $(L/2,0)$, $(L/2,L/2)$.
+            \item \textcolor{red}{Figure} containing the $Z_3$ vison imaginary time correlations at all three
+                of the points listed above.
+            \item Estimate of the vison gap is ...
+            \item Compare single and double vison correlations.
+        \end{itemize}
+
+    \subsection{Imaginary time dimer correlations}
+        \begin{itemize}
+            \item Same thing for the dimer gap $\rightarrow$ define correlation function.
+            \item investigate the same 3 points.
+            \item \textcolor{red}{Figure} of the imaginary time dimer correlations.
+            \item Estimate of the dimer gap is ...
+        \end{itemize}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+    \begin{itemize}
+        \item `` We present the QDPM ...''
+        \item We show the string-net representation of the QDPM, introduce string operators and
+            discus $Z_3$ excitations
+        \item By calculating the dimer correlations we show QDPM is in liquid state at RK point.
+        \item By calculating the imaginary time dimer and vison correlation functions we show ...
+            hopefully show vison gap is smaller and thus this is indicative of $Z_3$ topological
+            order.
+    \end{itemize}
+
+\end{document}
