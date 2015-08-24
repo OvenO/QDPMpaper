@@ -15,6 +15,23 @@
 %\newcommand*\bdiag{\includegraphics[height=1.6ex] {Symbols/blank_diag}}
 %\newcommand*\bstr{\includegraphics[height=1.6ex] {Symbols/blank_str}}
 
+\newcommand*{\hprs}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.2ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/hrzprestar} }
+}
+\newcommand*{\hspr}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.2ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/hrzstarpair} }
+}
+
 \newcommand*{\bplqt}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -142,13 +159,12 @@
 \section{Introduction}
 
     It became apparent in the 80's and early 90's that the Landau theory of symmetry breaking did not
-    encompass all possible types of order possible in the groundstate of a condensed matter system. 
+    encompass all possible types of order that can be found in the groundstate of a condensed matter system. 
     In fact it was found that the symmetry of a system
     could increase as a system was cooled past a critical tempature and a phase transition occured
-    that did not fit into Landau's theory. In these cases oder was found
+    that did not fit into Landau's theory. In these cases the odering 
     that could not be described with an order
-    parameters \cite{wen_1990} which was a topological order does not fit in to Landau's
-    theory of symmetry breaking. Though the discovery of topological order was originally thought
+    parameters \cite{wen_1990} was a topological order. Though the discovery of topological order was originally thought
     to help understand superconductivity in the context of chiral spin systems \cite{HERE} it was
     not able to do so. However, due to the robust ground state degeneracy of systems exhibiting
     topological order they have become candidates for methods of storing and manipulating
@@ -460,15 +476,13 @@
             magnetic string path. 
 
 
-        \subsubsection{String operators}
-    
         \subsubsection{properties of $Z_3$ string operators}
 
         \subsubsection{Winding Numbers}
 
             The ground state of the $Z_3$ toric code on the torus is nine-fold degenerate because of
             the nine different topological sectors in this topology. One can move between the
-            topological sectors with a nontrivial closed electric string which wraps around either
+            topological sectors with a nontrivial closed electric string wraps around either
             the major axis or the minor axis of the torus. We will call the electric winding
             operator that acts around the major axis $W^e_y$ and around the minor axis $W^e_x$.
             A given topological sector can be distinguish 
@@ -526,18 +540,136 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Quantum Dimer Pentamer Model}
 
-    \subsection{How to get local $Z_3$ symmetry in square lattice dimer model}
+    \subsection{Local $Z_3$ Gauge Symmetry}
+
+        In the QDPM Ising degrees of freedom live on the links of the lattice.
+        The operator $\hat{\sigma}^x_l$ acts on these links and has 
+        eigenvalues $\sigma_l = \pm 1$, where $\sigma_l$ is the
+        Ising variables of the $l^{\mathrm{th}}$ link on the lattice. The number operator for a give link is
+        defined as $\hat{n}_l \equiv (1+\hat{\sigma}_x)/2$ and counts the number of dimers on link $l$.
+        An exactl local gauge symetry exsists on the lattice due to the contraint that either one or
+        four dimers touch any give vertex. In terms of $n_l$ we can define an operator that counts the
+        number of dimers touching a given vertex $v$ as $n_v = \sum_{l\in v} n_l$. 
+        
+        the local gauge transformation $G_v$ acting on a give vertex $v$ for the quantum dimer model
+        can be expressed as
+        %
+        \begin{equation}
+            \label{}
+            G_v=e^{i \alpha (n_v - n_0)}
+        \end{equation}
+        %
+        where $n_0$ is the constrained number of dimers touching a vertex, $n_0=1$ in the QDM model,
+        The operator $G_v$ then acts in such a
+        way that only the physical states, states satisfying the local constraint 
+        are invariant. For the QDM $G_v =
+        e^{i\alpha (0)}$ and therefore $G_v$ leaves a physical state unchanged for any
+        $\alpha$ making the local gauge symetry $U(1)$. The local gauge transformation that leaves
+        only configurations contaiing dimers and pentamers invarient is
+        %
+        \begin{equation}
+            \label{eqn:gauge_trans}
+            G_v = e^{i (\hat{n}_v -1) 2\pi/3}    
+        \end{equation}
+        %
+        For the QDPM $\alpha$ is must be $2\pi/3$ due to the relaxed contraint of the QDM
+        model that alows for pentamers. Relaxing the contraint of the QDM brings the local gauge
+        symetry from $U(1)$ to $Z(3)$.
 
     \subsection{QDPM Hamiltonian}
+
+        We work specificly at the RK point at wich the ground state wave function
+        is an equal weighted superposition of fully packed dimer pentamer configurations
+        %
+        \begin{equation}
+            \label{}
+            \left| \Psi \right\rangle = \frac{1}{\sqrt{N}}\sum_{\{C\}} \left| C \right\rangle
+            ,
+        \end{equation}
+        %
+        where $\{C\}$ is the set of fully packed configurations. The Hilbert space can be defined
+        using the gauge trasformation in Eq.~\ref{eqn:gauge_trans} as all $\left| C \right\rangle$
+        satisfying $G \left| C \right\rangle = \left| C \right\rangle$.
+
+        The QDPM Hamiltonian
+        \begin{equation}
+            H_{\mathrm{QDPM}} = H_{\mathrm{QDM}} + \mathrm{pentamer\ terms}
+        \end{equation}
+
+        The pentamer terms in the Hamiltonian can be constructed with the dynamics shown in
+        Fig.~\ref{fig:pentamer_moves}.  
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=0.8\linewidth]{pentamer_moves.pdf}
+            \caption{a) Horizontal criation an anihilation, b) horizontal move, c) and d) are two
+            differen possible diagonal moves in the same direction.}
+            \label{fig:pentamer_moves}
+        \end{figure}
+        Each of the  moves shown in Fig.~\ref{fig:pentamer_moves} can be
+        rotated to produce the symetry related counterpart (eg. vertical creation and anihilation). 
+        As an example the creation and anhilation term in the Hamiltonian is
+        \begin{multline}
+        H_{\mathrm{pentamer\ creation}} = t_{\mathrm{create}}
+            \sum_{\bstr}
+            \left(
+                \left|
+                    \hprs
+                \right\rangle
+                \left\langle
+                    \hspr
+                \right|
+                +
+                \mathrm{h.c.}
+            \right)
+            \\
+            - v_{\mathrm{create}}
+            \sum_{\bstr}
+                \left(
+                    \left|
+                        \hprs
+                    \right\rangle
+                    \left\langle
+                        \hprs
+                    \right|
+                    +
+                    \left|
+                        \hspr
+                    \right\rangle
+                    \left\langle
+                        \hspr
+                    \right|
+                \right)
+        \end{multline}
+        where the factors $t_{\mathrm{create}}$ and $v_{\mathrm{create}}$ are the coefficients of
+        the penamer pair creation and anihilation respectivly. At the RK point
+        $t/v=1$ for each all the petamer terms. 
+        Writing the kinetic and potential energy terms as done above for all the dynamics shown in
+        Fig.~\ref{fig:pentamer_moves} and all of their symetry related counterparts comprise the
+        the pentamer terms of the Hamiltonian. 
 
     \subsection{Winding operators}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dimer Correlation Results}
-    \subsection{Correlation functions}
 
     \subsection{Liquid}
+
+
+    \subsection{Correlation functions}
+
+    \begin{equation}
+        C_{\mathrm{dimer}} = \langle d_0 d_r \rangle - \langle d_0 \rangle   \langle d_r \rangle   
+    \end{equation}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{spacial_dmr_cor.pdf}
+        \caption{(Note: This figure was made using equal probabilities of plaquette filps and
+        pentamer moves) Spacial correlation function of parralel dimers for the two different
+        sublattices distiguesed by their color (red, green).}
+        \label{fig:spacial_dmr_cor}
+    \end{figure}
 
     \subsection{Comparison to other models}
 
@@ -545,8 +677,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
     \subsection{Imaginary time vison correlations}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{z2_origin_vison_time_cor.pdf}
+        \caption{Imaginary time $z_2$ \textit{single} vison correlations at the origin in the QDM model (red) and QDPM
+        model (green) on an $8\times$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$.}
+        \label{fig:name}
+    \end{figure}
 
     \subsection{Imaginary time dimer correlations}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{dimer_origin_time_cor.pdf}
+        \caption{Imaginary time dimer correlations of a single dimer in the QDM model (red) and QDPM
+        model (green) on an $8\times$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$. }
+        \label{fig:}
+
+    \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
