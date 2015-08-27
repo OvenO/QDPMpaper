@@ -172,7 +172,7 @@
     its own right, is that topologically ordered systems exhibit fractal excitations. 
 
     One of the simplest and most well studied models that exhibits topological order is the
-    toric code. The toric code is also an exactly solvable model. Unfortunately it is
+    toric code, an exactly solvable model. Unfortunately it is
     a difficult model to physically realize. Another class of models that are well studied are
     the quantum dimer models (QDM).  These models can exhibit topological order and are also
     easier to experimentally realize, for example some short range resonating valence bond
@@ -547,7 +547,7 @@
         eigenvalues $\sigma_l = \pm 1$, where $\sigma_l$ is the
         Ising variables of the $l^{\mathrm{th}}$ link on the lattice. The number operator for a give link is
         defined as $\hat{n}_l \equiv (1+\hat{\sigma}_x)/2$ and counts the number of dimers on link $l$.
-        An exactl local gauge symetry exsists on the lattice due to the contraint that either one or
+        An exactly local gauge symmetry exists on the lattice due to the constraint that either one or
         four dimers touch any give vertex. In terms of $n_l$ we can define an operator that counts the
         number of dimers touching a given vertex $v$ as $n_v = \sum_{l\in v} n_l$. 
         
@@ -564,21 +564,21 @@
         way that only the physical states, states satisfying the local constraint 
         are invariant. For the QDM $G_v =
         e^{i\alpha (0)}$ and therefore $G_v$ leaves a physical state unchanged for any
-        $\alpha$ making the local gauge symetry $U(1)$. The local gauge transformation that leaves
-        only configurations contaiing dimers and pentamers invarient is
+        $\alpha$ making the local gauge symmetry $U(1)$. The local gauge transformation that leaves
+        only configurations containing dimers and pentamers invariant is
         %
         \begin{equation}
             \label{eqn:gauge_trans}
             G_v = e^{i (\hat{n}_v -1) 2\pi/3}    
         \end{equation}
         %
-        For the QDPM $\alpha$ is must be $2\pi/3$ due to the relaxed contraint of the QDM
-        model that alows for pentamers. Relaxing the contraint of the QDM brings the local gauge
-        symetry from $U(1)$ to $Z(3)$.
+        For the QDPM $\alpha$ is must be $2\pi/3$ due to the relaxed constraint of the QDM
+        model that allows for pentamers. Relaxing the constraint of the QDM brings the local gauge
+        symmetry from $U(1)$ to $Z(3)$.
 
     \subsection{QDPM Hamiltonian}
 
-        We work specificly at the RK point at wich the ground state wave function
+        We work specifically at the RK point at which the ground state wave function
         is an equal weighted superposition of fully packed dimer pentamer configurations
         %
         \begin{equation}
@@ -588,7 +588,7 @@
         \end{equation}
         %
         where $\{C\}$ is the set of fully packed configurations. The Hilbert space can be defined
-        using the gauge trasformation in Eq.~\ref{eqn:gauge_trans} as all $\left| C \right\rangle$
+        using the gauge transformation in Eq.~\ref{eqn:gauge_trans} as all $\left| C \right\rangle$
         satisfying $G \left| C \right\rangle = \left| C \right\rangle$.
 
         The QDPM Hamiltonian
@@ -601,13 +601,13 @@
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=0.8\linewidth]{pentamer_moves.pdf}
-            \caption{a) Horizontal criation an anihilation, b) horizontal move, c) and d) are two
-            differen possible diagonal moves in the same direction.}
+            \caption{a) Horizontal creation an annihilation, b) horizontal move, c) and d) are two
+            different possible diagonal moves in the same direction.}
             \label{fig:pentamer_moves}
         \end{figure}
         Each of the  moves shown in Fig.~\ref{fig:pentamer_moves} can be
-        rotated to produce the symetry related counterpart (eg. vertical creation and anihilation). 
-        As an example the creation and anhilation term in the Hamiltonian is
+        rotated to produce the symmetry related counterpart (eg. vertical creation and annihilation). 
+        As an example the creation and annihilation term in the Hamiltonian is
         \begin{multline}
         H_{\mathrm{pentamer\ creation}} = t_{\mathrm{create}}
             \sum_{\bstr}
@@ -641,13 +641,23 @@
                 \right)
         \end{multline}
         where the factors $t_{\mathrm{create}}$ and $v_{\mathrm{create}}$ are the coefficients of
-        the penamer pair creation and anihilation respectivly. At the RK point
-        $t/v=1$ for each all the petamer terms. 
+        the pentamer pair creation and annihilation respectively. At the RK point
+        $t/v=1$ for each all the pentamer terms. 
         Writing the kinetic and potential energy terms as done above for all the dynamics shown in
-        Fig.~\ref{fig:pentamer_moves} and all of their symetry related counterparts comprise the
+        Fig.~\ref{fig:pentamer_moves} and all of their symmetry related counterparts comprise the
         the pentamer terms of the Hamiltonian. 
 
     \subsection{Winding operators}
+
+        In the QDPM there is a conserved winding operator in a given topological sector
+        \begin{equation}
+            W_{x,y} = (N_A - N_B)\mod{3} = n
+            .
+        \end{equation}
+        For $W_y$ ($W_x$), $N_A$ is the number of dimers crossed on a vertical (horizontal) cut and
+        $n=0$, $1$, or $2$ depending on the topological sector. The winding operator commutes with
+        the Hamiltonian and therefore share the same eigenvalues. Since there are three winding numbers in
+        each direction then the ground state is ninefold degenerate.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -665,9 +675,9 @@
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\linewidth]{spacial_dmr_cor.pdf}
-        \caption{(Note: This figure was made using equal probabilities of plaquette filps and
-        pentamer moves) Spacial correlation function of parralel dimers for the two different
-        sublattices distiguesed by their color (red, green).}
+        \caption{(Note: This figure was made using equal probabilities of plaquette flips and
+        pentamer moves) Spacial correlation function of parallel dimers for the two different
+        sublattices distinguished by their color (red, green).}
         \label{fig:spacial_dmr_cor}
     \end{figure}
 
@@ -676,12 +686,45 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
+
+    \begin{table}[htpb]
+        \centering
+        \caption{$\Delta \tau = 150$}
+        \label{tab:label}
+        \begin{tabular}{c c c}
+            \hline\hline
+         L            & 8x8 Gap  & 16x16  \\ 
+            \hline
+         frac 1.0     &          & \\
+            \hline
+         Dimer origin &  0.03230 & 0.00806 \\
+         $Z_2$ origin &  0.00787 & 0.00198  \\
+         $Z_3$ origin &  NA      & NA \\
+            \hline
+         frac 0.9     &          & \\
+            \hline
+         Dimer origin &  0.00419 & 0.00429 \\
+         $Z_2$ origin &  0.00216 & 0.00129  \\
+         $Z_3$ origin &  0.00346 & 0.00359 \\
+            \hline
+         frac 0.5     &          & \\
+            \hline
+         Dimer origin &          & 0.02049 \\
+         $Z_2$ origin &          & 0.00614  \\
+         $Z_3$ origin &          & 0.01927  
+        \end{tabular}
+    \end{table}
+
+
+
+
+
     \subsection{Imaginary time vison correlations}
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\linewidth]{z2_origin_vison_time_cor.pdf}
         \caption{Imaginary time $z_2$ \textit{single} vison correlations at the origin in the QDM model (red) and QDPM
-        model (green) on an $8\times$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$.}
+        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$.}
         \label{fig:name}
     \end{figure}
 
@@ -690,7 +733,7 @@
         \centering
         \includegraphics[width=0.8\linewidth]{dimer_origin_time_cor.pdf}
         \caption{Imaginary time dimer correlations of a single dimer in the QDM model (red) and QDPM
-        model (green) on an $8\times$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$. }
+        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$. }
         \label{fig:}
 
     \end{figure}
