@@ -214,13 +214,27 @@ This this paper is organized as follows. In \secref{sec:Background} we provide r
 \subsection{Generalized quantum dimer models}
 \label{sec:GQDM}
 
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. Other unique, non-trivial constraints are $n_v=2$ and the parity constraints $n_v\mod2 =0$ and  $n_v\mod2 =1$ (see \figref{fig:GQDMexamples}).
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. We can distinguish between number constraints of the form $n_v = n_0$ and parity constraints of the form $n_v \mod 2 = 0,1$. The unique, non-trivial constraints of this form are the number constraints $n_v=1,2$ and the parity constraints $n_v\mod2 =0,1$ and  $n_v\mod2 =1$ (see \figref{fig:GQDMexamples}).
+
+The presence of such local constraints implies all physical states in the Hilbert space are invariant under local gauge transformations at each vertex, $G_v$. 
 
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
 H_{\rm{GQDM}} = -t \hat{T} + v \hat{V}
 \end{equation}
-where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $\hat{V}$ is a local potential energy term, and $v$ and $t$ are the strength of each term.
+where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $\hat{V}$ is a local potential energy term, and $v$ and $t$ parametrize the strength of each term. We will take the kinetic term $\hat{T}$ to be the dynamics which preserved the constraint; for example in the QDM $\hat{T}$ is the sum of all possible ``plaquette" flip terms acting on plaquettes with parallel dimers.
+\begin{equation}
+    \label{}
+    \hat{T} = \sum_{\bplqt} 
+            \left|
+                \vrtplqt
+            \right\rangle
+            \left\langle
+                \hrzplqt
+            \right|
+            +
+            \mathrm{h.c.}
+\end{equation}
 
     Now we will introduce the toric code on the square lattice in some detail to sever as a point of reference and
     comparison for the following discussion of the $Z_3$ case. The toric code Hamiltonian is given by
