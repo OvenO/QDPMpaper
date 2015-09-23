@@ -214,6 +214,14 @@ This this paper is organized as follows. In \secref{sec:Background} we provide r
 \subsection{Generalized quantum dimer models}
 \label{sec:GQDM}
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{example_local_constraints.pdf}
+    \caption{Clockwise from the upper left panel we show an example of a QDM with constraints: one
+    dimer, two dimers, an even number of dimers, and and odd number of dimers touching each vertex.}
+    \label{fig:example_local_constraints}
+\end{figure}
+
 Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. We can distinguish between number constraints of the form $n_v = n_0$ and parity constraints of the form $n_v \mod 2 = 0,1$. The unique, non-trivial constraints of this form are the number constraints $n_v=1,2$ and the parity constraints $n_v\mod2 =0,1$ and  $n_v\mod2 =1$ (see \figref{fig:GQDMexamples}).
 
 The presence of such local constraints implies all physical states in the Hilbert space are invariant under local gauge transformations at each vertex, $G_v$. 
@@ -744,34 +752,34 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
 
-    \begin{table*}[htpb]
-    \setlength\tabcolsep{0.3cm}
-        \centering
-        \caption{$\Delta \tau = 150$}
-        \label{tab:label}
-        \begin{tabular}{l l l l l}
-            \hline\hline
-         L            		& 8x8                               		& 12x12                            		& 16x16					& 18x18 \\ 
-            \hline                                                                                                                           
-         frac 1.0     	&                                       		&                                  		&                                    		&  \\
-            \hline                                                                                                                           
-         Dimer        	&  $ 3(1) \times 10^{-2}$        	& $ 1.43(3) \times 10^{-2}$	& $0.81(2)\times 10^{-2}$  	& \\
-         $Z_2$ origin 	&  $ 0.787?(5)\times 10^{-2} $ 	& $ 0.344? (1)\times 10^{-2}$ 	& $0.198? (4)\times 10^{-2} $ 	&  \\
-         $Z_3$ origin 	&  NA                                   	& NA                               		& NA                                  	& \\
-            \hline                                                                                                                         
-         frac 0.9     	&                                       		&                                  		&                                     		&  \\
-            \hline                                                                                                                          
-         Dimer origin 	&  $ 0.419(1)\times 10^{-2} $    	& $ 0.406(2)\times 10^{-2} $ 	& $0.429(1)\times 10^{-2} $   	&  $ 0.405(2)\times 10^{-2} $\\
-         $Z_2$ origin 	&  $ 0.216?(2)\times 10^{-2} $ 	& $ 0.141?(1)\times 10^{-2} $ 	& $0.129?(2)\times 10^{-2} $	&  $ 0.126?(2)\times 10^{-2} $\\
-         $Z_3$ origin 	&  $ 0.346?(4)\times 10^{-2} $ 	& $ 0.348(1)\times 10^{-2} $ 	& $0.359?(4)\times 10^{-2} $	&  $ 0.355?(3)\times 10^{-2}$\\
-            \hline                                                                                                                          
-         frac 0.5     	&                                       		&                                   		&                                    		& \\
-            \hline                                                                                                                          
-         Dimer origin 	&                                       		& $ 2.075(9)\times 10^{-2} $ 	& $2.05(1) \times 10^{-2}$		&  $ $ \\
-         $Z_2$ origin 	&                                       		& $ 0.615?(2)\times 10^{-2} $ 	& $0.614?(3)\times 10^{-2} $	&  $ $ \\
-         $Z_3$ origin 	&                                       		& $ 1.939(2)\times 10^{-2} $ 	& $1.927(2)\times 10^{-2} $	&  $ $  
-        \end{tabular}
-    \end{table*}
+%    \begin{table*}[htpb]
+%    \setlength\tabcolsep{0.3cm}
+%        \centering
+%        \caption{$\Delta \tau = 150$}
+%        \label{tab:label}
+%        \begin{tabular}{l l l l l}
+%            \hline\hline
+%         L            		& 8x8                               		& 12x12                            		& 16x16					& 18x18 \\ 
+%            \hline                                                                                                                           
+%         frac 1.0     	&                                       		&                                  		&                                    		&  \\
+%            \hline                                                                                                                           
+%         Dimer        	&  $ 3(1) \times 10^{-2}$        	& $ 1.43(3) \times 10^{-2}$	& $0.81(2)\times 10^{-2}$  	& \\
+%         $Z_2$ origin 	&  $ 0.787?(5)\times 10^{-2} $ 	& $ 0.344? (1)\times 10^{-2}$ 	& $0.198? (4)\times 10^{-2} $ 	&  \\
+%         $Z_3$ origin 	&  NA                                   	& NA                               		& NA                                  	& \\
+%            \hline                                                                                                                         
+%         frac 0.9     	&                                       		&                                  		&                                     		&  \\
+%            \hline                                                                                                                          
+%         Dimer origin 	&  $ 0.419(1)\times 10^{-2} $    	& $ 0.406(2)\times 10^{-2} $ 	& $0.429(1)\times 10^{-2} $   	&  $ 0.405(2)\times 10^{-2} $\\
+%         $Z_2$ origin 	&  $ 0.216?(2)\times 10^{-2} $ 	& $ 0.141?(1)\times 10^{-2} $ 	& $0.129?(2)\times 10^{-2} $	&  $ 0.126?(2)\times 10^{-2} $\\
+%         $Z_3$ origin 	&  $ 0.346?(4)\times 10^{-2} $ 	& $ 0.348(1)\times 10^{-2} $ 	& $0.359?(4)\times 10^{-2} $	&  $ 0.355?(3)\times 10^{-2}$\\
+%            \hline                                                                                                                          
+%         frac 0.5     	&                                       		&                                   		&                                    		& \\
+%            \hline                                                                                                                          
+%         Dimer origin 	&                                       		& $ 2.075(9)\times 10^{-2} $ 	& $2.05(1) \times 10^{-2}$		&  $ $ \\
+%         $Z_2$ origin 	&                                       		& $ 0.615?(2)\times 10^{-2} $ 	& $0.614?(3)\times 10^{-2} $	&  $ $ \\
+%         $Z_3$ origin 	&                                       		& $ 1.939(2)\times 10^{-2} $ 	& $1.927(2)\times 10^{-2} $	&  $ $  
+%        \end{tabular}
+%    \end{table*}
 
     \begin{table*}[htpb]
     \setlength\tabcolsep{0.3cm}
@@ -783,20 +791,20 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
                         & Dimer                 & $Z_2$ double ($L/2$)  &  $Z_3$ single (origin)     \\   
             \hline
             frac 1.0    &  &  & \\
-            $8\times8$  &                       &                       &                            \\
-            $12\times12$&                       &                       &                            \\
+            $8\times8$  & $3.(3)\times10^{-2}$  &                       &                            \\
+            $12\times12$& $1.4(5)\times10^{-2}$ &                       &                            \\
             $16\times16$&                       &                       &                            \\
             $18\times18$&                       &                       &                            \\
             \hline
             frac 0.9    &  &  & \\
-            $8\times8$  & $3.5(3)\times10^{-3}$ & $1.02(8)\times10^{-3}$&  $3.07(4)\times10^{-3}$    \\
-            $12\times12$&                       &                       &                            \\
-            $16\times16$&                       &                       &                            \\
+            $8\times8$  & $0.35(5)\times10^{-2}$&$0.102(1)\times10^{-2}$& $0.306(3)\times10^{-2}$     \\
+            $12\times12$& $0.35(7)\times10^{-2}$&$0.25(5)\times10^{-2}$ & $0.316(4)\times10^{-2}$    \\
+            $16\times16$& $0.35(7)\times10^{-2}$&$0.36(3)\times10^{-2}$ & $0.316(8)\times10^{-2}$    \\
             $18\times18$&                       &                       &                            \\
             \hline
             frac 0.5    &  &  & \\
-            $8\times8$  & $1.(8)\times10^{-2}$  &  $5.(6)\times10^{-4}$ & $1.7(5)\times10^{-2}$      \\
-            $12\times12$& $1.4(8)\times10^{-2}$ &                       &                            \\
+            $8\times8$  & $1.0(6)\times10^{-2}$ &$0.05(5)\times10^{-2}$ & $1.7(1)\times10^{-2}$     \\
+            $12\times12$& $1.5(7)\times10^{-2}$ &                       & $1.9(7)\times10^{-2}$      \\
             $16\times16$&                       &                       &                            \\
             $18\times18$&                       &                       &                            \\
         \end{tabular}
