@@ -602,7 +602,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
     \subsection{Local $Z_3$ Gauge Symmetry}
 
         In the QDPM Ising degrees of freedom live on the links of the lattice.
-        The operator $\hat{\sigma}^x_l$ acts on these links and has 
+        The operator $\hat{\sigma}^x_l$ acts on these links with 
         eigenvalues $\sigma_l = \pm 1$, where $\sigma_l$ is the
         Ising variables of the $l^{\mathrm{th}}$ link on the lattice. The number operator for a give link is
         defined as $\hat{n}_l \equiv (1+\hat{\sigma}_x)/2$ and counts the number of dimers on link $l$.
@@ -637,7 +637,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 
     \subsection{QDPM Hamiltonian}
 
-        We work specifically at the RK point at which the ground state wave function
+        We work specifically at the RK point where the ground state wave function
         is an equal weighted superposition of fully packed dimer pentamer configurations
         %
         \begin{equation}
@@ -650,12 +650,12 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         using the gauge transformation in Eq.~\ref{eqn:gauge_trans} as all $\left| C \right\rangle$
         satisfying $G \left| C \right\rangle = \left| C \right\rangle$.
 
-        The QDPM Hamiltonian
+        The QDPM Hamiltonian comprises the QDM Hamiltonian pluss additional terms coresponding to
+        the pentamer dynamics.
         \begin{equation}
             H_{\mathrm{QDPM}} = H_{\mathrm{QDM}} + \mathrm{pentamer\ terms}
         \end{equation}
-
-        The pentamer terms in the Hamiltonian can be constructed with the dynamics shown in
+        Specificaly the penatamers pentamer terms are constructed with the dynamics shown in
         Fig.~\ref{fig:pentamer_moves}.  
         \begin{figure}[htpb]
             \centering
@@ -721,7 +721,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dimer Correlation Results}
-
+    
     \subsection{Liquid}
     \begin{figure}[htpb]
         \centering
@@ -751,36 +751,24 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
+    An exponetial decay of the spacial correlations shown in the previous sections 
+    suggeste a gap in the spectrum. However we would like to know if the lowest lying excitations are in the vison
+    or the dimer sector.  The energy gap of the dimer and vison exsitations can be estimated by investigating the dimer and
+    vison imaginary time correlations respectivly as outlined by Henley \cite{Henley2004a}. 
+    One changlenge in the gap estimates from the imaginary time correlations is going far enough out
+    in imaginary time. In appendix \ref{appendix_gap_err} we discuss our proccess in determining
+    that this systematic error is sufficinetly small which is necissary when compairing gap
+    estimates for different excitatoins.
 
-%    \begin{table*}[htpb]
-%    \setlength\tabcolsep{0.3cm}
-%        \centering
-%        \caption{$\Delta \tau = 150$}
-%        \label{tab:label}
-%        \begin{tabular}{l l l l l}
-%            \hline\hline
-%         L            		& 8x8                               		& 12x12                            		& 16x16					& 18x18 \\ 
-%            \hline                                                                                                                           
-%         frac 1.0     	&                                       		&                                  		&                                    		&  \\
-%            \hline                                                                                                                           
-%         Dimer        	&  $ 3(1) \times 10^{-2}$        	& $ 1.43(3) \times 10^{-2}$	& $0.81(2)\times 10^{-2}$  	& \\
-%         $Z_2$ origin 	&  $ 0.787?(5)\times 10^{-2} $ 	& $ 0.344? (1)\times 10^{-2}$ 	& $0.198? (4)\times 10^{-2} $ 	&  \\
-%         $Z_3$ origin 	&  NA                                   	& NA                               		& NA                                  	& \\
-%            \hline                                                                                                                         
-%         frac 0.9     	&                                       		&                                  		&                                     		&  \\
-%            \hline                                                                                                                          
-%         Dimer origin 	&  $ 0.419(1)\times 10^{-2} $    	& $ 0.406(2)\times 10^{-2} $ 	& $0.429(1)\times 10^{-2} $   	&  $ 0.405(2)\times 10^{-2} $\\
-%         $Z_2$ origin 	&  $ 0.216?(2)\times 10^{-2} $ 	& $ 0.141?(1)\times 10^{-2} $ 	& $0.129?(2)\times 10^{-2} $	&  $ 0.126?(2)\times 10^{-2} $\\
-%         $Z_3$ origin 	&  $ 0.346?(4)\times 10^{-2} $ 	& $ 0.348(1)\times 10^{-2} $ 	& $0.359?(4)\times 10^{-2} $	&  $ 0.355?(3)\times 10^{-2}$\\
-%            \hline                                                                                                                          
-%         frac 0.5     	&                                       		&                                   		&                                    		& \\
-%            \hline                                                                                                                          
-%         Dimer origin 	&                                       		& $ 2.075(9)\times 10^{-2} $ 	& $2.05(1) \times 10^{-2}$		&  $ $ \\
-%         $Z_2$ origin 	&                                       		& $ 0.615?(2)\times 10^{-2} $ 	& $0.614?(3)\times 10^{-2} $	&  $ $ \\
-%         $Z_3$ origin 	&                                       		& $ 1.939(2)\times 10^{-2} $ 	& $1.927(2)\times 10^{-2} $	&  $ $  
-%        \end{tabular}
-%    \end{table*}
+    %At the RK point the Hamiltonian is proportional to the matrix of transitions rates the eigen modes of wich describe the time evolution of the
+    %system. Since the Hamiltonian and the rate matrix share eigenvalues the lowest energy can be
+    %found by looking at the fit of the imaginary time correlations far out in imaginary time where
+    %the smalles exponetial dominates.  
 
+    In this paper we only investigate the high symetry points in the Brillouin zone. 
+
+    In Table~\ref{tab:gap_table} we show the estimates of the dimer gap, the double $Z_2$ vison gap
+    at $L/2$ and the $Z_3$ vison gap.
     \begin{table*}[htpb]
     \setlength\tabcolsep{0.3cm}
         \centering
@@ -791,8 +779,8 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
                         & Dimer                 & $Z_2$ double ($L/2$)  &  $Z_3$ single (origin)     \\   
             \hline
             frac 1.0    &  &  & \\
-            $8\times8$  & $3.23(8)\times10^{-2}$  &                       &                            \\
-            $12\times12$& $1.4(5)\times10^{-2}$ &                       &                            \\
+            $8\times8$  & $3.24(5)\times10^{-2}$  &                       &                            \\
+            $12\times12$& $1.47(5)\times10^{-2}$ &                       &                            \\
             $16\times16$&                       &                       &                            \\
             $18\times18$&                       &                       &                            \\
             \hline
@@ -809,7 +797,6 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             $18\times18$&                       &                       &                            \\
         \end{tabular}
     \end{table*}
-
 
     \subsection{Imaginary time vison correlations}
     \begin{figure}[htpb]
@@ -834,6 +821,106 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{Error in the Gap Estimations}
+\label{appendix_gap_err}
+
+When estimating the gap by calculating correlations in imaginary time one has to be sure
+that the range of imaginary time is appropriate otherwise it is not meaningful to compare the relative 
+sizes of the vison and dimer gaps. In
+%Fig.~\ref{fig:HERE} 
+we show the finite size scaling of the different gaps. For each gap estimation we wanted to reduce
+if not eliminate the systematic error due to and inadiquate range of imaginary time. This was
+accived by investegating the gap as a fuction of the lower cutoff in the exponential fit of. We
+extended the range of $\tau$ until the gap plataued and had little dependence on the cutoff. We show an
+example of the estimate of the $Z_3$ vison gap dependence on the lower cutoff of the fit for the
+$HERE\times HERE$ lattice with a fraction (HERE) of $0.9$ in 
+%Fig.~\ref{fig:}
+%\begin{figure}[htpb]
+%    \centering
+%    \includegraphics[width=0.8\linewidth]{name.ext}
+%    \caption{Name}
+%    \label{fig:name}
+%\end{figure}
+
+NOTE: There is also some systematic error in the discritization of time. This error falls off in the QDM
+as the number of flippable plaquestts. We assume this error it is small compared to the
+statistical error.
+
+\section{Imaginary time Vison Correlations}
+\label{appendix_tau_corr}
+
+    \subsection{$Z_2$ Single and Double Visons}
+    
+        \subsubsection{Single Vison}
+            First we distiguish between the single and double vison correlation fuctions. We start with the
+            the described by Ivanov \cite{Ivanov2004} for rewriting the single vison correlation function in a
+            convieient form to implement numericaly. 
+            The correlation function between two point visons $V(\bm{x}_1,\tau_1)$, and $V(\bm{x}_2,\tau_2)$ at 
+            points in space $\bm{x}_1$, $\bm{x}_2$ and in imaginary time $\tau_1$ and $\tau_2$ can be writen as
+            \begin{equation}
+                C_{\mathrm{single}}(\bm{x}_2-\bm{x}_1,\tau_2 - \tau_1) = \langle V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_2) \rangle
+            \end{equation}
+            For the $Z_2$ vison $V(\bm{x}_i,\tau_j)^2=1$ and inserting this for $i=2$ and $j=1$ between the two vison
+            operators in the above equation we get 
+            \begin{equation}
+                V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_2) = \big(V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_1)\big)
+                \big( V(\bm{x}_2,\tau_1) V(\bm{x}_2,\tau_2) \big),
+                \label{eqn:expanded_z2_v_tau_cor}
+            \end{equation}
+            
+            The first product in Eq.~\ref{eqn:expanded_z2_v_tau_cor} on the RHS is a 
+            string operator between two points on the lattice at a given imaginary time $\tau_2$ 
+            \begin{equation}
+                V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_1) = (-1)^{n},
+                \label{eqn:simp_z2_vison_phase}
+            \end{equation}
+            $n$ being the number of dimers intersecting the path between $\bm{x}_1$ and $\bm{x}_1$. This number
+            can not depend on the path so one must choose a meathod of ``gauge fixing''. This can be done
+            by choosing an imutable bacround configureation which also changes the phase of the
+            operator $V_{12}(\tau)$ in the same way as the dynamic dimers. 
+            Including the gauge fixing Eqn.~\ref{eqn:simp_z2_vison_phase} becomes
+            \begin{equation}
+                V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_1) = (-1)^{n+n_{\mathrm{backround}}}.
+            \end{equation}
+
+            The second product in Eq.~\ref{eqn:expanded_z2_v_tau_cor} on the RHS is a string operator 
+            between two points at the location but at different imaginary time $\tau_2$. 
+            In order for the full path in space and
+            imaginary time to maintain its path independece it can be shown that the phase 
+            changes with every plaquet flip at $\bm{x}_2$. So
+            \begin{equation}
+                V(\bm{x}_2,\tau_1) V(\bm{x}_2,\tau_2) = (-1)^{n_{\mathrm{flipped}}},
+            \end{equation}
+            where $n_{\mathrm{flipped}}$ is the number of times the plaquette at $\bm{x}_2$ is flipped.
+            Finaly Eq.~\ref{eqn:expanded_z2_v_tau_cor} can be expresed as 
+            \begin{equation}
+                V(\bm{x}_1,\tau_1) V(\bm{x}_2,\tau_2) =
+                (-1)^{n+n_{\mathrm{backround}+n_{\mathrm{flipped}}}}.
+            \end{equation}
+            The gap that is being estimated by looking at the single vison correlatoin function is
+            the energy gap of a single vison exciation, only physical when the system has
+            boundries but measureable in any system topology. 
+
+        \subsubsection{Double Vison}
+            Calculating the doublue vison imaginary time correlation funciton
+            \begin{equation}
+                C_{\mathrm{double}}(\bm{x}_{12},\tau_2 - \tau_1) = \langle V(\bm{x}_1,\tau_1)V(\bm{x}_2,\tau_1) V(\bm{x}_1,\tau_2)V(\bm{x}_2,\tau_2) \rangle
+            \end{equation}
+            where the first product on the RHS is the string operator acting along path between points
+            $\bm{x}_1$ and $\bm{x}_1$ at imaginary time $\tau_1$ and the second product is the
+            string operator along a path between the same points but at $\tau_2$. 
+
+            by looking at the double vison correlation function in imaginary time the gap of a pair
+            of visons is extracted.
+    
+    
+    \subsection{$Z_3$ Single and Double Visons}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{apsrev4-1}
 \bibliography{QDPM}
 
