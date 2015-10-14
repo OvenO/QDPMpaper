@@ -653,9 +653,13 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         The QDPM Hamiltonian comprises the QDM Hamiltonian pluss additional terms coresponding to
         the pentamer dynamics.
         \begin{equation}
-            H_{\mathrm{QDPM}} = H_{\mathrm{QDM}} + \mathrm{pentamer\ terms}
+            H_{\mathrm{QDPM}} = H_{\mathrm{QDM}} + (1-\gamma)\mathrm{pentamer\ terms}
+            ,
         \end{equation}
-        Specificaly the penatamers pentamer terms are constructed with the dynamics shown in
+        where $\gamma$ is a single parameter that tunes the relative energy scale of the petamer
+        terms to the QDM terms in the Hamiltonian.
+
+        The penatamers pentamer terms are constructed with the dynamics shown in
         Fig.~\ref{fig:pentamer_moves}.  
         \begin{figure}[htpb]
             \centering
@@ -720,23 +724,32 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Dimer Correlation Results}
+\section{Spacial Dimer Correlation Results}
     
+    In this section we discuss the dimer dimer correlation function
+    \begin{equation}
+        C_{\mathrm{dimer}} = \langle d_0 d_r \rangle - \langle d_0 \rangle   \langle d_r \rangle   
+        ,
+    \end{equation}
+    where $d_i$ is the ising degrees of freedom on link i.
+    In order for the QDPM to exhibit topological order there we must find that it is in a gaped
+    dimer liquid phase. It is likely that the QDPM in a liquid phase at the RK point because there 
+    we find no evedence of broken symmetries in the system sizes up to $32x32$. As an example of the
+    absence of broken symmetries we show
+    the dimer correlation function measuered between a single dimer and all other dimers on the
+    lattice in Fig.~\ref{fig:fig:dimer_gry_scale_qdpm} for a $16x16$ lattice.
     \subsection{Liquid}
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\linewidth]{dimer_gry_scale_qdpm.pdf}
         \caption{Gray scale (actualy data) of the dimer corelation between the dimer in the upper
-        left corner and other dimers on a $16\times16$ lattice.}
+        left corner (colored red) and other dimers on a $16\times16$ lattice.}
         \label{fig:dimer_gry_scale_qdpm}
     \end{figure}
 
-    \subsection{Correlation functions}
-
-    \begin{equation}
-        C_{\mathrm{dimer}} = \langle d_0 d_r \rangle - \langle d_0 \rangle   \langle d_r \rangle   
-    \end{equation}
-
+    We also find exponetialy decaying dimer correlations 
+    In Fig.~\ref{fig:fig:spacial_dmr_cor} we show the dimer correlations between horizontal dimers
+    in a vertical column. We find the correlation length to be $HERE$.
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\linewidth]{spacial_dmr_cor.pdf}
@@ -751,71 +764,83 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
-    An exponetial decay of the spacial correlations shown in the previous sections 
-    suggeste a gap in the spectrum. However we would like to know if the lowest lying excitations are in the vison
-    or the dimer sector.  The energy gap of the dimer and vison exsitations can be estimated by investigating the dimer and
+    The exponetial decay of the spacial correlations shown in the previous sections 
+    suggest a gap in the spectrum though it is important to determine if the lowest lying
+    excitations are in the vison-like
+    or the dimer-like.  The energy gap of the dimer-like and vison-like excitations can be estimated 
+    by investigating the dimer and
     vison imaginary time correlations respectivly as outlined by Henley \cite{Henley2004a}. 
-    One changlenge in the gap estimates from the imaginary time correlations is going far enough out
-    in imaginary time. In appendix \ref{appendix_gap_err} we discuss our proccess in determining
-    that this systematic error is sufficinetly small which is necissary when compairing gap
-    estimates for different excitatoins.
+    One changlenge in this type of gap estimate is in resloving the correlation functions far enough out
+    in imaginary time. In appendix \ref{appendix_gap_err} we discuss our methods used to determine
+    that this particular source of systematic error is sufficinetly comparied to the gap
+    estimates for different types of excitatoins.
 
     %At the RK point the Hamiltonian is proportional to the matrix of transitions rates the eigen modes of wich describe the time evolution of the
     %system. Since the Hamiltonian and the rate matrix share eigenvalues the lowest energy can be
     %found by looking at the fit of the imaginary time correlations far out in imaginary time where
     %the smalles exponetial dominates.  
 
-    In this paper we only investigate the high symetry points in the Brillouin zone. 
-
+    In this paper we only investigate the gap at high symetry points in the Brillouin zone. 
     In Table~\ref{tab:gap_table} we show the estimates of the dimer gap, the double $Z_2$ vison gap
     at $L/2$ and the $Z_3$ vison gap.
     \begin{table*}[htpb]
     \setlength\tabcolsep{0.3cm}
         \centering
-        \caption{$\Delta \tau = 250$}
+        %\caption{$\Delta \tau = ??$}
         \label{tab:gap_table}
         \begin{tabular}{l l l l}
             \hline\hline
                         & Dimer                 & $Z_2$ double ($L/2$)  &  $Z_3$ single (origin)     \\   
             \hline
-            frac 1.0    &  &  & \\
-            $8\times8$  & $3.24(5)\times10^{-2}$  &                       &                            \\
+            $\gamma=1.0$ $(\Delta \tau =250)$    &  &  & \\
+            $8\times8$  & $3.24(5)\times10^{-2}$ &                       &                            \\
             $12\times12$& $1.47(5)\times10^{-2}$ &                       &                            \\
-            $16\times16$&                       &                       &                            \\
-            $18\times18$&                       &                       &                            \\
+            $16\times16$& $0.66(3)\times10^{-2}$ &                       &                            \\
+            $18\times18$& $0.64(2)\times10^{-2}$ &                       &                            \\
             \hline
-            frac 0.9    &  &  & \\
+            $\gamma=0.9$ $(\Delta \tau =500)$    &  &  & \\
             $8\times8$  & $0.3549(9)\times10^{-2}$&$0.0993(3)\times10^{-2}$& $0.3069(3)\times10^{-2}$     \\
             $12\times12$& $0.357(2)\times10^{-2} $&$0.256(2)\times10^{-2} $ & $0.3164(7)\times10^{-2}$    \\
             $16\times16$& $0.357(3)\times10^{-2} $&$0.363(5)\times10^{-2} $ & $0.3170(9)\times10^{-2}$    \\
             $18\times18$& $0.352(2)\times10^{-2} $&$0.419(3)\times10^{-2} $ & $0.3167(7)\times10^{-2}$    \\
             \hline
-            frac 0.5    &  &  & \\
+            $\gamma=0.5$    & & & \\
             $8\times8$  & $1.0(6)\times10^{-2}$ &$0.05(5)\times10^{-2}$ & $1.7(1)\times10^{-2}$     \\
             $12\times12$& $1.5(7)\times10^{-2}$ &                       & $1.9(7)\times10^{-2}$      \\
             $16\times16$&                       &                       &                            \\
             $18\times18$&                       &                       &                            \\
         \end{tabular}
     \end{table*}
-
-    \subsection{Imaginary time vison correlations}
+    This table shows that the QDPM gap is relativly constant as the system size is increased and
+    that the vison gap is lower than the dimer gap. In Fig.~\ref{fig:qdm_qdpm_gap} we show the
+    finite size scaling of the dimer gap for both the QDM and the QDPM.
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=0.8\linewidth]{z2_origin_vison_time_cor.pdf}
-        \caption{Imaginary time $z_2$ \textit{single} vison correlations at the origin in the QDM model (red) and QDPM
-        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$.}
-        \label{fig:name}
+        \includegraphics[width=0.8\linewidth]{qdm_vs_qdpm_dmr_gap.pdf}
+        \caption{Here we show the finite size scaling of the dimer gap for both the QDM and the
+        QDPM.}
+        \label{fig:qdm_qdpm_gap}
     \end{figure}
 
-    \subsection{Imaginary time dimer correlations}
-    \begin{figure}[htpb]
-        \centering
-        \includegraphics[width=0.8\linewidth]{dimer_origin_time_cor.pdf}
-        \caption{Imaginary time dimer correlations of a single dimer in the QDM model (red) and QDPM
-        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$. }
-        \label{fig:}
 
-    \end{figure}
+%    \subsection{Imaginary time vison correlations}
+%    \begin{figure}[htpb]
+%        \centering
+%        \includegraphics[width=0.8\linewidth]{z2_origin_vison_time_cor.pdf}
+%        \caption{Imaginary time $z_2$ \textit{single} vison correlations at the origin in the QDM model (red) and QDPM
+%        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$.}
+%        \label{fig:name}
+%    \end{figure}
+%
+%    \subsection{Imaginary time dimer correlations}
+%    \begin{figure}[htpb]
+%        \centering
+%        \includegraphics[width=0.8\linewidth]{dimer_origin_time_cor.pdf}
+%        \caption{Imaginary time dimer correlations of a single dimer in the QDM model (red) and QDPM
+%        model (green) on an $8\times8$ lattice. For the QDPM the dimer/pentamer move fraction is $0.9$. }
+%        \label{fig:}
+%
+%    \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
