@@ -244,18 +244,18 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \mathrm{h.c.}
 \end{equation}
 
-    Now we will introduce the toric code on the square lattice in some detail to sever as a point of reference and
-    comparison for the following discussion of the $Z_3$ case. The toric code Hamiltonian is given by
+    Now we will introduce the toric code on the square lattice which will sever as a reference and
+    point of comparison to the discussion of the $Z_3$ case. The toric code Hamiltonian is given by
     %
     \begin{equation}
         H_t = -J_e\sum_v A_v - J_m\sum_p B_p
         \label{eqn:toric_code_ham}
     \end{equation}
     %
-    where the operator $A_v$ acts on the vertex $v$ and the sum over $v$ is the sum over all vertices. 
-    The operator $B_p$ acts on a plaquette $p$ and the sum over $p$ is the sum over all
-    plaquettes. In the $Z_2$ toric code, Ising degrees of freedom live on the links of the
-    lattice. Explicitly the operators $A_v$ and $B_p$ can be expressed as
+    where the operator $A_v$ ($B_p$) acts on the vertex $v$ (plaquette $p$), and the sum over $v$ ($p$) 
+    is the sum over all vertices (plaquettes). 
+    In the toric code, Ising degrees of freedom live on the links of the
+    lattice and the operators $A_v$ and $B_p$ can be expressed as
     %
     \begin{equation}
         A_v = \prod_{i\in v} \sigma^x_i
@@ -268,26 +268,25 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         .
     \end{equation}
     %
-    The products are over the links adjacent to vertex $v$ and on the edges of plaquette $p$ for
-    $A_v$ and $B_p$ respectively. Since all $A_v$ operators commute with each other, all
-    $B_p$ operators commute with each other and $A_v$ commutes with $B_p$ even if they share
-    links (commute because they
-    can only share an even number of links) then the Hamiltonian can be solved term by term.
+    The products are over the links touching vertex $v$ and the edges of plaquette $p$ for
+    $A_v$ and $B_p$ respectively. It is not difficult to show that 
+    $[A_v,A_{v'}]=0$ for all $v$ and $v'$, 
+    $[B_p,B_{p'}]=0$ for all $p$ and $p'$, and $[A_v,B_p]=0$. The comutation relation between $A$
+    and $B$ holds even if they share links because they
+    can only share an even number of links. Given the commutation relations,
+    the toric Hamiltonian can be solved term by term.
 
-    Without a rigorous solution it is possible to guess at the form of the Toric code
-    ground state wave function. The first term in \ref{eqn:toric_code_ham} is maximized ($H_t$
-    minimized) when an even number of links touching a vertex are spin up or down in the
+    Even without a rigorous solution it is possible to guess at the form of the Toric code
+    ground state wave function. The first term in \ref{eqn:toric_code_ham} is maximized 
+    when an even number of links touching each vertex are spin up or down in the
     $\sigma^z$ basis. By coloring the links of all down spins the groundstate will
     contain closed loops. The second term in \ref{eqn:toric_code_ham} is maximized for a
     superposition of loops since $B_p$ flips the spins around a plaquette $p$. The ground state
     wave function is then a superposition of all possible closed loop configurations. 
     %Since $B_p$ is a local operator
     %though the alowed loop configurations are determined by how the sytem in initilized.
-    
-    NEED HERE Some stuff about plaquette flux ?? -> $B_p | \Psi \rangle = | \Psi \rangle$ -> only true if
-    grnd state as no vortices
 
-    NEED HERE String operators. The electric and magnetic string operators are respectively
+    The electric and magnetic string operators are
     \begin{equation}
         S^e_{\Gamma} = \prod_{i\in\Gamma_e} \sigma^x_i
         ,
@@ -296,26 +295,30 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         S^m_{\Gamma} = \prod_{i\in\Gamma_m} \sigma^z_i
         ,
     \end{equation}
-    where the path is denoted by $\Gamma$. The path of the electric string operator is along the
-    links of the lattice and if this path is not closed then the operator
-    creates a pair of excitations. These excitations are defects in the system 
-    that can be thought of as electric charges that live at the
-    end of the unclosed string. Each of these electric defects has an energy costs of $2J_e$. 
-    The path of the magnetic string operator runs perpendicular to the links
-    and starts and ends on the dual lattice. An unclosed magnetic path results in two magnetic
-    excitations on the at the ends of the magnetic string each costing $2J_m$ each. 
+    where the path is denoted by $\Gamma$. The electric string operator acts along the
+    links whereas the magnetic string operator acts along a path that perpendicularly
+    intersects the links. 
+    Electric and magnetic excitations are created when the string operator acts on an unclosed path. 
+    The electric excitations create monomer defects in the lattice at the end of the string, 
+    each of defects costing energy of $2J_e$. 
+    The magnetic excitations, which are 
+    are variational excited states  orthogonal
+    to the groundstate, create excitations at the ends in the ceter of two plaquettes.
+    Each end of the magnetic
+    string, a vison, costs energy of $2J_m$. 
 
-    Using a nontrivial path (genus of system $>0$) one can move between topological sectors using $S_e$ and determine
-    the topological sector the system is in using $S_m$. On a torus, acting with $S_e$ along a
-    path that encloses either the major or minor axis of the torus changes the topological sector.
-    In general there are $4^g$ topological sectors where $g$ is the
-    genus of the system. For a torus then there are four topological sectors. If These can be
-    measuerd using the $S_m$ operator on a ...
+    operating on a nontrivial path (genus of system $>0$) with $S_e$ changes the topological sector.
+    The current topological sector can be determined
+    by acting around the congugate path with $S_m$, e.g. on a torus, acting with $S_e$ along a
+    path that encloses the major or minor axis changes the topological sector and acting on a path
+    that encloses the minor axis with $S_m$ measures the topological sector.
+    As defined the magnetic string can only produce two different values called winding number.
+    Therefore, there are $4^g$ topological sectors on the torus where $g$ is the
+    genus of the system. 
 
 
-
-
-    \subsection{$Z_3$ Toric Code}
+    \subsection{$Z_3$ Toric Code on the Square Lattice}
+        In the $Z_3$ toric three degrees of freedom live on each link.
         We can represent the $Z_3$ algebra through the following expressions
         %
         %Z_N
@@ -341,10 +344,10 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             %\label{eqn:}
         \end{equation}
         %
-        where the operators $E_l$ and $A_l$ act on a given link $l$ and are analogous to the electric field and vector potential
-        respectively. 
-        By assigning orientations to the links between two vertices we can define 3 unique
-        link ``values'' pictorially. 
+        where the operators $E_l$ and $A_l$ act on a given link $l$ and are analogous to the 
+        electric field and vector potential respectively. 
+        By assigning orientations to the links between two vertices we can define the three degrees of
+        freedom pictorially. 
         %
         \begin{itemize}
             \item $\vvemptylink$ 
@@ -352,7 +355,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \item $\leftarrowlink$ 
         \end{itemize}
         % 
-        In this way we can define $e^{iA_l}$ as the operator $Q$ which acts on the links in the
+        To simplify notation, we define $e^{iA_l}$ as the operator $Q$ which acts on the links in the
         following way
         \begin{equation}
             \begin{split}
@@ -363,13 +366,15 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
                 ,
                 \\
                 & Q^\dagger_{vv'}  | \leftarrowlink \rangle = | \emptylink \rangle
-                ,
+                .
             \end{split}
             %\label{eqn:}
         \end{equation}
-        where the link is specified by the two vertices it connects and the operator
-        $Q^\dagger_{vv'}$ acts in a direction from vertex $v$ to vertex $v'$. By changing the
-        direction in which $Q$ operates we can express it in terms of its hermitian conjugate. 
+        The link is specified by the two vertices it connects. The operator
+        $Q^\dagger_{vv'}$ acts in the direction from the first subscript to the second subscript, in
+        this case denoted as $v$ and $v'$. 
+        Changing the direction in which $Q$ operates is equivalent to taking the hermitian conjugate
+        of the operator withougt changing the direction.  
         %
         \begin{equation}
             (Q^\dagger_{vv'})^\dagger = Q_{vv'}^\dagger
@@ -377,7 +382,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             %\label{eqn:}
         \end{equation}
 
-        The operator $E$ The operator $E_{vv'}$ can be defined in a similar way as
+        We now define an operator $E_{vv'}$ in a similar way, 
         %
         \begin{equation}
             \begin{split}
@@ -392,7 +397,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \end{split}
             %\label{eqn:}
         \end{equation}
-        and with it we can define.
+        and with it define the last important operator that acts on the links. 
         %
         \begin{equation}
             P_{vv'}^\dagger \equiv e^{i2\pi E_{vv'}/3}
@@ -400,7 +405,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             %\label{eqn:}
         \end{equation}
         %
-        Now how $P_{vv'}^\dagger$ acts on the links: 
+        $P_{vv'}^\dagger$ acts on the links in the following way: 
         %
         \begin{equation}
             \begin{split}
@@ -417,16 +422,15 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         \end{equation}
         %
 
-        The $Z_3$ toric code Hamiltonian can now be written in terms of the $P$ and $Q$ operators. The
-        usual string net Hamiltonian is written as 
+        With the above definitions the $Z_3$ toric code Hamiltonian can be written in terms of the $P$ and $Q$ operators.
+        In general a string net Hamiltonian might be written as 
         \begin{equation}
             H = - J_e \sum_v A_v - J_m \sum_p B_p
             %\label{eqn:}
         \end{equation}
-        where the sum over $v$ and the sum over $p$ are the sums over all vertices and plaquettes on
-        the lattice respectively and 
+        where 
         \begin{equation}
-            A_v = \prod_{i\in v} P^\dagger_{vv_i}~,~ B_p \prod_{i\in p} Q^\dagger_{v_iv_{i+1}}
+            A_v = \prod_{i\in v} P^\dagger_{vv_i}~,~ B_p = \prod_{i\in p} Q^\dagger_{v_iv_{i+1}}
             .
             %\label{eqn:}
         \end{equation}
@@ -439,9 +443,9 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \label{fig:vertex_link_labels}
         \end{figure}
         %
-        For the ground state of this Hamiltonian there is a local symmetry corresponding to the
-        minimization of the first term. The model has an exactly local gauge symmetry that can be
-        expressed as
+        For the ground state of this Hamiltonian there is aa local symmetry corresponding to the
+        minimization of the first term. This local symmetry is a gauge symmetry that can be
+        expressed in terms of the gauge operator.
         \begin{equation}
             G_v | \psi \rangle= | \psi \rangle
             %\label{eqn:}
@@ -449,12 +453,9 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         where $G_v$ = $A_v$.
 
 
-        \subsubsection{Hamiltonian Gauge symmetry }
-
-
-        \subsubsection{String operators}
-            With the above notation we can write down the string operators. The electric string operator along
-            the path $\Gamma_{v_b v_e}$ between the two vertices $v_0$ (beginning) and $v_N$ (end) is written
+        \subsubsection{$Z_3$ String operators}
+            With the above notation we can now write down the $Z_3$ string operators. The electric string operator along
+            the path $\Gamma$ is written
             %
             \begin{equation}
                 S^e_{\Gamma} = \prod_{l=0}^{N-2} Q_{v_lv_{l+1}}^\dagger
@@ -463,7 +464,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \end{equation}
             %
             where $v_l \in \Gamma$ and $N$ is the number of vertices in $\Gamma$. We show an example of an
-            electric string operator operation on an example configuration in Fig.~\ref{fig:example_elec_string}.
+            electric string operator operatiing on an example configuration in Fig.~\ref{fig:example_elec_string}.
             %
             %
             \begin{figure}[htpb]
@@ -477,7 +478,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             %
             The magnetic string operator can be written as
             \begin{equation}
-                S^m_{\Gamma} = \prod_{l=0}^{N-1} Q_{v_{2l}v_{2l+1}}^\dagger
+                S^m_{\Gamma} = \prod_{l=0}^{N-1} P_{v_{2l}v_{2l+1}}^\dagger
                 %\label{eqn:}
             \end{equation}
             %
@@ -499,7 +500,6 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \end{figure}
             %
             The magnetic string operator acting on path $\Gamma$ in Fig.~\ref{fig:example_mag_string} is
-            explicitly
             %
             \begin{multline}
                 S^m_{\Gamma} (\mathrm{~Fig.~\ref{fig:example_mag_string}~config})
@@ -511,38 +511,35 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \end{multline}
             %
 
-            An interesting property of the electric string string operators in the $Z_3$ toric code is
-            that they produce two defects, one having positive charge and the other having negative
-            charge. This is most easily see by looking at Fig.~\ref{fig:example_elec_string}. The
-            configuration in Fig.~\ref{fig:example_elec_string}(a) obeys the local gauge symmetry and
-            when the electric string operator acts on path $\Gamma$ it results in two defects at the
-            end points of $\Gamma$. At the first $v_0$ (red) the local constraint is broken and
-            $G_{v_0} = e^{i2\pi /3}$ as shown in Fig.~\ref{fig:example_elec_string}(b), whereas
-            $G_{v_3} = e^{-i2\pi /3}$ which can be thought of as negative and positive gauge charges
-            at $v_0$ and $v_3$ respectively.
+            An interesting property of the electric string operator in the $Z_3$ toric code is
+            that an unclosed string produces two different defects. 
+            An example of an open string and the defects is shown in Fig.~\ref{fig:example_elec_string}. The
+            configuration in Fig.~\ref{fig:example_elec_string}(a) obeys the local gauge symmetry
+            aside from the endpoints of the path that it acts on ($\Gamma$). The two defects at the
+            end points produce two different values when the vertecies are operated on by $G_v$, being
+            $G_{\mathrm{red}} = e^{i2\pi /3}$, and $G_{\mathrm{blue}} = e^{-i2\pi /3}$. 
 
-            The magnetic excitations, or $Z_3$ visons live at the endpoints of a path created with the magnetic
-            string operator. These visons can take three different values which can be changed by
-            operating with the electric operator on a path that encircles one endpoint of the
-            magnetic string path. 
+            The magnetic excitations, or $Z_3$ visons live at the endpoints of the magnetic
+            strings.  These visons can change the phase of a configuration by different values.
+            
 
 
-        \subsubsection{properties of $Z_3$ string operators}
+%        \subsubsection{properties of $Z_3$ string operators}
 
         \subsubsection{Winding Numbers}
 
-            The ground state of the $Z_3$ toric code on the torus is nine-fold degenerate because of
-            the nine different topological sectors in this topology. One can move between the
-            topological sectors with a nontrivial closed electric string wraps around either
-            the major axis or the minor axis of the torus. We will call the electric winding
+            The ground state of the $Z_3$ toric code has nine-fold topological degeneracy because of
+            the $3\times3$ different topological sectors. As the case of the toric code the $Z_3$
+            electric string changes the topological sector when acting on on a nontrivial closed
+            path. We call the electric winding
             operator that acts around the major axis $W^e_y$ and around the minor axis $W^e_x$.
-            A given topological sector can be distinguish 
-            by acting around the minor and major axes with the magnetic string operator $W^m_y$ and
-            $W^m_x$. All of the aforementioned winding operators commute with the Hamiltonian and
+            The topological sector can be determined 
+            by acting around the axes with the magnetic string operator, called $W^m_y$ and
+            $W^m_x$. All of the winding commute with the Hamiltonian and
             therefore share the same eigenvalues. The operator $W^m_{x}$ ($W^m_{y}$) can 
             have three different values depending on how many electric strings enclose the minor
-            (major) axis. Since there are three different
-            possible values for each winding number around each axis there are nine distinct
+            (major) axis. The three different
+            possible values for each winding number around each axis gives the model nine distinct
             topological sectors.
 
             \begin{figure}[htpb]
@@ -590,8 +587,10 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         \end{equation}
         This model can be defined in terms of a single parameter $t/v$ for which the wave function is
         known exactly at the Rokhsar and Kivelson (RK) point, the point where $t/v =1$. At the RK
-        point the wave function is the equal weighted superposition over all dimer configurations.
-        HERE
+        point the wave function is the equal weighted superposition over all dimer configurations
+        and known to be in a critical liquid state with powerlaw decaying dimer correlations. This
+        model has an exact local $U(1)$ gauge symetry and is known to be described by a $U(1)$ gauge
+        thoery.
 
 
 
@@ -734,7 +733,7 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
     where $d_i$ is the ising degrees of freedom on link i.
     In order for the QDPM to exhibit topological order there we must find that it is in a gaped
     dimer liquid phase. It is likely that the QDPM in a liquid phase at the RK point because there 
-    we find no evedence of broken symmetries in the system sizes up to $32x32$. As an example of the
+    we find no evedence of broken symmetries for system sizes up to $32\times32$. As an example of the
     absence of broken symmetries we show
     the dimer correlation function measuered between a single dimer and all other dimers on the
     lattice in Fig.~\ref{fig:fig:dimer_gry_scale_qdpm} for a $16x16$ lattice.
@@ -749,8 +748,8 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         \label{fig:dimer_gry_scale_qdpm}
     \end{figure}
 
-    We also find exponetialy decaying dimer correlations 
-    In Fig.~\ref{fig:fig:spacial_dmr_cor} we show the dimer correlations between horizontal dimers
+    The dimer correlations decay exponetialy in the distance between the dimers. 
+    In Fig.~\ref{fig:spacial_dmr_cor} we show the dimer correlations between horizontal dimers
     in a vertical column. We find the correlation length to be $HERE$.
     \begin{figure}[htpb]
         \centering
@@ -761,14 +760,14 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
         \label{fig:spacial_dmr_cor}
     \end{figure}
 
-    \subsection{Comparison to other models}
+    \subsection{Comparison to other models???}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Estimating the Gap}
     The exponetial decay of the spacial correlations shown in the previous sections 
-    suggest a gap in the spectrum though it is important to determine if the lowest lying
-    excitations are in the vison-like
+    implieds a gap in the spectrum though it is important to determine if the lowest lying
+    excitations are vison-like
     or the dimer-like.  The energy gap of the dimer-like and vison-like excitations can be estimated 
     by investigating the dimer and
     vison imaginary time correlations respectivly as outlined by Henley \cite{Henley2004a}. 
