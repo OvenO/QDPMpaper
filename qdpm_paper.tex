@@ -1,5 +1,6 @@
 \documentclass[twocolumn,prb,aps,floatfix,superscriptaddress]{revtex4-1}
 
+\usepackage{color}
 \usepackage{bm}%bold math
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -185,7 +186,7 @@ Over the last several decades, experimental and theoretical work has demonstrate
 
 Because of the exotic nature of topological phases and their potential use for quantum information processing, there is great interest in the development of theoretical models which display these phases. Such models offer the possibility of furthering the understanding of these phases as well as providing possibly candidate experimental systems in which to constructively engineer topological order~\cite{Duan2003,Jaksch2005,Lewenstein2007,Jiang2008d,Weimer2010a,Herdman2010c,Martinis2015}. A variety of exactly soluble lattice models are known to support ground states with topological order that ranges from the simplest variety, so-called $Z_2$ topological order~\cite{Kitaev2003,Wen2003}, to those with non-Abelian anyonic excitations~\cite{Levin2005a,Kitaev2006a}. These exactly soluble models generally involve complex many-body interactions, and thus it is desirable to find simpler models supporting topological order that are closer to what is accessible experimentally.
 
-Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; the frustration inherent in these constraints inhibits the formation of symmetry breaking local order and given sufficient dynamics, such models may have symmetric liquid ground states. The simplest such geometrically constrained model is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
+Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; such constraints inhibit the formation of symmetry breaking local order and given sufficient dynamics, such models may have symmetric liquid ground states. The simplest such geometrically constrained model is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
 
 \begin{figure}[b!]
     \centering
@@ -198,11 +199,11 @@ While on non-bipartite lattices, the QDM posses a topologically ordered ground s
 
 The existence of topologically ordered ground states in dimer-based models is intimately related to the local constraint which imposes a local gauge symmetry in the low energy Hilbert space; the topological order that arises is directly related to a discrete gauge theory with the appropriate local gauge constraint~\cite{Moessner2001}.
 
-Given that these models with dimer degrees of freedom and local constraints posses the simplest non-trivial local (Ising) Hilbert space at each link, they provide a (possibly) simpler route to engineering exotic phases; the local constraints constraint can often be enforced by a local potential energy penalty and the required dynamics are generally expected to arise at the lowest order non-trivial order in perturbation theory. Previous work as demonstrated that GQDM on the square lattice support gapped $Z_2$ topologically ordered phases as well as gapless quantum critical points. On non-bipartite lattices GQDM supported $Z_2$ topological order~\cite{Moessner2001a,Misguich2002} as well as doubled-semion phases~\cite{Qi2014,Buerschaper2014a}. A full characterization of all exotic phases that can exist within this framework is thus desirable.
+Given that these models with dimer degrees of freedom and local constraints posses the simplest non-trivial local (Ising) Hilbert space at each link, they provide a potentially simpler route to engineering exotic phases; the local constraints can often be enforced by a local potential energy penalty and the required dynamics are generally expected to arise at the lowest order non-trivial order in perturbation theory. We will refer to such models with dimer degrees of freedom on links and local constraints at vertices as \emph{generalized quantum dimer modes} (GQDMs). Previous work as demonstrated that GQDMs on the square lattice support gapped $Z_2$ topologically ordered phases as well as gapless quantum critical points. On non-bipartite lattices, GQDMs support $Z_2$ topological order~\cite{Moessner2001a,Misguich2002} as well as doubled-semion phases~\cite{Qi2014,Buerschaper2014a}. A full characterization of all exotic phases that can exist within this framework is thus desirable.
 
-In this work we extend this paradigm to a new GQDM on the square lattice, what we term the quantum dimer-pentamer model (QDPM). In the QDPM, the local constraint is relaxed from that of the QDM to require that either $1$ or $4$ dimers to touching each vertex, as shown in figure \figref{fig:QDPMex}. Correspondingly, the QDPM extends the Hilbert space of the QDM to include both fully-packed hard-core dimer configurations, as well as those pentamers, four dimers touch a vertex. To give the system dynamics, the Hamiltonian includes terms that incorporate the simplest non-trivial dynamics that don't violate the local constraint.
+In this work we extend this paradigm to a new GQDM on the square lattice, what we term the \emph{quantum dimer-pentamer model} (QDPM). In the QDPM, the local constraint is relaxed from that of the QDM to allow either $1$ or $4$ dimers to touch each vertex, as shown in figure \figref{fig:QDPMex}. Correspondingly, the QDPM extends the Hilbert space of the QDM to include both fully-packed hard-core dimer configurations, as well as those with pentamers--four dimers touching a vertex. To give the system dynamics, the Hamiltonian includes terms that incorporate the simplest non-trivial dynamics that preserve the local constraint.
 
-We present a numerical study of the ground state of the QDPM at an exactly soluble point and demonstrate the the soluble point represents a gapped, disordered quantum liquid phase.  Using Monte Carlo calculations, we explicitly demonstrate the absence of symmetry breaking order and the exponential decay of correlation functions; by computing imaginary-time correlation functions, we find that the RK point is gapped in the thermodynamic limit. By construction the QDPM has an exact local $Z_3$ symmetry and conserves a $Z_3$ topological winding number. Thus the QDPM has a 9-fold topological degeneracy on the torus. Thus we argue that the ground state of the QDPM posses $Z_3$ topological order.
+We present a numerical study of the ground state of the QDPM at an exactly soluble point and demonstrate the the soluble point represents a \textcolor{red}{gapped}, disordered quantum liquid phase.  Using Monte Carlo calculations, we explicitly demonstrate the absence of symmetry breaking order and the exponential decay of correlation functions; \textcolor{red}{by computing imaginary-time correlation functions, we find that the RK point is gapped in the thermodynamic limit}. By construction the QDPM has an exact local $Z_3$ symmetry and conserves a $Z_3$ topological winding number. Thus the QDPM has a 9-fold topological degeneracy on the torus. Thus we argue that the ground state of the QDPM posses $Z_3$ topological order.
 
 This this paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:MC} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point.
 
@@ -222,18 +223,16 @@ This this paper is organized as follows. In \secref{sec:Background} we provide r
     \label{fig:example_local_constraints}
 \end{figure}
 
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. We can distinguish between number constraints of the form $n_v = n_0$ and parity constraints of the form $n_v \mod 2 = 0,1$. The unique, non-trivial constraints of this form are the number constraints $n_v=1,2$ and the parity constraints $n_v\mod2 =0,1$ and  $n_v\mod2 =1$ (see \figref{fig:GQDMexamples}).
-
-The presence of such local constraints implies all physical states in the Hilbert space are invariant under local gauge transformations at each vertex, $G_v$. 
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. We can distinguish between number constraints of the form $n_v = n_0$ and parity constraints of the form $n_v\mod 2 = 0,1$. The unique, non-trivial constraints of this form are the number constraints $n_v=1,2$ and the parity constraints $n_v\mod2 =0,1$ and  $n_v\mod2 =1$ (see \figref{fig:example_local_constraints}).
 
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
 H_{\rm{GQDM}} = -t \hat{T} + v \hat{V}
 \end{equation}
-where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $\hat{V}$ is a local potential energy term, and $v$ and $t$ parametrize the strength of each term. We will take the kinetic term $\hat{T}$ to be the dynamics which preserved the constraint; for example in the QDM $\hat{T}$ is the sum of all possible ``plaquette" flip terms acting on plaquettes with parallel dimers.
+where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $\hat{V}$ is a diagonal potential energy term, and $v$ and $t$ parametrize the strength of each term. In the simplest case, $\hat{T}$ involves the minimum non-trivial dynamics that preserve the constraint. For example in the QDM $\hat{T}$ is the sum of all possible ``plaquette flip" terms acting on plaquettes with parallel dimers:
 \begin{equation}
     \label{}
-    \hat{T} = \sum_{\bplqt} 
+    \hat{T}_{\rm{QDM}} = \sum_{\bplqt} 
             \left|
                 \vrtplqt
             \right\rangle
@@ -241,8 +240,25 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
                 \hrzplqt
             \right|
             +
-            \mathrm{h.c.}
+            h.c..
 \end{equation}
+
+
+Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001}. For GQDM with a number constraint, we write the gauge transformation as:
+\begin{equation}
+G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
+\end{equation}
+as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. When the number constraint is relaxed to a parity constraint, there is a correspondingly reduced gauge symmetry which can be written as
+\begin{equation}
+G_v^e = e^{\pm i \pi n_v}, \quad G_v^o = e^{\pm i \pi \left(n_v-1\right)}, \notag
+\end{equation}
+where $G^{e\left(o\right)}_v$ is the transformation for the even (odd) parity constraint; the gauge symmetry is now reduced to to $Z_2$.
+By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
+\begin{equation}
+\left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
+\end{equation}
+
+
 
     Now we will introduce the toric code on the square lattice which will sever as a reference and
     point of comparison to the discussion of the $Z_3$ case. The toric code Hamiltonian is given by
