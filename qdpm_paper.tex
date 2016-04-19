@@ -157,7 +157,11 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/vrtplqt.pdf} }
 }
-
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\eket}[1]{\left | #1 \right \rangle}
+\newcommand{\ebra}[1]{\left \langle #1 \right |}
+\newcommand{\Eqref}[1]{Eq. \eqref{#1}}
+\newcommand{\RK}{\mathrm{RK}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
@@ -188,7 +192,7 @@ Because of the exotic nature of topological phases and their potential use for q
 
 Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; such constraints inhibit the formation of symmetry breaking local order and given sufficient dynamics, such models may have symmetric liquid ground states. The simplest such geometrically constrained model is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
 
-\begin{figure}[b!]
+\begin{figure}[t!]
     \centering
     \includegraphics[width=0.5\columnwidth]{QDPM_ex_config.pdf}
     \caption{Example of an allowed configuration in the quantum dimer-pentamer model.}
@@ -219,17 +223,65 @@ This this paper is organized as follows. In \secref{sec:Background} we provide r
     \centering
     \includegraphics[width=0.8\linewidth]{example_local_constraints.pdf}
     \caption{Clockwise from the upper left panel we show an example of a QDM with constraints: one
-    dimer, two dimers, an even number of dimers, and and odd number of dimers touching each vertex.}
+    dimer ($n_0 = 1$), two dimers ($n_0 = 2$), and an even ($n_P = 0$) or odd ($n_P = 1$) number of dimers touching each vertex.}
     \label{fig:example_local_constraints}
 \end{figure}
 
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex; the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, where $n_v$ is the number of dimers that touch a vertex. We can distinguish between number constraints of the form $n_v = n_0$ and parity constraints of the form $n_v\mod 2 = 0,1$. The unique, non-trivial constraints of this form are the number constraints $n_v=1,2$ and the parity constraints $n_v\mod2 =0,1$ and  $n_v\mod2 =1$ (see \figref{fig:example_local_constraints}).
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. Defining $n_v$ as the number of dimers that touch a vertex, we can distinguish between fixed number constraints of the form $n_v = n_0$ and fixed parity constraints of the form $n_v\mod 2 = n_P$. The unique, non-trivial constraints of this form for the square lattice are the number constraints $n_0=1,2$ and the parity constraints $n_P =0,1$ (see \figref{fig:example_local_constraints}).
 
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
-H_{\rm{GQDM}} = -t \hat{T} + v \hat{V}
+H_{\rm{GQDM}} = -\sum_\nu t_\nu \hat{T}_{\nu} + \sum_\nu v_\nu \hat{V}_{\nu} \label{eq:HGQDM}
 \end{equation}
-where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $\hat{V}$ is a diagonal potential energy term, and $v$ and $t$ parametrize the strength of each term. In the simplest case, $\hat{T}$ involves the minimum non-trivial dynamics that preserve the constraint. For example in the QDM $\hat{T}$ is the sum of all possible ``plaquette flip" terms acting on plaquettes with parallel dimers:
+where $\hat{T}_\nu$ are off-diagonal kinetic energy operators, $\hat{V}_\nu$ are diagonal the potential energy operators, $t_\nu$ and $v_\nu$ parametrize the strength of these terms, and each $\nu$ and represents a set of $n_\nu$ neighboring links. $\hat{T}_\nu$ is constructed to favor a resonance between two distinct allowed dimerazations of $\nu$, $c_\nu$ and its compliment $\bar{c}_\nu$, and is written as:
+\begin{equation}
+\hat{T}_{\nu} = \eket{c_\nu}\ebra{\bar{c}_\nu} + h.c.;
+\end{equation}
+in the simplest case, $\hat{T_\nu}$ involves the minimum non-trivial dimer dynamics that preserve the constraint. Similarly, the potential energy term provides an energy cost for states with these local configurations:
+\begin{equation}
+\hat{V}_{\nu} = \eket{c_\nu}\ebra{c_\nu} +  \eket{\bar{c}_\nu}\ebra{\bar{c}_\nu}.
+\end{equation}
+In general the $T_\nu$'s don't commute with each other or with the $V_\nu$'s, and thus the ground state of $H_{\rm{GQDM}}$ is not explicitly known.
+
+However, at the special point where $t_\nu = v_\nu~\forall \nu$, $H_{\rm{GQDM}}$, known as the Rokhsar-Kivelson (RK) point, the exact ground state is known. This can be shown by writing \Eqref{eq:HGQDM} at the RK point as the sum of projection operators
+\begin{equation}
+H_{\rm{RK}} = 2 \sum_\nu \hat{h}_\nu \label{eq:HRK},
+\end{equation}
+where $\hat{h}_\nu \equiv \hat{P}^\dagger_{\nu} \hat{P}_{\nu}$ and $\hat{P}^\dagger_\nu$ is a vector orthogonal to the equal superposition of $c_\nu$ and $\bar{c}_\nu$
+\begin{equation}
+\hat{P}^\dagger_\nu \equiv \frac{1}{\sqrt{2}} \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
+\end{equation} 
+Since all $h_\nu$ are projectors with eigenvalues $\{0,1\}$, a zero energy ground state of \Eqref{eq:HRK} is simultaneously annihilated by all $\hat{h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
+\begin{equation}
+\eket{\Phi_{\RK}^{\Omega}} = \sum_{C \in \Omega} \eket{C}
+\end{equation} 
+where $\Omega$ is a subset of the Hilbert space connected by $\{T_\nu\}$. Thus $\{ \ket{\Phi_{\RK}^\Omega} \}$ are the exact, degenerate ground states of $H_{\rm{GQDM}}$ with a degeneracy labelled by $\Omega$ at the RK point.
+
+Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001}. For GQDM with a number constraint, we write the gauge transformation as:
+\begin{equation}
+G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
+\end{equation}
+as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. When the number constraint is relaxed to a parity constraint, there is a correspondingly reduced gauge symmetry which can be written as
+\begin{equation}
+G_v^P = e^{\pm i \pi \left(n_v-n_P\right)}, \notag
+\end{equation}
+and the gauge symmetry is now reduced to to $Z_2$.
+By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
+\begin{equation}
+\left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
+\end{equation}
+
+Given the gauge symmetry, one may construct a gauge invariant string operator along an oriented path $\Gamma$ path on the dual lattice
+\begin{equation}
+S_\Gamma \equiv \prod_{\ell \in \Gamma} e^{i \alpha_\ell n_\ell}
+\end{equation}
+where $\alpha_\ell$ is a phase that is associated with each link on the lattice, as well as the direction the link is crossed in $\Gamma$.
+
+\subsection{Square lattice QDM}
+
+the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, 
+
+For example in the QDM $\hat{T}$ is the sum of all possible ``plaquette flip" terms acting on plaquettes with parallel dimers:
 \begin{equation}
     \label{}
     \hat{T}_{\rm{QDM}} = \sum_{\bplqt} 
@@ -241,21 +293,6 @@ where $\hat{T}$ is an off-diagonal kinetic term that preserves the constraint, $
             \right|
             +
             h.c..
-\end{equation}
-
-
-Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001}. For GQDM with a number constraint, we write the gauge transformation as:
-\begin{equation}
-G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
-\end{equation}
-as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. When the number constraint is relaxed to a parity constraint, there is a correspondingly reduced gauge symmetry which can be written as
-\begin{equation}
-G_v^e = e^{\pm i \pi n_v}, \quad G_v^o = e^{\pm i \pi \left(n_v-1\right)}, \notag
-\end{equation}
-where $G^{e\left(o\right)}_v$ is the transformation for the even (odd) parity constraint; the gauge symmetry is now reduced to to $Z_2$.
-By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
-\begin{equation}
-\left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
 \end{equation}
 
 
