@@ -162,6 +162,9 @@
 \newcommand{\ebra}[1]{\left \langle #1 \right |}
 \newcommand{\Eqref}[1]{Eq. \eqref{#1}}
 \newcommand{\RK}{\mathrm{RK}}
+\newcommand{\HGQDM}{H_\mathrm{GQDM}}
+\newcommand{\HQDM}{H_\mathrm{QDM}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
@@ -182,9 +185,9 @@ We study the ground state of the quantum dimer-pentamer model (QDPM) on the squa
 
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Over the last several decades, experimental and theoretical work has demonstrated that strongly interacting quantum many-body systems support exotic quantum phases phases of matter not described by the Landau symmetry breaking paradigm. One class of such quantum phases of matter are topologically ordered quantum liquids~\cite{Wen1990}, first realized experimentally via the fractional quantum Hall effect~\cite{FQHE????}. Despite the absence of conventional symmetry breaking and a local order parameter, topological quantum liquids possess a non-trivial quantum order that distinguishes them from trivial liquid phases~\cite{Nayak2008}. Although not detectable by local operators, topological order arises due to a non-local entanglement structure that leaves a signatures in the bipartite entanglement entropy~\cite{Levin2006a,Kitaev2006b}. Such topological phases provide the basis for a proposal for fault-tolerant quantum information processing~\cite{Freedman2001,Kitaev2003}.
 
@@ -192,12 +195,14 @@ Because of the exotic nature of topological phases and their potential use for q
 
 Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; such constraints inhibit the formation of symmetry breaking local order and given sufficient dynamics, such models may have symmetric liquid ground states. The simplest such geometrically constrained model is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
     \centering
     \includegraphics[width=0.5\columnwidth]{QDPM_ex_config.pdf}
     \caption{Example of an allowed configuration in the quantum dimer-pentamer model.}
     \label{fig:QDPMex}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 While on non-bipartite lattices, the QDM posses a topologically ordered ground state~\cite{Moessner2001a,Fendley2002}, on the square lattice there is only a liquid ground state at an isolated critical quantum point~\cite{Leung1996,Syljuasen2006}. If the hard-core constraint of the QDM is relaxed to a parity constraint such that each vertex much have an even (odd) number of dimers touching each vertex, the simplest non-trivial dynamics lead to the (odd) toric code which has a $Z_2$ topologically ordered ground state~\cite{Kitaev2003,Wen2003}. 
 
@@ -212,13 +217,16 @@ We present a numerical study of the ground state of the QDPM at an exactly solub
 This this paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:MC} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 \label{sec:Background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Generalized quantum dimer models}
 \label{sec:GQDM}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.8\linewidth]{example_local_constraints.pdf}
@@ -226,8 +234,8 @@ This this paper is organized as follows. In \secref{sec:Background} we provide r
     dimer ($n_0 = 1$), two dimers ($n_0 = 2$), and an even ($n_P = 0$) or odd ($n_P = 1$) number of dimers touching each vertex.}
     \label{fig:example_local_constraints}
 \end{figure}
-
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. Defining $n_v$ as the number of dimers that touch a vertex, we can distinguish between fixed number constraints of the form $n_v = n_0$ and fixed parity constraints of the form $n_v\mod 2 = n_P$. The unique, non-trivial constraints of this form for the square lattice are the number constraints $n_0=1,2$ and the parity constraints $n_P =0,1$ (see \figref{fig:example_local_constraints}).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. Defining $n_v$ as the number of dimers that touch a vertex, we can distinguish between fixed number constraints of the form $n_v = n_0$ and fixed parity constraints of the form $n_v\mod 2 = n_P$ (see \figref{fig:example_local_constraints}).
 
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
@@ -257,45 +265,61 @@ Since all $h_\nu$ are projectors with eigenvalues $\{0,1\}$, a zero energy groun
 \end{equation} 
 where $\Omega$ is a subset of the Hilbert space connected by $\{T_\nu\}$. Thus $\{ \ket{\Phi_{\RK}^\Omega} \}$ are the exact, degenerate ground states of $H_{\rm{GQDM}}$ with a degeneracy labelled by $\Omega$ at the RK point.
 
-Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001}. For GQDM with a number constraint, we write the gauge transformation as:
+Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001} of the general form
 \begin{equation}
-G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
+G_v = e^{i \alpha \left( n_v -c_0 \right)}; \notag
 \end{equation}
-as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. When the number constraint is relaxed to a parity constraint, there is a correspondingly reduced gauge symmetry which can be written as
-\begin{equation}
-G_v^P = e^{\pm i \pi \left(n_v-n_P\right)}, \notag
-\end{equation}
-and the gauge symmetry is now reduced to to $Z_2$.
+where the $c_0$ and $\alpha$ depend on the constraint.  
 By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
 \begin{equation}
 \left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
 \end{equation}
 
-Given the gauge symmetry, one may construct a gauge invariant string operator along an oriented path $\Gamma$ path on the dual lattice
+The gauge symmetry allows one to construct a gauge invariant string operator $S_\gamma$ along an oriented path $\gamma$ path on the dual lattice. We first orient all the links of the square lattice such that they point from the $A$ sublattice to the $B$ sublattice (see \figref{fig:orientedSL}) and define an oriented dimer flux $\Phi_\gamma$ through the path:
 \begin{equation}
-S_\Gamma \equiv \prod_{\ell \in \Gamma} e^{i \alpha_\ell n_\ell}
+\Phi_\gamma \equiv \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) n_\ell
 \end{equation}
-where $\alpha_\ell$ is a phase that is associated with each link on the lattice, as well as the direction the link is crossed in $\Gamma$.
-
-\subsection{Square lattice QDM}
-
-the simplest constraint is that of the hard-core fully-packed QDM where a single dimer must touch each vertex. We write this constraint as $n_v = 1$, 
-
-For example in the QDM $\hat{T}$ is the sum of all possible ``plaquette flip" terms acting on plaquettes with parallel dimers:
+where $\mathrm{sgn}(\ell,\gamma)$ is positive (negative) if $\ell$ is oriented to the right with respect to the orientation of $\gamma$. The string operator is defined as
 \begin{equation}
+S_\gamma \equiv e^{i \alpha \Phi_\gamma}
+\end{equation}
+where $\alpha$ such that $S_\gamma$ commutes with $\HGQDM$ everywhere except at the ends of $\gamma$. Therefore, for closed loops $\Gamma$, $[ S_\Gamma,\HGQDM]=0$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{QDPM_ex_config.pdf}
+    \caption{\textcolor{red}{Replace with a figure showing the orientations of the lattice links, with an open oriented string on the dual lattice as well as a closed oriented loop and topologically non-trivial loops.}The link orientations of the square lattice.}
+    \label{fig:orientedSL}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fixed number constraints}
+
+The two unique fixed-number constraints on the square lattice $n_0 = 1$ and $n_0=2$ lead to the QDM and the quantum full-packed loop model (QFPLM), respectively. For such GQDMs with a number constraint, we write the gauge transformation as:
+\begin{equation}
+G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
+\end{equation}
+as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. The Hamiltonian for these models gives dynamics to parallel dimers on the plaquettes of the lattice:
+\begin{align}
     \label{}
-    \hat{T}_{\rm{QDM}} = \sum_{\bplqt} 
-            \left|
-                \vrtplqt
-            \right\rangle
-            \left\langle
-                \hrzplqt
-            \right|
-            +
-            h.c..
+   \HQDM = &-t\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\hrzplqt} +h.c. \biggr) \notag\\
+    					&+v\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\vrtplqt} +\eket{\hrzplqt} \ebra{\hrzplqt} \biggr).
+\end{align}
+In this case of a fixed number constraint, the Hamiltonian conserves the dimer flux through a closed loop:
+\begin{equation}
+\left[ \Phi_\Gamma, \HQDM \right] = 0
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fixed parity constraints}
 
+When the number constraint is relaxed to a parity constraint, there is a correspondingly reduced gauge symmetry which can be written as
+\begin{equation}
+G_v^P = e^{\pm i \pi \left(n_v-n_P\right)}, \notag
+\end{equation}
+and the gauge symmetry is now reduced to to $Z_2$.
 
     Now we will introduce the toric code on the square lattice which will sever as a reference and
     point of comparison to the discussion of the $Z_3$ case. The toric code Hamiltonian is given by
