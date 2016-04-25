@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{bbold}
 \usepackage{setspace}
 \usepackage{epstopdf}
 \usepackage{scalerel}
@@ -254,21 +255,17 @@ Therefore we may define a Hamiltonian for a GQDM using \Eqref{eq:HGQDM} and defi
 \end{equation}
  In general the $T_\nu$'s don't commute with each other or with the $V_\nu$'s, and thus the ground state of $H_{\rm{GQDM}}$ is not explicitly known.
 
-However, at the special point where $t_\nu = v_\nu~\forall \nu$, $H_{\rm{GQDM}}$, known as the Rokhsar-Kivelson (RK) point, the exact ground state is known. This can be shown by writing \Eqref{eq:HGQDM} at the RK point as the sum of projection operators
+However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, the exact ground state is known when \Eqref{eq:HGQDM} can be written as the sum of projection operators
 \begin{equation}
-H_{\rm{RK}} = 2 \sum_\nu \hat{h}_\nu \label{eq:HRK},
+H_{\rm{RK}} = \sum_\nu \hat{h}_\nu \label{eq:HRK},
 \end{equation}
-where $\hat{h}_\nu \equiv \hat{P}^\dagger_{\nu} \hat{P}_{\nu}$ and $\hat{P}^\dagger_\nu$ is a vector orthogonal to the equal superposition of $c_\nu$ and $\bar{c}_\nu$
-\begin{equation}
-\hat{P}^\dagger_\nu \equiv \frac{1}{\sqrt{2}} \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
-\end{equation} 
-Since all $h_\nu$ are projectors with eigenvalues $\{0,1\}$, a zero energy ground state of \Eqref{eq:HRK} is simultaneously annihilated by all $\hat{h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
+where all $h_\nu$ are projectors with eigenvalues $\{0,1\}$; a zero energy ground state of \Eqref{eq:HRK} is simultaneously annihilated by all $\hat{h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
 \begin{equation}
 \eket{\Phi_{\RK}^{\Omega}} = \sum_{C \in \Omega} \eket{C}
 \end{equation} 
 where $\Omega$ is a subset of the Hilbert space connected by $\{T_\nu\}$. Thus $\{ \ket{\Phi_{\RK}^\Omega} \}$ are the exact, degenerate ground states of $H_{\rm{GQDM}}$ with a degeneracy labelled by $\Omega$ at the RK point.
 
-Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$~\cite{Moessner2001} of the general form
+Because of the local constraints, all states in the Hilbert space of a GQDM are invariant under local gauge transformations a the vertices, $G_v$ of the general form~\cite{Moessner2001}
 \begin{equation}
 G_v = e^{i \alpha \left( n_v -c_0 \right)}; \notag
 \end{equation}
@@ -277,20 +274,30 @@ By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
 \begin{equation}
 \left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
 \end{equation}
-If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM.
+If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM. One may determine if such electric charges are confined by introducing a pair of such defects and computing their spatial correlation function, thus determining the confined or deconfined nature of the GQDM ground state.
 
 The gauge symmetry allows one to construct a gauge invariant string operator $S_\gamma$ along an oriented path $\gamma$ path on the dual lattice. We first orient all the links of the square lattice such that they point from the $A$ sublattice to the $B$ sublattice (see \figref{fig:orientedSL}) and define an oriented dimer flux $\Phi_\gamma$ through the path:
 \begin{equation}
 \Phi_\gamma \equiv \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) n_\ell
 \end{equation}
-where $\mathrm{sgn}(\ell,\gamma)$ is positive (negative) if $\ell$ is oriented to the right with respect to the orientation of $\gamma$. The string operator is defined as
+where $\mathrm{sgn}(\ell,\gamma)$ is positive (negative) if $\ell$ is oriented to the right with respect to the orientation of $\gamma$. Additionally, we define background flux $\tilde{\Phi}_\ell$
 \begin{equation}
-S_\gamma \equiv e^{i \alpha \Phi_\gamma}
+\tilde{\Phi}_\gamma \equiv -\frac{c_0}{4} \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) 
 \end{equation}
-where $\alpha$ such that $S_\gamma$ commutes with $\HGQDM$ everywhere except at the ends of $\gamma$. Therefore, for closed loops $\Gamma$, $[ S_\Gamma,\HGQDM]=0$.
+and the total charge $Q_\Gamma$ enclosed in a closed loop $\Gamma$ as
+\begin{equation}
+Q_\Gamma \equiv \Phi_\Gamma+ \tilde{\Phi}_\Gamma.
+\end{equation}
+(Alternately can think of the source of $\Phi_\Gamma$ to be static charges of charge $+c_0$ ($-c_0$) sitting at the verticies of the $A$($B$) sub-lattice.).
+
+We define the string operator is defined as
+\begin{equation}
+S_\gamma \equiv e^{i \alpha \left( \Phi_\gamma - \tilde{\Phi}_\gamma \right)}
+\end{equation}
+where $\alpha$ such that $S_\gamma$ commutes with $\HGQDM$ everywhere except at the ends of $\gamma$. Therefore, for closed loops $\Gamma$, $[ S_\Gamma,\HGQDM]=0$. For open strings, $S_\gamma$ does not commute with the Hamiltonian and can be viewed as creating a pair of ``magnetic charges'' at the ends of the string: correspondingly $S_\gamma \ket{\Phi_{\RK}}$ can used as a trial wavefunction for an excited state with a pair of magnetic charges.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[htpb]
+\begin{figure}[tpb]
     \centering
     \includegraphics[width=0.5\columnwidth]{QDPM_ex_config.pdf}
     \caption{\textcolor{red}{Replace with a figure showing the orientations of the lattice links, with an open oriented string on the dual lattice as well as a closed oriented loop and topologically non-trivial loops.}The link orientations of the square lattice.}
@@ -307,7 +314,7 @@ G_v = e^{i \alpha \left( n_v -n_0 \right)}; \notag
 \end{equation}
 as the states in the GQDM Hilbert space are invariant under $G_v$ for all $0 \leq \alpha \leq 2 \pi$, this represents a local $U(1)$ gauge symmetry. The Hamiltonian for these models gives dynamics to parallel dimers on the plaquettes $\bplqt$ of the lattice:
 \begin{equation}
-\HQDM\left(t,v\right) \equiv \HGQDM \biggl( \bigl\{ \left(\vrtplqt,\hrzplqt\right) \bigr\},\bigl\{ \left(t,v\right) \bigr\} \biggr)
+\HQDM\left(t,v\right) \equiv \HGQDM \biggl( \bigl\{ \left(\vrtplqt,\hrzplqt\right) \bigr\},\bigl\{ \left(t,v\right) \bigr\} \biggr)  \label{eq:HQDM}
 \end{equation}
 where we have taken $t_\bplqt = t$ \& $v_\bplqt =v$ $\forall \bplqt$.
 %\begin{align}
@@ -315,6 +322,7 @@ where we have taken $t_\bplqt = t$ \& $v_\bplqt =v$ $\forall \bplqt$.
 %   \HQDM = &-t\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\hrzplqt} +h.c. \biggr) \notag\\
 %    					&+v\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\vrtplqt} +\eket{\hrzplqt} \ebra{\hrzplqt} \biggr). \label{eq:HQDM}
 %\end{align}
+
 In this case of a fixed number constraint, the Hamiltonian conserves the dimer flux through a closed loop:
 \begin{equation}
 \left[ \Phi_\Gamma, \HQDM \right] = 0
@@ -323,17 +331,15 @@ and therefore we can define two conserved topological winding numbers $\Phi_{x}$
 \begin{equation}
 -L_{x/y}/2 \leq  \Phi_{x/y} \leq L_{x/y}/2,
 \end{equation}
-thus there are $\mathcal{O} (L_x L_y)$ distinct topological sectors. Since the plaquette flip term in \Eqref{eq:HQDM} is ergodic in each of these topological sectors on the square lattice~\cite{????}, each of these topological sectors corresponds to a unique RK ground state where $\Omega$ is labeled by $(\Phi_x,\Phi_y)$.
+thus there are $\mathcal{O} (L_x L_y)$ distinct topological sectors. 
 
-To understand defects in these models, we define background flux $\tilde{\Phi}_\ell$
+At the Rokhsar-Kivelson point $t=v$, we may write $\HQDM$ in the form of \Eqref{eq:HRK} by defining projection operators  $\hat{h}_\nu \equiv \hat{P}^\dagger_{\nu} \hat{P}_{\nu}$, with
 \begin{equation}
-\tilde{\Phi}_\gamma \equiv -\frac{n_0}{4} \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) 
-\end{equation}
-and the total charge $Q_\Gamma$ enclosed in a closed loop $\Gamma$ as
-\begin{equation}
-Q_\Gamma \equiv \Phi_\Gamma+ \tilde{\Phi}_\Gamma.
-\end{equation}
-(Alternately can think of the source of $\Phi_\Gamma$ to be static charges of charge $+n_0$ ($-n_0$) sitting at the verticies of the $A$($B$) sub-lattice.) In this language, the gauge constraint requires each vertex to have $Q_v = 0$; thus defects which violate the constraint have $Q_v \neq 0$. A table of the charges associated with defects in the QDM and QFPLM is listed in Table \ref{tab:defects}.
+\hat{P}^\dagger_\nu \equiv \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
+\end{equation} 
+Since the plaquette flip term in \Eqref{eq:HQDM} is ergodic in each of topological sector $(\Phi_x,\Phi_y)$ on the square lattice (\textcolor{red}{is this known for the FPLM???})~\cite{????}, each topological sector corresponds to a unique RK ground state where $\Omega$ is labeled by $(\Phi_x,\Phi_y)$. Thus the equal superposition RK points of the QDM and QFPLM have an \emph{extensively} degenerate ground states.
+
+The gauge constraint requires each vertex to have $Q_v = 0$; thus defects which violate the constraint have $Q_v \neq 0$. A table of the charges associated with defects in the QDM and QFPLM is listed in Table \ref{tab:defects}.
 
 The QDM and QFPLM on the square lattice have isolated liquid ground states at the RK point surrounded by symmetry broken phases~\cite{Rokhsar1988,Leung1996,Syljuasen2005,Syljuasen2006,Syljuasen2004,Moessner2008}. The RK point of these models have been shown to have power-law decaying dimer-dimer and monomer-monomer correlation functions and gapless excitations~\cite{Fisher1961,Kasteleyn1961,Fisher1966a,Fisher1963,Kasteleyn1963a,Sutherland1988b,Sutherland1988a,Kohmoto1988a,Liang1988,Sutherland1988,Kohmoto1988,Levitov1990,Leung1996,Henley1997,Henley1997,Henley2004a,Pollmann2006}. Thus, such fixed number constrained models on bipartite lattices are expected to have an isolated unstable gapless critical quantum liquid points with logarithmically confined defect and an extensive topological degeneracy. These features of fixed number constrained models are consistent with the effective U(1) gauge theory description of the RK point~\cite{Fradkin2004,Fradkin1990,Moessner2001}; in 2+1D pure U(1) gauge theories are always confining and thus the lack of an extended deconfined topologically ordered phase near the RK point~\cite{PolyakovBook}.
 
@@ -366,88 +372,28 @@ We now consider relaxing the local constraint to a parity constraint such that $
 \begin{equation}
 G_v^P = e^{\pm i \pi \left(n_v-n_P\right)}, \notag
 \end{equation}
-and the gauge symmetry is now reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{TC}}$ is expanded accordingly \textcolor{red}{Owen: Add symbols for 4-0 resonance, and 1-3 resonances and 2-2 resonsnce}:
-\begin{equation}
-\mathcal{C}_{\rm{TC}} \equiv \bigl\{ \left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right) \bigr\}
-\end{equation}
+and the gauge symmetry is now reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{TC}}$ is expanded accordingly \textcolor{red}{Owen: Add symbols for 4-0 resonance, and 1-3 resonances and 2-2 resonance}:
+\begin{align}
+\mathcal{C}_{\rm{TC}} &\equiv \bigl\{ \left(c_{\Box,i},\bar{c}_{\Box,i}\right) \bigr\} \\
+&=\bigl\{ \left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right) \bigr\}
+\end{align}
 where we implicitly include rotational symmetry related resonances. We will limit or discussion to $v_\bplqt=0$ such that the corresponding Hamiltonian is
 \begin{equation}
 \HTC\left(t\right) \equiv \HGQDM \biggl( \mathcal{C}_{\rm{TC}},\bigl\{ \left(t,0\right) \bigr\} \biggr).
 \end{equation}
-In this case the equal superposition RK wavefunction is the exact ground state occurs in the absence of a potential energy term.
+In this case the equal superposition RK wavefunction is the exact ground state occurs in the absence of a potential energy term, as we can define a projection operator on each plaquette
+\begin{equation}
+h_\Box \equiv \frac{1}{2} \left( \mathbb{1} - \sum_i \eket{c_{\Box,i}}\ebra{\bar{c}_{\Box,i}} + h.c. \right)
+\end{equation}
+such that $\HTC$ takes the form of \Eqref{eq:HRK} (up to a constant), and the RK state is the ground state for all values of $t$.
 
-    Now we will introduce the toric code on the square lattice which will sever as a reference and
-    point of comparison to the discussion of the $Z_3$ case. The toric code Hamiltonian is given by
-    %
-    \begin{equation}
-        H_t = -J_e\sum_v A_v - J_m\sum_p B_p
-        \label{eqn:toric_code_ham}
-    \end{equation}
-    %
-    where the operator $A_v$ ($B_p$) acts on the vertex $v$ (plaquette $p$), and the sum over $v$ ($p$) 
-    is the sum over all vertices (plaquettes). 
-    In the toric code, Ising degrees of freedom live on the links of the
-    lattice and the operators $A_v$ and $B_p$ can be expressed as
-    %
-    \begin{equation}
-        A_v = \prod_{i\in v} \sigma^x_i
-        ,
-    \end{equation}
-    %
-    and
-    \begin{equation}
-        B_p = \prod_{i\in p} \sigma^z_i
-        .
-    \end{equation}
-    %
-    The products are over the links touching vertex $v$ and the edges of plaquette $p$ for
-    $A_v$ and $B_p$ respectively. It is not difficult to show that 
-    $[A_v,A_{v'}]=0$ for all $v$ and $v'$, 
-    $[B_p,B_{p'}]=0$ for all $p$ and $p'$, and $[A_v,B_p]=0$. The comutation relation between $A$
-    and $B$ holds even if they share links because they
-    can only share an even number of links. Given the commutation relations,
-    the toric Hamiltonian can be solved term by term.
+The increased dynamics of $\HTC$ vs. $\HQDM$ no longer conserve the dimer flux $\Phi_\Gamma$ through a closed curve; only $\Phi_\Gamma \mod 2$ is preserved by $\HTC$. Consequently, the string operator which commutes with $\HTC$ (for closed strings) is
+\begin{equation}
+S_\gamma^{\rm{TC}} \equiv e^{i\pi \Phi_\gamma}.
+\end{equation}
+Thus for each topologically non-trival loop, $S_\Gamma$ has two eigenvalues $\pm 1$, and the topological sectors on the torus can be labeled as $\Omega: (\pm 1,\pm1)$. Thus the extensive degeneracy of the fixed number constrained models has been reduced to a finite ground state degeneracy in the fixed parity models.
 
-    Even without a rigorous solution it is possible to guess at the form of the Toric code
-    ground state wave function. The first term in \ref{eqn:toric_code_ham} is maximized 
-    when an even number of links touching each vertex are spin up or down in the
-    $\sigma^z$ basis. By coloring the links of all down spins the groundstate will
-    contain closed loops. The second term in \ref{eqn:toric_code_ham} is maximized for a
-    superposition of loops since $B_p$ flips the spins around a plaquette $p$. The ground state
-    wave function is then a superposition of all possible closed loop configurations. 
-    %Since $B_p$ is a local operator
-    %though the alowed loop configurations are determined by how the sytem in initilized.
-
-    The electric and magnetic string operators are
-    \begin{equation}
-        S^e_{\Gamma} = \prod_{i\in\Gamma_e} \sigma^x_i
-        ,
-    \end{equation}
-    \begin{equation}
-        S^m_{\Gamma} = \prod_{i\in\Gamma_m} \sigma^z_i
-        ,
-    \end{equation}
-    where the path is denoted by $\Gamma$. The electric string operator acts along the
-    links whereas the magnetic string operator acts along a path that perpendicularly
-    intersects the links. 
-    Electric and magnetic excitations are created when the string operator acts on an unclosed path. 
-    The electric excitations create monomer defects in the lattice at the end of the string, 
-    each of defects costing energy of $2J_e$. 
-    The magnetic excitations, which are 
-    are variational excited states  orthogonal
-    to the groundstate, create excitations at the ends in the ceter of two plaquettes.
-    Each end of the magnetic
-    string, a vison, costs energy of $2J_m$. 
-
-    operating on a nontrivial path (genus of system $>0$) with $S_e$ changes the topological sector.
-    The current topological sector can be determined
-    by acting around the congugate path with $S_m$, e.g. on a torus, acting with $S_e$ along a
-    path that encloses the major or minor axis changes the topological sector and acting on a path
-    that encloses the minor axis with $S_m$ measures the topological sector.
-    As defined the magnetic string can only produce two different values called winding number.
-    Therefore, there are $4^g$ topological sectors on the torus where $g$ is the
-    genus of the system. 
-
+Defects at a vertex in the Toric Code models carry a $Z_2$ electric charge of $-1$, consistent with the $Z_2$ gauge theory description of the models.
 
     \subsection{$Z_3$ Toric Code on the Square Lattice}
         In the $Z_3$ toric three degrees of freedom live on each link.
