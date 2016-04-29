@@ -808,25 +808,26 @@ Defects at a vertex in the Toric Code models carry a $Z_2$ electric charge of $-
         C_{\mathrm{dimer}} = \langle d_0 d_r \rangle - \langle d_0 \rangle   \langle d_r \rangle   
         ,
     \end{equation}
-    where $d_i$ is the ising degrees of freedom on link i.
+    where $d_i$ represents the presence of a dimer on link i, $1/2$ or $-1/2$ for the presence or
+    absence of a dimer respectively.
     In order for the QDPM to exhibit topological order there we must find that it is in a gaped
     dimer liquid phase. It is likely that the QDPM in a liquid phase at the RK point because there 
-    we find no evedence of broken symmetries for system sizes up to $32\times32$. As an example of the
+    we find no evidence of broken symmetries for system sizes up to $32\times32$. As an example of the
     absence of broken symmetries we show
-    the dimer correlation function measuered between a single dimer and all other dimers on the
+    the dimer correlation function measured between a single dimer and all other dimers on the
     lattice in Fig.~\ref{fig:fig:dimer_gry_scale_qdpm} for a $16x16$ lattice.
     \subsection{Liquid}
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\linewidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{Gray scale (actual data) of the dimer corelation between the dimer in the upper
+        \caption{Gray scale (actual data) of the dimer correlation between the dimer in the upper
         left corner (colored red) and all other dimers on a $16\times16$ lattice. The 
         dimers in the upperleft corner are colored red because they are off the scale shown at the
         botom of the figure.}
         \label{fig:dimer_gry_scale_qdpm}
     \end{figure}
 
-    The dimer correlations decay exponetialy in the distance between the dimers. 
+    The dimer correlations decay exponentially in the distance between the dimers. 
     In Fig.~\ref{fig:spacial_dmr_cor} we show the dimer correlations between horizontal dimers
     in a vertical column. We find the correlation length to be $HERE$.
     \begin{figure}[htpb]
@@ -837,6 +838,39 @@ Defects at a vertex in the Toric Code models carry a $Z_2$ electric charge of $-
         sublattices distinguished by their color (red, green).}
         \label{fig:spacial_dmr_cor}
     \end{figure}
+
+    %\begin{figure}[htpb]
+    %    \centering
+    %    \includegraphics[width=0.8\linewidth]{spacial_z3vis_cor.pdf}
+    %    \caption{The $Z_3$ vison correlation function for $\gamma=0.5$.}
+    %    \label{fig:spacial_z3vis_cor}
+    %\end{figure}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=1.0\linewidth]{qdpm_dmr_HM_16x16.pdf}
+        \caption{QDPM dimer structure factor $\gamma=0.5$.}
+        \label{fig:spacial_z3vis_cor}
+    \end{figure}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=1.0\linewidth]{qdpm_vis_HM_16x16.pdf}
+        \caption{QDPM $Z_3$ vison structure factor $\gamma=0.5$.}
+        \label{fig:spacial_z3vis_cor}
+    \end{figure}
+
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=1.0\linewidth]{vis_dmr_qdpm_struc_fac_16x16.pdf}
+        \caption{The QDPM dimer structure factor $S_d(k)$ and $Z_3$ vison structure factor $S_v(k)$
+        shown along the path in $k$ space connecting the $(0,0)$, to $(\pi,0)$, $(\pi,\pi)$, $(0,0)$
+        points for $\gamma=0.5$.}
+        \label{fig:vis_dmr_cut}
+    \end{figure}
+
+
 
     \subsection{Comparison to other models???}
 
