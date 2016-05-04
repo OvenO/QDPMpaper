@@ -47,6 +47,14 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/blank_plqt} }
 }
+\newcommand*{\fplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.2ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/full_plqt} }
+}
 \newcommand*{\bhrzmv}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -158,6 +166,86 @@
       valign=M,% center vertically
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/vrtplqt.pdf} }
+}
+\newcommand*{\threedownplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/threedownplqt.pdf} }
+}
+\newcommand*{\threeupplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/threeupplqt.pdf} }
+}
+\newcommand*{\threerightplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/threerightplqt.pdf} }
+}
+\newcommand*{\threeleftplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/threeleftplqt.pdf} }
+}
+\newcommand*{\onedownplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/onedownplqt.pdf} }
+}
+\newcommand*{\oneupplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/oneupplqt.pdf} }
+}
+\newcommand*{\onerightplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/onerightplqt.pdf} }
+}
+\newcommand*{\oneleftplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/oneleftplqt.pdf} }
+}
+\newcommand*{\twoupplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/twoupplqt.pdf} }
+}
+\newcommand*{\twodownplqt}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=1.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/twodownplqt.pdf} }
 }
 \newcommand{\ket}[1]{| #1 \rangle}
 \newcommand{\eket}[1]{\left | #1 \right \rangle}
@@ -383,7 +471,8 @@ The QDM and QFPLM on the square lattice have isolated liquid ground states at th
 We now consider relaxing the local constraint to a parity constraint such that only $Q_v^{Z_2} \equiv (Q_v \mod 2)$ is required to vanish; the resulting GQDM are the even and odd sectors are the  even \& odd Ising gauge theories (IGT) (and the closely related even and odd sector Toric Codes). In these cases, the local constraint requires $\alpha_v \in \{ 0, \pi\}$ in \Eqref{eq:Gv} and therefore the gauge symmetry is reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{TC}}$ is expanded accordingly \textcolor{red}{Owen: Add symbols for 4-0 resonance, and 1-3 resonances and 2-2 resonance}:
 \begin{align}
 \mathcal{C}_{\rm{TC}} &\equiv \bigl\{ \left(c_{\Box,i},\bar{c}_{\Box,i}\right) \bigr\} \\
-&=\bigl\{ \left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right),\left(\vrtplqt,\hrzplqt\right) \bigr\}
+&=\bigl\{
+\left(\vrtplqt,\hrzplqt\right),\left(\threeleftplqt,\oneleftplqt\right),\left(\twodownplqt,\twoupplqt\right),\left(\bplqt,\fplqt\right) \bigr\}
 \end{align}
 where we implicitly include rotational symmetry related resonances. We will limit or discussion to $v_\bplqt=0$ such that the corresponding Hamiltonian is
 \begin{equation}
@@ -532,18 +621,9 @@ To investigate the possibility of symmetry breaking order in the RK ground state
 %%%%%%%%%%%%%%%%%%%%%%%
    \begin{figure}[]
         \centering
-        \includegraphics[width=0.75\columnwidth]{qdpm_dmr_HM_16x16.pdf}
+        \includegraphics[width=0.75\columnwidth]{qdpm_dmr_vis_HM_16x16.pdf}
         \caption{QDPM dimer structure factor $\gamma=0.5$.}
-        \label{fig:spacial_z3vis_cor}
-    \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{figure}[]
-        \centering
-        \includegraphics[width=0.75\columnwidth]{qdpm_vis_HM_16x16.pdf}
-        \caption{QDPM $Z_3$ vison structure factor $\gamma=0.5$.}
-        \label{fig:spacial_z3vis_cor}
+        \label{fig:spacial_dmr_z3vis_cor}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
