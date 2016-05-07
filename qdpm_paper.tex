@@ -247,6 +247,46 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/twodownplqt.pdf} }
 }
+\newcommand*{\svrtmon}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_monomer.pdf} }
+}
+\newcommand*{\svrtdmr}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_dimer.pdf} }
+}
+\newcommand*{\svrttrmr}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_trimer.pdf} }
+}
+\newcommand*{\svrtquat}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_quatramer.pdf} }
+}
+\newcommand*{\svrtpent}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_pentamer.pdf} }
+}
 \newcommand{\ket}[1]{| #1 \rangle}
 \newcommand{\eket}[1]{\left | #1 \right \rangle}
 \newcommand{\ebra}[1]{\left \langle #1 \right |}
@@ -281,7 +321,7 @@ We study the ground state of the quantum dimer-pentamer model (QDPM) on the squa
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Over the last several decades, experimental and theoretical work has demonstrated that strongly interacting quantum many-body systems support exotic quantum phases phases of matter not described by the Landau symmetry breaking paradigm. One class of such quantum phases of matter are topologically ordered quantum liquids~\cite{Wen1990}, first realized experimentally via the fractional quantum Hall effect~\cite{FQHE????}. Despite the absence of conventional symmetry breaking and a local order parameter, topological quantum liquids possess a non-trivial quantum order that distinguishes them from trivial liquid phases~\cite{Nayak2008}. Although not detectable by local operators, topological order arises due to a non-local entanglement structure that leaves a signatures in the bipartite entanglement entropy~\cite{Levin2006a,Kitaev2006b}. Such topological phases may provide the basis for fault-tolerant quantum information processing~\cite{Freedman2001,Kitaev2003}.
+Over the last several decades, experimental and theoretical work has demonstrated that strongly interacting quantum many-body systems support exotic quantum phases of matter not described by the Landau symmetry breaking paradigm. One class of such quantum phases of matter are topologically ordered quantum liquids~\cite{Wen1990}, first realized experimentally via the fractional quantum Hall effect~\cite{FQHE????}. Despite the absence of conventional symmetry breaking and a local order parameter, topological quantum liquids possess a non-trivial quantum order that distinguishes them from trivial liquid phases~\cite{Nayak2008}. Although not detectable by local operators, topological order arises due to a non-local entanglement structure that leaves a signatures in the bipartite entanglement entropy~\cite{Levin2006a,Kitaev2006b}. Such topological phases may provide the basis for fault-tolerant quantum information processing~\cite{Freedman2001,Kitaev2003}.
 
 Because of the exotic nature of topological phases and their potential use for quantum information processing, there is great interest in the development of theoretical models which display these phases. Such models offer the possibility of furthering the understanding of these phases as well as providing possibly candidate experimental systems in which to constructively engineer topological order~\cite{Duan2003,Jaksch2005,Lewenstein2007,Jiang2008d,Weimer2010a,Herdman2010c,Martinis2015}. A variety of exactly soluble lattice models are known to support ground states with topological order that ranges from the simplest variety, $Z_2$ topological order~\cite{Kitaev2003,Wen2003}, to those with non-Abelian anyonic excitations~\cite{Levin2005a,Kitaev2006a}; such models generally involve complex many-body interactions, and thus it is desirable to find simpler models supporting topological order that are closer to what is accessible experimentally.
 
@@ -445,19 +485,19 @@ The QDM and QFPLM on the square lattice have isolated liquid ground states at th
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
-  \begin{tabular}{| l | c | c | c |}
+  \begin{tabular}{| l | c | c | c | c |}
   	\hline
-      	type & $n_v$ & $Q_v^{\rm{QDM}}$ & $Q_v^{\rm{FPLM}}$  \\
+    type & $n_v$ & $Q_v^{\rm{QDM}}$ & $Q_v^{\rm{FPLM}}$  &  \\
 	\hline
-	monomer & $0$ & -1 & -2 \\
+    monomer & $0$ & -1 & -2 & $\svrtmon$ \\
 	\hline
-	dimer & $1$ & 0 & -1 \\
+    dimer & $1$ & 0 & -1 &  $\svrtdmr$ \\
 	\hline
-	trimer & $2$ & 1 & 0 \\
+    trimer & $2$ & 1 & 0 &  $\svrttrmr $ \\
 	\hline
-	tetramer & $3$ & 2 & 1 \\
+    tetramer & $3$ & 2 & 1 &  $\svrtquat$ \\
 	\hline
-	pentamer & $4$ & 3 & 2 \\
+    pentamer & $4$ & 3 & 2 &  $\svrtpent$ \\
 	\hline
   \end{tabular}
   \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM and QFPLM. Defects on the B sub-lattice have opposite charge.}
