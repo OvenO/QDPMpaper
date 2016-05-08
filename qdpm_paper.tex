@@ -271,6 +271,14 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/sing_vrt_trimer.pdf} }
 }
+\newcommand*{\svrttrmrtwo}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=3.5ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/sing_vrt_trimer2.pdf} }
+}
 \newcommand*{\svrtquat}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -442,8 +450,11 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tpb]
     \centering
-    \includegraphics[width=0.5\columnwidth]{QDPM_ex_config.pdf}
-    \caption{\textcolor{red}{Replace with a figure showing the orientations of the lattice links, with an open oriented string on the dual lattice as well as a closed oriented loop and topologically non-trivial loops.}The link orientations of the square lattice.}
+    \includegraphics[width=1.0\columnwidth]{mag_loops_on_orntd_lat.pdf}
+    \caption{Three oriented magnetic strings on the square lattice. From left to right we show: i) a
+    nontrivial string winding around the system in one of the two possible directions, ii) an open
+    magnetic string with two different charged (colored) visons at the end points, iii) a trivial closed
+    string. The colors red and blue distinguish the two different sublattices that orient the links.}
     \label{fig:orientedSL}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -493,7 +504,7 @@ The QDM and QFPLM on the square lattice have isolated liquid ground states at th
 	\hline
     dimer & $1$ & 0 & -1 &  $\svrtdmr$ \\
 	\hline
-    trimer & $2$ & 1 & 0 &  $\svrttrmr $ \\
+    trimer & $2$ & 1 & 0 &  $\svrttrmr$ $\svrttrmrtwo$\\
 	\hline
     tetramer & $3$ & 2 & 1 &  $\svrtquat$ \\
 	\hline
