@@ -386,7 +386,7 @@ Among the simplest class of models displaying topological quantum liquid phases 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
     \centering
-    \includegraphics[width=0.5\columnwidth]{QDPM_ex_config.pdf}
+    \includegraphics[width=1.0\columnwidth]{QDPM_ex_config.pdf}
     \caption{Example of an allowed configuration in the quantum dimer-pentamer model.}
     \label{fig:QDPMex}
 \end{figure}
@@ -499,9 +499,9 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\columnwidth]{mag_loops_on_orntd_lat.pdf}
-    \caption{Three oriented magnetic strings on the square lattice. From left to right we show: i) a
-    nontrivial string winding around the system in one of the two possible directions, ii) an open
-    magnetic string with two different charged (colored) visons at the end points, iii) a trivial closed
+    \caption{$\Phi_i$: a nontrivial string winding around the system in one of the two possible
+        directions. $\Phi_2$: an open
+    magnetic string with two different charged (colored) visons at the end points. $\Phi_3$ a trivial closed
     string. The colors red and blue distinguish the two different sublattices that orient the links.}
     \label{fig:orientedSL}
 \end{figure}
@@ -623,18 +623,34 @@ where $H_{\rm{pent}}$ only involves the resonances in \figref{fig:pentamter_move
 %\end{figure}
 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{table}
+%    \begin{tabular}{| c | c | c | c | c | c |}
+%  	\hline
+%    $c_1$& $\bar{c}_1$ & $c_2$& $\bar{c}_2$ & $c_2$& $\bar{c}_2$ \\
+%	\hline
+%    $\pentmvcreate$& $\pentmvanal$ & $\penmvhrzleft$& $\penmvhrzright$ & $\penmvdiagup$& $\penmvdiagdown$ \\
+%	\hline
+%  \end{tabular}
+%  \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM and QFPLM. Defects on the B sub-lattice have opposite charge.}
+%  \label{tab:defects}
+%\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
-    \begin{tabular}{| c | c | c | c | c | c |}
+    \begin{tabular}{| l | c | c |}
   	\hline
-    $c_1$& $\bar{c}_1$ & $c_2$& $\bar{c}_2$ & $c_2$& $\bar{c}_2$ \\
+     & $c$ & $\bar{c}$ \\
 	\hline
-    $\pentmvcreate$& $\pentmvanal$ & $\penmvhrzleft$& $\penmvhrzright$ & $\penmvdiagup$& $\penmvdiagdown$ \\
+    1 & $\pentmvcreate$ &  $\pentmvanal$  \\
+	\hline
+    2 &$\penmvhrzleft$&$\penmvhrzright$ \\
+	\hline
+    3 &$\penmvdiagup$& $\penmvdiagdown$\\
 	\hline
   \end{tabular}
   \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM and QFPLM. Defects on the B sub-lattice have opposite charge.}
   \label{tab:defects}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
  
 Because of the terms involving pentamers, $\HQDPM$ conserves $Q_v^{Z_3}$ rather than $Q_v$, and thus $\Phi_\Gamma$ does not commute with the Hamiltonian for closed loops $\Gamma$. The appropriate string and loop operator corresponds to \Eqref{eq:Sgamma} with $\alpha = 2\pi/3$:
@@ -676,7 +692,8 @@ We explicitly demonstrate how the extensive topological degeneracy of the QDM is
 \begin{figure}[]
     \centering
     \includegraphics[width=1.0\linewidth]{u1_wind_qdpm.pdf}
-    \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in the QDPM on a $16\times16$ lattice. Different colors correspond to calculations initialized to different winding sectors. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy.}
+    \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in the QDPM on a
+    $32\times 32$ lattice. Different colors correspond to calculations initialized to different winding sectors. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy.}
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -696,10 +713,9 @@ To investigate the possibility of symmetry breaking order in the RK ground state
     \begin{figure}
         \centering
         \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{Gray scale of the dimer correlation function between the dimer in the upper
-        left corner (colored red) and all other dimers on a $16\times16$ lattice. The 
-         red dimers indicate correlations that are off the scale shown at the
-        bottom of the figure. \textcolor{red}{Owen: make the origin dimer a different color that the off-scale dimers}.}
+        \caption{Gray scale of the dimer (left) and $Z_3$ vison (right) correlation functions
+            The color blue indicates the dimer (plaquete) from which the correlation is measured. The 
+            color red indicate correlations that are off the gray scale used here .}
         \label{fig:dimer_gry_scale_qdpm}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
