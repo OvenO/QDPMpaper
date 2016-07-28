@@ -21,6 +21,7 @@
 \newcommand{\figref}[1]{Fig. \ref{#1}}
 \newcommand{\secref}[1]{Sec. \ref{#1}}
 \newcommand{\tabref}[1]{Tab. \ref{#1}}
+\newcommand{\note}[1]{\textcolor{red}{#1}}
 
 %\newcommand*{\hprs}{%
 %  \text{% change size in subscripts or superscripts
@@ -386,7 +387,7 @@ Among the simplest class of models displaying topological quantum liquid phases 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
     \centering
-    \includegraphics[width=1.0\columnwidth]{QDPM_ex_config.pdf}
+    \includegraphics[width=0.75\columnwidth]{QDPM_ex_config.pdf}
     \caption{Example of an allowed configuration in the quantum dimer-pentamer model.}
     \label{fig:QDPMex}
 \end{figure}
@@ -479,9 +480,9 @@ The gauge symmetry allows one to construct a gauge invariant string operator $S_
 \end{equation}
 where $\mathrm{sgn}(\ell,\gamma)$ is positive (negative) if $\ell$ is oriented to the right with respect to the orientation of $\gamma$. Additionally, we define background flux $\tilde{\Phi}_\ell$
 \begin{equation}
-\tilde{\Phi}_\gamma \equiv -\frac{c_P}{4} \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) 
+\tilde{\Phi}_\gamma \equiv - \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) \tilde{n}_\ell
 \end{equation}
-and the total charge enclosed in a closed loop $\Gamma$ is $Q_\Gamma = \Phi_\Gamma+ \tilde{\Phi}_\Gamma$. (Alternately can think of the source of $\Phi_\Gamma$ to be static charges of charge $+c_0$ ($-c_0$) sitting at the verticies of the $A$($B$) sub-lattice.).
+where $n_\ell$ is the number operator for a static background dimer configuration which is chosen to fix the gauge, and the total charge enclosed in a closed loop $\Gamma$ is $Q_\Gamma = \Phi_\Gamma+ \tilde{\Phi}_\Gamma$. (Alternately can think of the source of $\Phi_\Gamma$ to be static charges of charge $+c_0$ ($-c_0$) sitting at the verticies of the $A$($B$) sub-lattice.).
 
 We define the string operator is defined as
 \begin{equation}
@@ -614,41 +615,20 @@ The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaque
 \end{equation}
 where $H_{\rm{pent}}$ only involves the resonances in \figref{fig:pentamter_moves} involving pentamers. 
  
- %%%%%%%%%%%%%%%%%
-%\begin{figure}[tpb]
-%\centering
-%\includegraphics[width=0.8\linewidth]{pentamer_moves.pdf}
-%\caption{a) Horizontal creation an annihilation, b) horizontal move \textcolor{red}{Owen:fix this move}, c) diagonal moves \textcolor{red}{Owen: Remove (d) as it is related to (c) by rotational symmetry}}
-%\label{fig:pentamer_moves}
-%\end{figure}
-%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{table}
-%    \begin{tabular}{| c | c | c | c | c | c |}
-%  	\hline
-%    $c_1$& $\bar{c}_1$ & $c_2$& $\bar{c}_2$ & $c_2$& $\bar{c}_2$ \\
-%	\hline
-%    $\pentmvcreate$& $\pentmvanal$ & $\penmvhrzleft$& $\penmvhrzright$ & $\penmvdiagup$& $\penmvdiagdown$ \\
-%	\hline
-%  \end{tabular}
-%  \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM and QFPLM. Defects on the B sub-lattice have opposite charge.}
-%  \label{tab:defects}
-%\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
     \begin{tabular}{| l | c | c |}
   	\hline
      & $c$ & $\bar{c}$ \\
 	\hline
-    1 & $\pentmvcreate$ &  $\pentmvanal$  \\
+    $i$ & $\pentmvcreate$ &  $\pentmvanal$  \\
 	\hline
-    2 &$\penmvhrzleft$&$\penmvhrzright$ \\
+    $ii$ &$\penmvhrzleft$&$\penmvhrzright$ \\
 	\hline
-    3 &$\penmvdiagup$& $\penmvdiagdown$\\
+    $iii$ &$\penmvdiagup$& $\penmvdiagdown$\\
 	\hline
   \end{tabular}
-  \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM and QFPLM. Defects on the B sub-lattice have opposite charge.}
-  \label{tab:defects}
+  \caption{The pairs of local dimer \& pentamer configurations $c\leftrightarrow\bar{c}$ generate minimal local dynamics that create/annihilate pairs ($i$) of pentamers and translate single pentamers ($ii$ \& $iii$). Note that pentamers always stay on the same sublattice which is associates with their $U(1)$ charge. }
+  \label{tab:pentamerMoves}
 \end{table}
 
 
@@ -682,18 +662,19 @@ Thus we have demonstrated that ground state at the RK point of the QDPM has an e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Numerical Study of the RK ground state of the QDPM}
 
-To determine the nature of the ground state at the RK point of the QDPM, we have performed Monte Carlo calculations of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \figref{fig:pentamer_moves}.
+To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamerMoves} to compute ground state expectation values. We studied $L\times L$ lattices with periodic boundary conditions on systems up to $L=64$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Topological winding sectors}
 
-We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the $U(1)$ topological winding number $\Phi_X$ histogram. This is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors. We confirm that $\Phi_{X,Y}$ are conserved modulo $3$, leading to $9$-fold topological degeneracy. Notice that $\Phi_X = \pm L/2$ correspond to ordered configurations, and therefore the probability of $\Phi_{XY}$ reaching these extrema vanishes in the RK state.
+We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding number $\Phi_X$ . This is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors; we confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly gaussian envelope with a width that scales with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM. For the remainder of the paper we present results in the $(0,0)$, topological sector, but we see no dependence the topological sector for any of the results presented here~\note{Owen: which calculations/system sizes have you checked different topological sectors?}.
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[]
     \centering
     \includegraphics[width=1.0\linewidth]{u1_wind_qdpm.pdf}
     \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in the QDPM on a
-    $32\times 32$ lattice. Different colors correspond to calculations initialized to different winding sectors. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy.}
+    $L=32$ lattice. Different colors correspond to calculations initialized to different winding sectors. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus.
+    \note{Owen: change the y-axis label to $P(\Phi_x)$ and the x-axis to $\Phi_x$. Is this still an $L=32$ lattice? Do you have $L=64$? Perhaps put both on the same plot? (with no vertical bars)}}
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -702,20 +683,19 @@ We explicitly demonstrate how the extensive topological degeneracy of the QDM is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dimer correlations}
 
-To investigate the possibility of symmetry breaking order in the RK ground state of the QDPM, we have computed the dimer-dimer correlation function:
-\begin{equation}
+Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_gry_scale_qdpm} we plot the bare dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice; here the origin $\bm{0}$ represents the blue link, and $\bm{r}$ varies over all other links of the lattice. We see no evidence of symmetry breaking in the dimer correlations on lattices up $L=64$.
+
+  \begin{equation}
     C_{\mathrm{d}} = \langle n_0 n_r \rangle - \langle n_0 \rangle   \langle n_r \rangle   
     .
 \end{equation}
-\figref{fig:dimer_gry_scale_qdpm} shows $C_d$ in real space for and $L=16$ lattice; we see no evidence of symmetry breaking in systems up to $L=64$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel dimers is plotted as a function of separation, and displays an exponential decay with correlation length $\chi \approx ?????$. Thus we find that the RK ground state of the QDPM is a symmetric dimer-pentamer liquid with exponentially decaying correlations.
+ In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel dimers is plotted as a function of separation, and displays an exponential decay with correlation length $\chi \approx ?????$. Thus we find that the RK ground state of the QDPM is a symmetric dimer-pentamer liquid with exponentially decaying correlations.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}
         \centering
         \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{Gray scale of the dimer (left) and $Z_3$ vison (right) correlation functions
-            The color blue indicates the dimer (plaquete) from which the correlation is measured. The 
-            color red indicate correlations that are off the gray scale used here .}
+        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_0 n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale.~\note{Owen: Is this the bare or connected correlation function? What do these plots look like on a log scale?} ({\it right}) $Z_3$ magnetic string correlation function. }
         \label{fig:dimer_gry_scale_qdpm}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -724,7 +704,7 @@ To investigate the possibility of symmetry breaking order in the RK ground state
     \centering
     \includegraphics[width=1.0\columnwidth]{spacial_cors_parallel.pdf}
     \caption{Correlation function between parallel dimers on the same (blue) and different (red) 
-    sub-lattice for a $L=64$ lattice. }
+    sub-lattice for a $L=64$ lattice. \note{Owen: Which direction is this? Do you have data for the perpendicular direction?}}
     \label{fig:spatial_dmr_cor}
 \end{figure}
 %    The lines represent least-squares fits to exponential decay. }
