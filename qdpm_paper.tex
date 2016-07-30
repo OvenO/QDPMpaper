@@ -344,6 +344,22 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/pentmvdiagdown.pdf} }
 }
+\newcommand*{\monomermvA}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=5.0ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/monomer_mv_1} }
+}
+\newcommand*{\monomermvB}{%
+  \text{% change size in subscripts or superscripts
+    \includegraphics[
+      height=5.0ex,% adjust to suit
+      valign=M,% center vertically
+      raise=\fontdimen22\textfont2,% but raise it to the formula axis
+    ]{Symbols/monomer_mv_2} }
+}
 \newcommand{\ket}[1]{| #1 \rangle}
 \newcommand{\eket}[1]{\left | #1 \right \rangle}
 \newcommand{\ebra}[1]{\left \langle #1 \right |}
@@ -630,6 +646,20 @@ where $H_{\rm{pent}}$ only involves the resonances in \tabref{tab:pentamer_moves
   \caption{The pairs of local dimer \& pentamer configurations $c\leftrightarrow\bar{c}$ generate minimal local dynamics that create/annihilate pairs ($i$) of pentamers and translate single pentamers ($ii$ \& $iii$). Note that pentamers always stay on the same sublattice which is associated with their $U(1)$ charge. }
   \label{tab:pentamer_moves}
 \end{table}
+
+\begin{table}
+    \begin{tabular}{| l | c | c |}
+  	\hline
+     & $c$ & $\bar{c}$ \\
+	\hline
+    $i$ & $\monomermvA$ &  $\monomermvB$  \\
+    \hline
+  \end{tabular}
+  \caption{The pair of local dimer \& monomer configurations $c\leftrightarrow\bar{c}$ generate
+  minimal local monomer dynamics. Monomers always remain on their origonal sublattice. }
+  \label{tab:pentamerMoves}
+\end{table}
+
 
 
  
