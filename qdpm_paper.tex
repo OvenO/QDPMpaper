@@ -347,7 +347,7 @@
 \newcommand*{\monomermvA}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
-      height=5.0ex,% adjust to suit
+      height=3.5ex,% adjust to suit
       valign=M,% center vertically
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/monomer_mv_1} }
@@ -355,7 +355,7 @@
 \newcommand*{\monomermvB}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
-      height=5.0ex,% adjust to suit
+      height=3.5ex,% adjust to suit
       valign=M,% center vertically
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/monomer_mv_2} }
@@ -442,7 +442,7 @@ Here we will provide background about generalized quantum dimer models on the sq
 \begin{equation}
 Q_v \equiv \pm \left( n_v - c_P \right)
 \end{equation}
-where $c_P = 2$, ($c_P=1$) for models in the even (odd) sector of the constraint, and the $+$($-$) sign corresponds to vertices on the $A$($B$) sublattice. A local dimer number constraint requires $Q_v$ to vanish for all vertices; a dimer parity constraint requires only $Q_v \mod 2$ to vanish $\forall v$.
+where $c_P = 2$, ($c_P=1$) for models in the even (odd) sector of the constraint, and the $+$($-$) sign corresponds to vertices on the $A$($B$) sublattice. A local dimer number constraint requires $Q_v$ to vanish for all vertices; a dimer parity constraint requires only $(Q_v\mod 2)$ to vanish.
  
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
@@ -504,7 +504,7 @@ We define the string operator is defined as
 \begin{equation}
 S_\gamma \left( \alpha \right) \equiv e^{i \alpha \left( \Phi_\gamma - \tilde{\Phi}_\gamma \right)} \label{eq:Sgamma}
 \end{equation}
-where $\alpha$ such that $S_\gamma$ commutes with $\HGQDM$ everywhere except at the ends of $\gamma$. Therefore, for closed loops $\Gamma$, $[ S_\Gamma,\HGQDM]=0$. For open strings, $S_\gamma$ does not commute with the Hamiltonian and can be viewed as creating a pair of ``magnetic charges'' at the ends of the string: correspondingly $S_\gamma \ket{\Phi_{\RK}}$ can used as a trial wavefunction for an excited state with a pair of magnetic charges. 
+where $\alpha$ such that $S_\gamma$ commutes with $\HGQDM$ everywhere except at the ends of $\gamma$. Therefore, for closed loops $\Gamma$, $[ S_\Gamma,\HGQDM]=0$. For open strings, $S_\gamma$ does not commute with the Hamiltonian and can be viewed as creating a pair of ``magnetic charges'' at the ends of the string: correspondingly $S_\gamma \ket{\Phi_{\RK}}$ can used as a trial wavefunction for an excited state with a pair of magnetic vortices. If a state has topological order with deconfined electric charges, these magnetic vortices should be gapped excitations, and correspondingly the magnetic string operator should decay exponentially~\cite{Read1989a,Senthil2000,Senthil2001e}. The condensation of magnetic vortices can drive a phase transition from a topologically ordered phase to a conventionally order phase~\cite{Jalabert1991,Ralko2007}. Thus, the magnetic string correlation can be used as test for deconfinement of electric charges.
 
 On surfaces with non-trivial topology, we may define the topological loop operators
 \begin{equation}
@@ -646,22 +646,6 @@ where $H_{\rm{pent}}$ only involves the resonances in \tabref{tab:pentamer_moves
   \caption{The pairs of local dimer \& pentamer configurations $c\leftrightarrow\bar{c}$ generate minimal local dynamics that create/annihilate pairs ($i$) of pentamers and translate single pentamers ($ii$ \& $iii$). Note that pentamers always stay on the same sublattice which is associated with their $U(1)$ charge. }
   \label{tab:pentamer_moves}
 \end{table}
-
-\begin{table}
-    \begin{tabular}{| l | c | c |}
-  	\hline
-     & $c$ & $\bar{c}$ \\
-	\hline
-    $i$ & $\monomermvA$ &  $\monomermvB$  \\
-    \hline
-  \end{tabular}
-  \caption{The pair of local dimer \& monomer configurations $c\leftrightarrow\bar{c}$ generate
-  minimal local monomer dynamics. Monomers always remain on their origonal sublattice. }
-  \label{tab:pentamerMoves}
-\end{table}
-
-
-
  
 Because of the terms involving pentamers, $\HQDPM$ conserves $Q_v^{Z_3}$ rather than $Q_v$, and thus $\Phi_\Gamma$ does not commute with the Hamiltonian for closed loops $\Gamma$. The appropriate string and loop operator corresponds to \Eqref{eq:Sgamma} with $\alpha = 2\pi/3$:
 \begin{equation}
@@ -713,14 +697,14 @@ We explicitly demonstrate how the extensive topological degeneracy of the QDM is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dimer density correlations}
 
-Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_gry_scale_qdpm} we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice; here the origin $\bm{0}$ represents the blue link, and $\bm{r}$ varies over all other links of the lattice. We see no evidence of symmetry breaking in the dimer correlations on lattices up $L=64$. We will restrict the rest of our disucssion to correlations between horizontal of dimers, as we find no rotational symmetry breaking, or qualitative difference between the the correlations between parallel dimers and perpendicular dimers.
+Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_vison_heatmap} we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice; here the origin $\bm{0}$ represents the blue link, and $\bm{r}$ varies over all other links of the lattice. We see no evidence of symmetry breaking in the dimer correlations on lattices up $L=64$. We will restrict the rest of our disucssion to correlations between horizontal of dimers, as we find no rotational symmetry breaking, or qualitative difference between the the correlations between parallel dimers and perpendicular dimers.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}
         \centering
         \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_0 n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale.~\note{Owen: Is this the bare or connected correlation function? What do these plots look like on a log scale?} ({\it right}) $Z_3$ magnetic string correlation function. }
-        \label{fig:dimer_gry_scale_qdpm}
+        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale.~\note{Owen: Is this the bare or connected correlation function? What do these plots look like on a log scale?} ({\it right}) The $Z_3$ magnetic string correlation function $C_m(\bm{r}_{\bm{0}p})$, where the the correlations is with respect to the blue plaquette. \note{Are we using the real part? What does $\sqrt{C_M^*C_m}$ look like? Regardless we should make this a positive quantity so the lefthand side of the grayscale is zero.}}
+        \label{fig:dimer_vison_heatmap}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -734,7 +718,7 @@ where we restrict the sum to horizontal links, for an $L=32$ lattice. $S_d(\bm{k
    \begin{figure}[]
         \centering
         \includegraphics[width=1.0\columnwidth]{qdpm_dmr_vis_HM_16x16.pdf}
-        \caption{({\it left}) The horizontal dimer density structure factor $S_d(\bm{k})$ for the QDPM RK ground state on an $L=32$ lattice. The lack of $x\leftrightarrow y$ rotational symmetry is due to the fact that horizontal links have been isolated. ({\it right}) \note{Owen: What does this vison structure factor look like w/o the factor for the background dimerization?}}
+        \caption{({\it left}) The horizontal dimer density structure factor $S_d(\bm{k})$ for the QDPM RK ground state on an $L=32$ lattice. The lack of $x\leftrightarrow y$ rotational symmetry is due to the fact that horizontal links have been isolated. ({\it right}) \note{Owen: Is this the real part or $\sqrt{S_M^* S_M}$}}
         \label{fig:structure_factor} 
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -772,7 +756,9 @@ To investigate the $Z_3$ gauge theory description of the QDPM RK ground state, w
 \begin{equation}
 C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3} i \left( \Phi_{\gamma_{pp'}} -\tilde{\Phi}_{\gamma_{pp'}} \right) \right] \right \rangle
 \end{equation}
-where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice connecting $p$ and $p'$.
+where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice connecting $p$ and $p'$. \note{Something about the background dimerization and gauge fixing here. Are we using the real parts or $\sqrt{C_M^*C_M}$?}
+
+In \figref{fig:dimer_vison_heatmap}, we have ploted $C_M$ for an $L=16$ lattice, which displays short distance correlations that quickly decay. \note{Comment here about gauge fixing breaking symmetry, if still present...}. We find no evidence of magnetic vortex condensation on lattices up to $L=64$.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -788,6 +774,11 @@ where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Monomer deconfinement}
 
+To study the confinement of electrically charged defects in the QDPM, we have Monte Carlo sampled the RK ground state with a single pair of monomers. We initialize the system with a monomer on each sub-lattice and supplement the local Monte Carlo updates with updates of the form:
+\begin{equation}
+\monomermvA  \Longleftrightarrow \monomermvB
+\end{equation}
+which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$, depending on the sub-lattice.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[]
