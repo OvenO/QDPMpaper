@@ -668,7 +668,7 @@ Since the $W_{X,Y}^{\rm{QDPM}}$ operators have eigenvalues $\{0,1,-1\}$...
 
 Defects in the QDPM (monomers, trimers, and tetramers) carry a $Z_3$ electric charge $Q_v^{Z_3} = \pm 1$, where the sign depends on the sub-lattice and type of defect (see \ref{tab:defects}).
 
-Thus we have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or in an confining symmetry broken phase. 
+Thus we have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory.  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a critically correlated or confining symmetry broken phase, which we do below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -726,9 +726,9 @@ where we restrict the sum to horizontal links, for an $L=32$ lattice. $S_d(\bm{k
     \begin{figure}[]
         \centering
         \includegraphics[width=1.0\columnwidth]{vis_dmr_qdpm_struc_fac_32x32.pdf}
-        \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the ({\it bottom})
+        \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the $Z_3$ magnetic string structure factor $S_M$ ({\it bottom})
         shown along the path in $k$ space connecting the $(0,0)$, to $(\pi,0)$, $(\pi,\pi)$, $(0,0)$
-        points for $\gamma=0.5$. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. What do there look like if you added $L=16$ data to these plots?}}
+        points for $\gamma=0.5$. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. What do there look like if you added $L=16$ data to these plots? Switch the y-axis from $S_v\rightarrow S_M$.}}
         \label{fig:structure_factor_path}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -740,11 +740,13 @@ Additionally we have studied the nature of the decay of the connected dimer-dime
 \end{equation}
 where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, \textcolor{red}{for both $r$ parallel and perpendicular to the orientation of the dimers} \note{(Owen: can you add both directions to this plot?)} for an $L=64$ lattice. We find that $C_d$ decays exponentially with distance with a correlations length  $\chi\approx???$; additionally we find that correlations between perpendicular dimers also decay exponentially.
 
+Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the 
+
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_parallel.pdf}
-    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in directions perpendicular (circles) and parallel (squares) to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx???$. \note{Owen: Can you add the other direction to this plot? The y-axis also needs a label. Can you add the correlation length estimate here as well?}}
+    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in directions perpendicular (circles) and parallel (squares) to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx???$. \note{Owen: Can you add the other direction to this plot? The y-axis also needs a label. Can you add the correlation length estimate here as well? Can you add the $r=0$ data point to this plot?}}
     \label{fig:spatial_dmr_cor}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -758,14 +760,22 @@ C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3}
 \end{equation}
 where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice connecting $p$ and $p'$. \note{Something about the background dimerization and gauge fixing here. Are we using the real parts or $\sqrt{C_M^*C_M}$?}
 
-In \figref{fig:dimer_vison_heatmap}, we have ploted $C_M$ for an $L=16$ lattice, which displays short distance correlations that quickly decay. \note{Comment here about gauge fixing breaking symmetry, if still present...}. We find no evidence of magnetic vortex condensation on lattices up to $L=64$.
+In \figref{fig:dimer_vison_heatmap}, we have ploted $C_M$ for an $L=16$ lattice, which displays short distance correlations that quickly decay. \note{Comment here about gauge fixing breaking symmetry, if still present...}. Additionally, we have plotted the magnetic string structure factor
+\begin{equation}
+S_M\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{p,p'} e^{-i \bm{k} \cdot r_{pp'}} C_M\left( \bm{r}_{pp'}\right)
+\end{equation}
+in \figref{fig:structure_factor}. \note{Discuss any effect of gauge fixing here, if relevant}. 
+
+\figref{fig:vison_cor} show the decay of $C_M$ along one of the axes of the dual lattice; \note{we find this decays exponentially with distance, with a correlation length $\chi\approx???$} 
+
+Thus we find no evidence of magnetic vortex condensation on lattices up to $L=64$.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_z3_vis.pdf}
-    \caption{ $Z_3$ vison correlation function for $L=64$ lattice.}
-    \label{fig:spatial_dmr_cor}
+    \caption{ $Z_3$ magnetic string correlation $C_M$ along along one axis of an $L=64$ lattice. The line corresponds to an exponential fit with correlations length \note{$\chi\approx???$}.}
+    \label{fig:vison_cor}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -774,18 +784,20 @@ In \figref{fig:dimer_vison_heatmap}, we have ploted $C_M$ for an $L=16$ lattice,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Monomer deconfinement}
 
-To study the confinement of electrically charged defects in the QDPM, we have Monte Carlo sampled the RK ground state with a single pair of monomers. We initialize the system with a monomer on each sub-lattice and supplement the local Monte Carlo updates with updates of the form:
+To study the confinement of electrically charged defects in the QDPM, we have Monte Carlo sampled the RK ground state doped with a single pair of monomers. We initialize the system with a monomer on each sub-lattice and supplement the local Monte Carlo updates with updates of the form:
 \begin{equation}
 \monomermvA  \Longleftrightarrow \monomermvB
 \end{equation}
-which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$, depending on the sub-lattice.
+which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$, where the positive and negative monomers live on different sub-lattices. 
+
+We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlation}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \sim L^{-4}$ at large separations. In \figref{fig:monomer_correlations}, the horizontal lines correspond to $L^{-4}$ for each system size; we find that the monomer correlations quickly decay to $L^{-4}$ indicating a deconfinement of monomers.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[]
         \centering
         \includegraphics[width=1.0\columnwidth]{monomer_cor_log.pdf}
-        \caption{Monomer correlations in the QDPM.}
-        \label{fig:vis_dmr_cut}
+        \caption{Monomer-monomer correlations function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ along the  in the QDPM RK ground state doped with a single pair of monomers on lattices up to \note{$L=48$}. The horizontal lines correspond to $L^{-4}$ with the color corresponding to the system size. \note{Owen: Do you have data for $L=64$? Can you make the subscripts in the y-axis label bold math? Maybe we should renomalize this plot by a factor of $L^2$.}}
+        \label{fig:monomer_correlation}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -794,7 +806,9 @@ which appear to provide ergodic dynamics in the monomer-dimer-pentamer configura
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-We have presented the quantum dimer-pentamer model on the square lattice and studied the ground state at the RK point. Using numerical calculations, we have demonstrated that the RK state of the QDPM is a dimer liquid, without spontaneously broken symmetry. We find that the correlations decay exponentially with distance in contrast to the power-law decay of correlations in the QDM. Additionally the extensive topological degeneracy of the QDM has been reduced to a finite 9-fold degeneracy in the QDPM on a torus. We also have demonstrated that monomer defects are deconfined in the QDPM. These results are consistent with an effective $Z_3$ gauge theory description of the low energy physics of the QDPM and the RK ground state possessing $Z_3$ topological order.
+We have presented the quantum dimer-pentamer model on the square lattice and studied the ground state at the RK point. Using numerical calculations, we have demonstrated that the RK state of the QDPM is a dimer liquid, without spontaneously broken symmetry. The extensive topological degeneracy of the QDM has been reduced to a finite 9-fold degeneracy in the QDPM on a torus. We find that the dimer correlations decay exponentially with distance in contrast to the power-law decay of dimer correlations in the QDM. Additionally we also have demonstrated that monomer defects are deconfined in the QDPM, in contrast with the critical confinement of monomers in the QDM. Finally, we find that the $Z_3$ magnetic string correlations decay exponentially and display no evidence of $Z_3$ vortex condensation; this is consistent with $Z_3$ vortices being gapped quasiparticles excitations about the QDPM ground state. 
+
+The above results suggest a $Z_3$ gauge theory description of the low energy physics of the QDPM and the RK ground state possessing $Z_3$ topological order.
 
 Future work could directly probe the existence of a finite gap above the RK point by studying the imaginary time dynamics of correlations functions using Monte Carlo~\cite{Henley}. Additionally, one could conclusively demonstrate the existence of $Z_3$ topological order by computing the topological entanglement entropy in the QDPM ground state~\cite{Levin2005,Kitaev2005,Hastings2010}.
 
