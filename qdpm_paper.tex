@@ -519,7 +519,7 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
     \caption{$\Phi_i$: a nontrivial string winding around the system in one of the two possible
         directions. $\Phi_2$: an open
     magnetic string with two different charged (colored) visons at the end points. $\Phi_3$ a trivial closed
-    string. The colors red and blue distinguish the two different sublattices that orient the links.}
+    string. The colors red and blue distinguish the two different sublattices that orient the links. \note{Owen: Add a dimer/pentamer-ization to the figure. Also, add a monomer defect in the magnetic loop, to demonstrate the fractional statistics of defects.}}
     \label{fig:orientedSL}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -848,234 +848,75 @@ Our calculations were performed on the VACC....
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-    \section{$Z_3$ Toric Code on the Square Lattice}
-        In the $Z_3$ toric three degrees of freedom live on each link.
-        We can represent the $Z_3$ algebra through the following expressions
-        %
-        %Z_N
-        %\begin{equation}
-        %    E |n\rangle = n |n\rangle, ~ n=0,1,2,...,N-1
-        %    \\
-        %    e^{iA} |n\rangle = |n+1 \rangle, ~ n=0,1,2,...,N-2
-        %    \\
-        %    e^{iA} |N-1\rangle = |0\rangle
-        %    %\label{eqn:}
-        %\end{equation}
-        %Z_3
-        %
-        \begin{equation}
-            \begin{split}
-            & E_l |n_l\rangle = n_l |n_l\rangle, ~ n_l=0,1,2
-            \\
-            & e^{iA_l} |n_l \rangle = |n_l+1 \rangle, ~ n_l =0,1
-            \\ 
-            & e^{iA_l} |2 \rangle = |0\rangle
-            \end{split}
-            ,
-            %\label{eqn:}
-        \end{equation}
-        %
-        where the operators $E_l$ and $A_l$ act on a given link $l$ and are analogous to the 
-        electric field and vector potential respectively. 
-        By assigning orientations to the links between two vertices we can define the three degrees of
-        freedom pictorially. 
-        %
-        \begin{itemize}
-            \item $\vvemptylink$ 
-            \item $\rightarrowlink$ 
-            \item $\leftarrowlink$ 
-        \end{itemize}
-        % 
-        To simplify notation, we define $e^{iA_l}$ as the operator $Q$ which acts on the links in the
-        following way
-        \begin{equation}
-            \begin{split}
-                & Q^\dagger_{vv'}  | \vvemptylink \rangle = | \rightarrowlink \rangle
-                ,
-                \\
-                & Q^\dagger_{vv'}  | \rightarrowlink \rangle = | \leftarrowlink \rangle
-                ,
-                \\
-                & Q^\dagger_{vv'}  | \leftarrowlink \rangle = | \emptylink \rangle
-                .
-            \end{split}
-            %\label{eqn:}
-        \end{equation}
-        The link is specified by the two vertices it connects. The operator
-        $Q^\dagger_{vv'}$ acts in the direction from the first subscript to the second subscript, in
-        this case denoted as $v$ and $v'$. 
-        Changing the direction in which $Q$ operates is equivalent to taking the hermitian conjugate
-        of the operator withougt changing the direction.  
-        %
-        \begin{equation}
-            (Q^\dagger_{vv'})^\dagger = Q_{vv'}^\dagger
-            .
-            %\label{eqn:}
-        \end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{$Z_3$ Gauge theory on the square lattice}
 
-        We now define an operator $E_{vv'}$ in a similar way, 
-        %
-        \begin{equation}
-            \begin{split}
-                & E^\dagger_{vv'}  | \vvemptylink \rangle = 0
-                ,
-                \\
-                & E^\dagger_{vv'}  | \rightarrowlink \rangle = | \rightarrowlink \rangle
-                ,
-                \\
-                & E^\dagger_{vv'}  | \leftarrowlink \rangle = 2| \leftarrowlink \rangle
-                ,
-            \end{split}
-            %\label{eqn:}
-        \end{equation}
-        and with it define the last important operator that acts on the links. 
-        %
-        \begin{equation}
-            P_{vv'}^\dagger \equiv e^{i2\pi E_{vv'}/3}
-            .
-            %\label{eqn:}
-        \end{equation}
-        %
-        $P_{vv'}^\dagger$ acts on the links in the following way: 
-        %
-        \begin{equation}
-            \begin{split}
-                & P^\dagger_{vv'}  | \vvemptylink \rangle = | \vvemptylink \rangle
-                ,
-                \\
-                & P^\dagger_{vv'}  | \rightarrowlink \rangle = e^{i2\pi/3} | \rightarrowlink \rangle
-                ,
-                \\
-                & P^\dagger_{vv'}  | \leftarrowlink \rangle = e^{-i2\pi/3} | \leftarrowlink \rangle
-                .
-            \end{split}
-            %\label{eqn:}
-        \end{equation}
-        %
+Here we will review a string-net implementation of $Z_3$ gauge theory on the square lattice~\cite{Horn1979}. We define a three -dimensional Hilbert space on each link, corresponding to the presence or absence of an oriented string segment that carries $Z_3$ electric flux which are eigenstates of the Hermitian $Z_3$ electric flux operator $E_{vv'}$
+\begin{align}
+        & E_{vv'}  \eket{\vvemptylink} = 0
+        ,
+        \\
+        & E_{vv'}  \eket{\rightarrowlink} = + \eket{\rightarrowlink}
+        ,
+        \\
+        & E_{vv'} \eket{\leftarrowlink} = - \eket{\leftarrowlink}
+        .
+\end{align}
+\note{Owen:can you add symbols with $v$ and $v'$ at both end points for all types of links?}.  
 
-        With the above definitions the $Z_3$ toric code Hamiltonian can be written in terms of the $P$ and $Q$ operators.
-        In general a string net Hamiltonian might be written as 
-        \begin{equation}
-            H = - J_e \sum_v A_v - J_m \sum_p B_p
-            %\label{eqn:}
-        \end{equation}
-        where 
-        \begin{equation}
-            A_v = \prod_{i\in v} P^\dagger_{vv_i}~,~ B_p = \prod_{i\in p} Q^\dagger_{v_iv_{i+1}}
-            .
-            %\label{eqn:}
-        \end{equation}
-        The specific vertex and plaquette labeling scheme is shown in Fig.~\ref{fig:vertex_link_labels}.
-        %
-        \begin{figure}[htpb]
-            \centering
-            \includegraphics[width=0.8\linewidth]{vertex_link_gauge_def}
-            \caption{Notation of vertex and plaquette labels}
-            \label{fig:vertex_link_labels}
-        \end{figure}
-        %
-        For the ground state of this Hamiltonian there is aa local symmetry corresponding to the
-        minimization of the first term. This local symmetry is a gauge symmetry that can be
-        expressed in terms of the gauge operator.
-        \begin{equation}
-            G_v | \psi \rangle= | \psi \rangle
-            %\label{eqn:}
-        \end{equation}
-        where $G_v$ = $A_v$.
+At each vertex we define a local unitary gauge transformation $G_v$,
+\begin{equation}
+G_v \equiv \prod_{v'} P^\dagger_{vv'}
+\end{equation}
+where the product is over all nearest neighbor vertices $v'$, and we have defined the unitary operator
+\begin{equation}
+P_{vv'}^\dagger \equiv e^{i 2\pi/3 E_{vv'}}.
+\end{equation}
+We consider eigenstates of $G_v$ to have a definite $Z_3$ electric charge at vertex $v$. The charge-free sector is the gauge invariant subspace where
+\begin{equation}
+G_v \eket{\psi} = \eket{\psi} \quad \forall v.
+\end{equation}
+This gauge invariant subspace corresponds to states where the ``string flux" vanishes modulo 3 at each vertex, thus including vertices where three inward or three outward strings meet at a vertex. For eigenstates of $G_v$ with  nonzero electric charge
+\begin{equation}
+G_v \ket{\psi} = e^{\pm 2\pi/3 i} \ket{\psi}
+\end{equation}
+which corresponds to the presence of a $Z_3$ charge of $\pm1$ at vertex $v$. A vertex with a positive (negative) charge has a net outward (inward) string flux of 1 modulo 3, or net inward (outward) flux of 2. \figref{fig:example_elec_string} shows examples of charged and charge free string configurations.
 
+To provide dynamics, we define a unitary operator electric flux ladder operator $Q^\dagger_{vv'}$ that increments the electric flux:
+\begin{align}
+        & Q^\dagger_{vv'}  \eket{\vvemptylink} = \eket{\rightarrowlink}
+        ,
+        \\
+        & Q^\dagger_{vv'}  \eket{\rightarrowlink} = \eket{\leftarrowlink}
+        ,
+        \\
+        & Q^\dagger_{vv'}  \eket{\leftarrowlink} = \eket{\emptylink}
+\end{align}
+The simplest gauge invariant Hamiltonian is then
+\begin{equation}
+H_{Z_3} = - J  \sum_p  \left( Q^\dagger_{v_1^pv_2^p} Q^\dagger_{v_2^pv_3^p} Q^\dagger_{v_3^pv_4^p} Q^\dagger_{v_4^pv_1^p} + h.c. \right)
+\end{equation}
+where $v_i^p$ represent the four vertices in the plaquette $p$, ordered cyclically by nearest neighbors.
 
-        \subsubsection{$Z_3$ String operators}
-            With the above notation we can now write down the $Z_3$ string operators. The electric string operator along
-            the path $\Gamma$ is written
-            %
-            \begin{equation}
-                S^e_{\Gamma} = \prod_{l=0}^{N-2} Q_{v_lv_{l+1}}^\dagger
-                %\label{eqn:}
-                ,
-            \end{equation}
-            %
-            where $v_l \in \Gamma$ and $N$ is the number of vertices in $\Gamma$. We show an example of an
-            electric string operator operatiing on an example configuration in Fig.~\ref{fig:example_elec_string}.
-            %
-            %
-            \begin{figure}[htpb]
-                \centering
-                \includegraphics[width=0.8\linewidth]{example_elec_string.pdf}
-                \caption{The grey line is the path $\Gamma$ on which the string operator acts. The operator acts
-            in the direction from the vertex labeled in red to the one labeled in blue.}
-                \label{fig:example_elec_string}
-            \end{figure}
-            %
-            %
-            The magnetic string operator can be written as
-            \begin{equation}
-                S^m_{\Gamma} = \prod_{l=0}^{N-1} P_{v_{2l}v_{2l+1}}^\dagger
-                %\label{eqn:}
-            \end{equation}
-            %
-            where $v_l$ are the vertices adjacent to the links in $\Gamma$ and $N$ is the number of
-            vertices
-            on the \textit{left} side of the path when looking along the path from red to blue. 
-            An example of this operator acting
-            on a configuration is shown in Fig.~\ref{fig:example_mag_string} along with the vertex labeling
-            scheme.
-            %
-            %
-            \begin{figure}[htpb]
-                \centering
-                \includegraphics[width=0.8\linewidth]{example_mag_string.pdf}
-                \caption{The grey line is the path $\Gamma$ on which the string operator acts. The magnetic
-                    string operator acts in the 
-                    direction from the plaquette labeled in red to the one labeled in blue.}
-                \label{fig:example_mag_string}
-            \end{figure}
-            %
-            The magnetic string operator acting on path $\Gamma$ in Fig.~\ref{fig:example_mag_string} is
-            %
-            \begin{multline}
-                S^m_{\Gamma} (\mathrm{~Fig.~\ref{fig:example_mag_string}~config})
-                = P_{v_0v_1}^\dagger P_{v_2v_3}^\dagger P_{v_4v_5}^\dagger
-                \\
-                = \exp{[0 - \frac{i2\pi}{3} + \frac{i2\pi}{3} ]} 
-                = 1 (\mathrm{~Fig.~\ref{fig:example_mag_string}~config})
-                .
-            \end{multline}
-            %
-
-            An interesting property of the electric string operator in the $Z_3$ toric code is
-            that an unclosed string produces two different defects. 
-            An example of an open string and the defects is shown in Fig.~\ref{fig:example_elec_string}. The
-            configuration in Fig.~\ref{fig:example_elec_string}(a) obeys the local gauge symmetry
-            aside from the endpoints of the path that it acts on ($\Gamma$). The two defects at the
-            end points produce two different values when the vertecies are operated on by $G_v$, being
-            $G_{\mathrm{red}} = e^{i2\pi /3}$, and $G_{\mathrm{blue}} = e^{-i2\pi /3}$. 
-
-            The magnetic excitations, or $Z_3$ visons live at the endpoints of the magnetic
-            strings.  These visons can change the phase of a configuration by different values.
-            
-
-
-%        \subsubsection{properties of $Z_3$ string operators}
-
-        \subsubsection{Winding Numbers}
-
-            The ground state of the $Z_3$ toric code has nine-fold topological degeneracy because of
-            the $3\times3$ different topological sectors. As the case of the toric code the $Z_3$
-            electric string changes the topological sector when acting on on a nontrivial closed
-            path. We call the electric winding
-            operator that acts around the major axis $W^e_y$ and around the minor axis $W^e_x$.
-            The topological sector can be determined 
-            by acting around the axes with the magnetic string operator, called $W^m_y$ and
-            $W^m_x$. All of the winding commute with the Hamiltonian and
-            therefore share the same eigenvalues. The operator $W^m_{x}$ ($W^m_{y}$) can 
-            have three different values depending on how many electric strings enclose the minor
-            (major) axis. The three different
-            possible values for each winding number around each axis gives the model nine distinct
-            topological sectors.
-
-\section{Additional numerical results on the QDPM RK ground state}
-
-%%%%%%%%%%%%%%%%%%%%%%%
+We can define two oriented open string operators which commute with $H_{Z_3}$ everywhere except at the endpoints. The electric string operator $S_e$, which acts on an open, oriented string on the lattice $\gamma_{vv'}$ with endpoints $v,v'$, and creates a $+1$ ($-1$) charge at vertex $v$ ($v')$, is defined as
+\begin{equation}
+    S_e \left( \gamma_{vv'} \right) \equiv \prod_{l \in \gamma_{vv'}} Q_{v_l v_l'}^\dagger
+\end{equation}
+where the product is over all links $l$ in $\gamma_{vv'}$, $v_l$ and $v_l'$ are the two vertices in $l$, ordered according to the orientation of $\gamma_{vv'}$ (see \figref{fig:example_elec_string}). The magnetic string operator $S_m$ is defined by an open, oriented string on the dual lattice and creates a magnetic vortex-antivortex pair on plaquettes at the endpoints of $\tilde{\gamma}_{pp'}$
+\begin{equation}
+    S_m \left( \tilde{\gamma}_{vv'} \right) \equiv \prod_{l \perp \tilde{\gamma}_{pp'}} P_{v_l v_l'}^\dagger
+\end{equation}
+where the product is over all links $l$ that cross $\tilde{\gamma}$ and $v_l$ ($v_l'$) is the vertex to the left (right) of the string as $\tilde{\gamma}$ is traversed from $p$ to $p'$. 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\linewidth]{example_elec_string.pdf}
+    \caption{ ({\it left}) An example of a charge free $Z_3$ electric string configuration. The electric string operator $S_\gamma^e$ represented by the thick gray line, oriented from the red to blue vertex. ({\it right}) An example of a $Z_3$ electric string configuration with a $+1$ ($-1$) electric charge at the red (blue) vertex; this string configuration results form the action of $S_\gamma^e$ on the left panel. \note{Owen: Can you remove the a) and b) labels on the figure? Also switch the $\Gamma$ to $\gamma$, and remove the $v_0-v_3$ labels. Add a gray arrow on the string operator from red to blue. Can you add a non-trivial magnetic loop around the blue charge on the right?} }
+    \label{fig:example_elec_string}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_perp.pdf}
@@ -1083,7 +924,23 @@ Our calculations were performed on the VACC....
     sub-lattice for a $L=64$ lattice.}
     \label{fig:spatial_dmr_cor}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+Note that  $S_e$ and $S_m$ do not commute if their corresponding strings intersect--this underlies the non-trivial statics of electric charges and magnetic vortices. Consider the magnetic string operator $S_m(\tilde{\Gamma})$ defined by an oriented \emph{closed} loop $\tilde{\Gamma}$ on the dual lattice. This operator corresponds to the creation of a vortex-antivortex pair, winding of the vortex around $\Gamma$, and annihilation of the vortex pair. A state with definite electric charge inside $\Gamma$ will be an eigenstate of $S_m(\tilde{\Gamma})$, with eigenvalue $e^{ i 2 \pi/3 q}$, where $q=0,\pm1$ is the net $Z_3$ electric charge (modulo 3) inside $\tilde{\Gamma}$. For $\Gamma$ winding around an isolated electric charge, we see that electric charges and magnetic vortices are anyons with relative braiding statics with a statistical phase of $e^{\pm i 2\pi/3}$.
+
+Additionally, these string operators give rise to a topological degeneracy in systems of non-trivial topology. For example, consider the charge free sector on a torus. We can consider two topologically non-trivial closed loops $\tilde{\Gamma}_{X/Y}$ which have single winding around the $x/y$ directions of the torus. Since $S_m(\Gamma_{X/Y})$ commutes with $H_{Z_3}$, we can label the energy eigenstates by the eigenvalues of $S_m(\Gamma_{X/Y})$: $\{1,e^{\pm i 2\pi/3}\}$. Thus $H_{Z_3}$ has a 9-fold ground state degeneracy on the torus, and the ground states subspace can be labeled by the $Z_3$ electric flux winding about each axis of the torus.
+            
+%\section{Additional numerical results on the QDPM RK ground state}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=1.0\columnwidth]{spatial_cors_end_to_end_parallel.pdf}
+%    \caption{Correlation function between parallel dimers (end-to-end) on the same (blue) and different (red) 
+%    sub-lattice for a $L=64$ lattice.}
+%    \label{fig:spatial_dmr_cor}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
