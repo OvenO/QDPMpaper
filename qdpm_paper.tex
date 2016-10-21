@@ -363,12 +363,18 @@
 \newcommand{\ket}[1]{| #1 \rangle}
 \newcommand{\eket}[1]{\left | #1 \right \rangle}
 \newcommand{\ebra}[1]{\left \langle #1 \right |}
+\newcommand{\exval}[1]{\langle #1 \rangle}
 \newcommand{\Eqref}[1]{Eq. \eqref{#1}}
 \newcommand{\RK}{\mathrm{RK}}
 \newcommand{\HGQDM}{H_\mathrm{GQDM}}
 \newcommand{\HQDM}{H_\mathrm{QDM}}
 \newcommand{\HIGT}{H_\mathrm{IGT}}
 \newcommand{\HQDPM}{H_\mathrm{QDPM}}
+\newcommand{\Mrot}{M_{\rm{rot}}}
+\newcommand{\Mperp}{M_\perp}
+\newcommand{\Mpar}{M_{\vert\vert}}
+\newcommand{\MstagSq}{M_{\rm{stag}}^2}
+\newcommand{\McolSq}{M_{\rm{col}}^2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -677,54 +683,44 @@ Thus we have demonstrated that ground state at the RK point of the QDPM has an e
 \section{Numerical Study of the RK ground state of the QDPM}
 \label{sec:numerics}
 
-To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves} to compute ground state expectation values. Below we present the results of calculations on $L\times L$ lattices with periodic boundary conditions on systems up to $L=64$. 
+To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves}. Below we present the results of calculations on $L\times L$ lattices with periodic boundary conditions on systems up to $L=64$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Topological sectors}
 
-We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding number $\Phi_X$ . This is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors; we confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly gaussian envelope with a width that scales with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM. Additionally, we find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$, topological sector, but we see no dependence the topological sector for any of the results presented here~\note{Owen: which calculations/system sizes have you checked different topological sectors?}.
+We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding number $\Phi_{X/Y}$ . $\Phi_X$ is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors (the behavior of $\Phi_Y$ is identical to that of $\Phi_X$~\note{(Owen: can you confirm this?)}). We confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly Gaussian envelope with a width that increases with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$, topological sector, but we see no qualitative, dependence the topological sector for any of the results presented here. Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM.
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[]
     \centering
     \includegraphics[width=1.0\linewidth]{u1_wind_qdpm.pdf}
     \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in the QDPM on a
-    $L=32$ lattice. Different colors correspond to calculations initialized to different winding sectors. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus.
-    \note{Owen: change the y-axis label to $P(\Phi_x)$ and the x-axis to $\Phi_x$. Is this still an $L=32$ lattice? Do you have $L=64$? Perhaps put both on the same plot? (with no vertical bars)}}
+    $L=32$ lattice. Different colors correspond to calculations initialized to different winding sectors, and the lines are fits to a Gaussian. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus, that is labeled by $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$. \note{Owen: Can you plot $P\left(\Phi_Y\right)$ on this plot also? Maybe with open symbols?}}
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Order Parameters}
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[]
-    \centering
-    \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
-    \caption{}
-    \label{fig:order_params}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dimer density correlations}
 
-Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_vison_heatmap} we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice; here the origin $\bm{0}$ represents the blue link, and $\bm{r}$ varies over all other links of the lattice. We see no evidence of symmetry breaking in the dimer correlations on lattices up $L=64$. We will restrict the rest of our disucssion to correlations between horizontal of dimers, as we find no rotational symmetry breaking, or qualitative difference between the the correlations between parallel dimers and perpendicular dimers.
+Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_vison_heatmap} we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice; here the origin $\bm{0}$ represents the blue link, and $\bm{r}$ varies over all other links of the lattice. The left panel of \figref{fig:structure_factor} shows the equal-time dimer-dimer structure factor, 
+\begin{equation}
+S_d\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{i,j} e^{-i \bm{k} \cdot \left(\bm{r}_i - \bm{r}_j\right)} \left \langle n_{\bm{r}_i} n_{\bm{r}_j} \right \rangle
+\end{equation}
+where we restrict the sum to horizontal links, for an $L=32$ lattice. \figref{fig:structure_factor_path} shows $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers--the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}
         \centering
         \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale.~\note{Owen: Is this the bare or connected correlation function? What do these plots look like on a log scale?} ({\it right}) The $Z_3$ magnetic string correlation function $C_m(\bm{r}_{\bm{0}p})$, where the the correlations is with respect to the blue plaquette. \note{Are we using the real part? What does $\sqrt{C_M^*C_m}$ look like? Regardless we should make this a positive quantity so the lefthand side of the grayscale is zero.}}
+        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale. ({\it right}) The $Z_3$ magnetic string correlation function $C_M(\bm{r}_{\bm{0}p})$, where the the correlations is with respect to the blue plaquette. \note{Owen:What if we put the dimer structure factor on the right panel here, and move the vison correlation to the left pannel of figure 6, and put the top panel of figure 7 below these two?}}
         \label{fig:dimer_vison_heatmap}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-
-The left panel of \figref{fig:structure_factor} shows the equal-time dimer-dimer structure factor, 
-\begin{equation}
-S_d\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{i,j} e^{-i \bm{k} \cdot \left(\bm{r}_i - \bm{r}_j\right)} \left \langle n_i n_j \right \rangle
-\end{equation}
-where we restrict the sum to horizontal links, for an $L=32$ lattice. $S_d(\bm{k})$ displays maxima at $\bm{k} = (0, \pm \pi)$ due to correlation between parallel links on a given plaquette but we see no evidence of translational symmetry breaking. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers--we see no evidence of rotational symmetry breaking between horizontal and vertical dimer correlations. \figref{fig:structure_factor_path} shows $S_d(\bm{k})$ for a particular path through the Brillouin zone.
 
 %%%%%%%%%%%%%%%%%%%%%%%
    \begin{figure}[]
@@ -740,10 +736,38 @@ where we restrict the sum to horizontal links, for an $L=32$ lattice. $S_d(\bm{k
         \includegraphics[width=1.0\columnwidth]{vis_dmr_qdpm_struc_fac_32x32.pdf}
         \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the $Z_3$ magnetic string structure factor $S_M$ ({\it bottom})
         shown along the path in $k$ space connecting the $(0,0)$, to $(\pi,0)$, $(\pi,\pi)$, $(0,0)$
-        points for $\gamma=0.5$. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. What do there look like if you added $L=16$ data to these plots? Switch the y-axis from $S_v\rightarrow S_M$.}}
+        points for $\gamma=0.5$. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. Switch the y-axis from $S_v\rightarrow S_M$.}}
         \label{fig:structure_factor_path}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
+
+
+To test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define 
+\begin{equation}
+\Mrot \equiv  \frac{2}{L^2} \left(N_h - N_v\right) \label{eq:Mrot},
+\end{equation}
+where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. to To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define $\Mperp$ 
+\begin{align}
+\Mperp \equiv  \frac{8}{L^2} \sum_{\Box} \Bigl(  &(-1)^{r_x} \theta\left(\Mrot \right) \Pi_\Box^v \notag\\
++ &(-1)^{r_y}\theta\left(-\Mrot \right) \Pi_\Box^h\Bigr) \label{eq:Mperp},
+\end{align}
+where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is one if the plaquette $\Box$ has two horizontal (vertical) dimers, and zero otherwise. Similarly, we define $\Mpar$ to be given by \Eqref{eq:Mperp} with $r_x$ and $r_y$ swapped between terms. Additionally, we define order parameters that indicate ``columnar" and ``staggered" dimer order~\cite{Syljuasen2005}:
+\begin{align}
+\MstagSq \equiv  \frac{1}{4L^2} \biggl[ &\biggl( \sum_{\ell_h} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2  \notag\\
++&\biggl( \sum_{\ell_v} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2\biggr]\label{eq:Mstag},
+\end{align}
+\begin{align}
+\McolSq \equiv  \frac{1}{4L^2} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
++ &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
+\end{align}
+where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation in \figref{fig:order_params}.
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[]
+    \centering
+    \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
+    \caption{The symmetry breaking order parameters defined in \eqref{Mperp}.}
+    \label{fig:order_params}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 Additionally we have studied the nature of the decay of the connected dimer-dimer correlation function,
@@ -758,7 +782,7 @@ Thus we find that the RK point of the QDPM is a symmetric dimer liquid with expo
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_parallel.pdf}
-    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in directions perpendicular (circles) and parallel (squares) to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx???$. \note{Owen: Can you add the other direction to this plot? The y-axis also needs a label. Can you add the correlation length estimate here as well? Can you add the $r=0$ data point to this plot?}}
+    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in directions perpendicular (circles) and parallel (squares) to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx???$. \note{Owen: Can you add the direction parallel to the dimers to this plot? Can you add the correlation length estimate here as well?}}
     \label{fig:spatial_dmr_cor}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
