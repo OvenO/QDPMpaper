@@ -741,35 +741,6 @@ where we restrict the sum to horizontal links, for an $L=32$ lattice. \figref{fi
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-
-To test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define 
-\begin{equation}
-\Mrot \equiv  \frac{2}{L^2} \left(N_h - N_v\right) \label{eq:Mrot},
-\end{equation}
-where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. to To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define $\Mperp$ 
-\begin{align}
-\Mperp \equiv  \frac{8}{L^2} \sum_{\Box} \Bigl(  &(-1)^{r_x} \theta\left(\Mrot \right) \Pi_\Box^v \notag\\
-+ &(-1)^{r_y}\theta\left(-\Mrot \right) \Pi_\Box^h\Bigr) \label{eq:Mperp},
-\end{align}
-where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is one if the plaquette $\Box$ has two horizontal (vertical) dimers, and zero otherwise. Similarly, we define $\Mpar$ to be given by \Eqref{eq:Mperp} with $r_x$ and $r_y$ swapped between terms. Additionally, we define order parameters that indicate ``columnar" and ``staggered" dimer order~\cite{Syljuasen2005}:
-\begin{align}
-\MstagSq \equiv  \frac{1}{4L^2} \biggl[ &\biggl( \sum_{\ell_h} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2  \notag\\
-+&\biggl( \sum_{\ell_v} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2\biggr]\label{eq:Mstag},
-\end{align}
-\begin{align}
-\McolSq \equiv  \frac{1}{4L^2} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
-+ &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
-\end{align}
-where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation in \figref{fig:order_params}.
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[]
-    \centering
-    \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
-    \caption{The symmetry breaking order parameters defined in \eqref{Mperp}.}
-    \label{fig:order_params}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
-
 Additionally we have studied the nature of the decay of the connected dimer-dimer correlation function,
   \begin{equation}
     C_{\mathrm{d}} \left(r\right) \equiv \langle n_{\bm{0}} n_{\bm{r}} \rangle - \langle n_{\bm{0}} \rangle   \langle n_{\bm{r}} \rangle   
@@ -965,7 +936,7 @@ Note that  $S_e$ and $S_m$ do not commute if their corresponding strings interse
 
 Additionally, these string operators give rise to a topological degeneracy in systems of non-trivial topology. For example, consider the charge free sector on a torus. We can consider two topologically non-trivial closed loops $\tilde{\Gamma}_{X/Y}$ which have single winding around the $x/y$ directions of the torus. Since $S_m(\Gamma_{X/Y})$ commutes with $H_{Z_3}$, we can label the energy eigenstates by the eigenvalues of $S_m(\Gamma_{X/Y})$: $\{1,e^{\pm i 2\pi/3}\}$. Thus $H_{Z_3}$ has a 9-fold ground state degeneracy on the torus, and the ground states subspace can be labeled by the $Z_3$ electric flux winding about each axis of the torus.
             
-%\section{Additional numerical results on the QDPM RK ground state}
+\section{Additional numerical results on the QDPM RK ground state}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure}
@@ -976,6 +947,34 @@ Additionally, these string operators give rise to a topological degeneracy in sy
 %    \label{fig:spatial_dmr_cor}
 %\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
+
+To test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define 
+\begin{equation}
+\Mrot \equiv  \frac{2}{L^2} \left(N_h - N_v\right) \label{eq:Mrot},
+\end{equation}
+where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. to To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define $\Mperp$ 
+\begin{align}
+\Mperp \equiv  \frac{8}{L^2} \sum_{\Box} \Bigl(  &(-1)^{r_x} \theta\left(\Mrot \right) \Pi_\Box^v \notag\\
++ &(-1)^{r_y}\theta\left(-\Mrot \right) \Pi_\Box^h\Bigr) \label{eq:Mperp},
+\end{align}
+where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is one if the plaquette $\Box$ has two horizontal (vertical) dimers, and zero otherwise. Similarly, we define $\Mpar$ to be given by \Eqref{eq:Mperp} with $r_x$ and $r_y$ swapped between terms. Additionally, we define order parameters that indicate ``columnar" and ``staggered" dimer order~\cite{Syljuasen2005}:
+\begin{align}
+\MstagSq \equiv  \frac{1}{L^2} \biggl[ &\biggl( \sum_{\ell_h} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2  \notag\\
++&\biggl( \sum_{\ell_v} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2\biggr]\label{eq:Mstag},
+\end{align}
+\begin{align}
+\McolSq \equiv  \frac{1}{L^2} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
++ &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
+\end{align}
+where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation in \figref{fig:order_params}.
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[]
+    \centering
+    \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
+    \caption{The symmetry breaking order parameters defined in \eqref{Mperp}.}
+    \label{fig:order_params}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
