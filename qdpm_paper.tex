@@ -711,17 +711,16 @@ Here we discuss the dimer density correlations in the RK ground state of the QDP
 S_d\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{i,j} e^{-i \bm{k} \cdot \left(\bm{r}_i - \bm{r}_j\right)} \left \langle n_{\bm{r}_i} n_{\bm{r}_j} \right \rangle
 \end{equation}
 where we restrict the sum to horizontal links, for an $L=32$ lattice. \figref{fig:structure_factor_path} shows $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers--the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
-
+We have plotted the finite size scaling of the intensity of these peaks in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit. These maxima at $(0,\pi)$ and $(\pi,\pi)$ are thus consistent with finite size effects due to short distance correlations. Thus we see no evidence of thermodynamic limit symmetry breaking.
 
 %%%%%%%%%%%%%%%%%%%%%%%
-    \begin{figure}[]t
+    \begin{figure}[t]
         \centering
         \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale. ({\it right}) The $Z_3$ magnetic string correlation function $C_M(\bm{r}_{\bm{0}p})$, where the the correlations is with respect to the blue plaquette. \note{Owen:What if we put the dimer structure factor on the right panel here, and move the vison correlation to the left pannel of figure 6, and put the top panel of figure 7 below these two?}}
+        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale. ({\it right}) The magnitude of the $Z_3$ magnetic string correlation function $|C_M(\bm{r}_{\bm{0}p})|$, where the the correlations is with respect to the blue plaquette. \note{Owen:What if we put the dimer structure factor on the right panel here, and move the vison correlation to the left pannel of figure 6, and put the top panel of figure 7 below these two?}}
         \label{fig:dimer_vison_heatmap}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%
    \begin{figure}[t]
         \centering
@@ -734,19 +733,17 @@ where we restrict the sum to horizontal links, for an $L=32$ lattice. \figref{fi
     \begin{figure}[t]
         \centering
         \includegraphics[width=1.0\columnwidth]{vis_dmr_qdpm_struc_fac_32x32.pdf}
-        \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the $Z_3$ magnetic string structure factor $S_M$ ({\it bottom})
-        shown along the path in $k$ space connecting the $(0,0)$, to $(\pi,0)$, $(\pi,\pi)$, $(0,0)$
-        points for $\gamma=0.5$. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. Switch the y-axis from $S_v\rightarrow S_M$.}}
+        \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the magnitude of the $Z_3$ magnetic string structure factor $|S_M|$ ({\it bottom})
+        shown along a path in $k$ space for an $L=64$ lattice. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. Switch the y-axis from $S_v\rightarrow S_M$.}}
         \label{fig:structure_factor_path}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
     \centering
     \includegraphics[width=1.0\columnwidth]{peak_scaling.pdf}
-    \caption{Finite-size scaling of the Bragg peaks.}
-    \label{fig:spatial_dmr_cor}
+    \caption{Finite-size scaling of the maxima in the dimer ($S_d$) and magnetic string ($|S_M|$) structure factors. All maximum vanish in the thermodynamic limit, indicating that the RK state of the QDPM is a symmetric dimer liquid. \note{Owen: We don't need the absolute value bars for $S_d$ since it's real.}}
+    \label{fig:bragg_scaling}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -754,9 +751,7 @@ Additionally we have studied the nature of the decay of the connected dimer-dime
   \begin{equation}
     C_{\mathrm{d}} \left(r\right) \equiv \langle n_{\bm{0}} n_{\bm{r}} \rangle - \langle n_{\bm{0}} \rangle   \langle n_{\bm{r}} \rangle   
 \end{equation}
-where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, \textcolor{red}{for both $r$ parallel and perpendicular to the orientation of the dimers} \note{(Owen: can you add both directions to this plot?)} for an $L=64$ lattice. We find that $C_d$ decays exponentially with distance with a correlations length  $\chi\approx???$; additionally we find that correlations between perpendicular dimers also decay exponentially.
-
-Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the 
+where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, \textcolor{red}{for both $r$ parallel and perpendicular to the orientation of the dimers} \note{(Owen: can you add both directions to this plot?)} for an $L=64$ lattice. We find that $C_d$ decays exponentially with distance with a correlations length  $\chi\approx???$. Additionally, $C_d$ displays a sub-lattice oscillation that is consistent with the finite-size maximum in $S_d$ at $(0,\pi)$. Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the QDM.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -774,70 +769,55 @@ To investigate the $Z_3$ gauge theory description of the QDPM RK ground state, w
 \begin{equation}
 C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3} i \left( \Phi_{\gamma_{pp'}} -\tilde{\Phi}_{\gamma_{pp'}} \right) \right] \right \rangle
 \end{equation}
-where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice connecting $p$ and $p'$. \note{Something about the background dimerization and gauge fixing here. Are we using the real parts or $\sqrt{C_M^*C_M}$?}
-
-In \figref{fig:dimer_vison_heatmap}, we have ploted $C_M$ for an $L=16$ lattice, which displays short distance correlations that quickly decay. \note{Comment here about gauge fixing breaking symmetry, if still present...}. Additionally, we have plotted the magnetic string structure factor
+where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice connecting $p$ and $p'$. In \figref{fig:dimer_vison_heatmap}, we have plotted $|C_M|$ for an $L=16$ lattice. Note, that while $C_M$ depends on the choice of the background dimerization which fixes the gauge, $|C_M|$ is independent of the background dimerization. Additionally, we have computed the magnetic string structure factor
 \begin{equation}
 S_M\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{p,p'} e^{-i \bm{k} \cdot r_{pp'}} C_M\left( \bm{r}_{pp'}\right)
 \end{equation}
-in \figref{fig:structure_factor}. \note{Discuss any effect of gauge fixing here, if relevant}. 
-
-\figref{fig:vison_cor} show the decay of $C_M$ along one of the axes of the dual lattice; \note{we find this decays exponentially with distance, with a correlation length $\chi\approx???$} 
-
-Thus we find no evidence of magnetic vortex condensation on lattices up to $L=64$.
+and plot the magnitude $|S_M$ in \figref{fig:structure_factor}. We have chosen d a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{fig:BKGD_dimers}\note{Where should we show the background dimerization??}; this chose breaks the translational symmetry and thus requires doubling the unit cell the $x$-direction. \note{Owen: What are the effects of the background dimerization?}. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$) \note{(Owen: What about $(\pi,\pi)$??)}. We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit. While the vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, the vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice; \note{we find this decays exponentially with distance, with a correlation length $\chi\approx???$}. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_z3_vis.pdf}
-    \caption{ $Z_3$ magnetic string correlation $C_M$ along along one axis of an $L=64$ lattice. The line corresponds to an exponential fit with correlations length \note{$\chi\approx???$}.}
+    \caption{ The magnitude of the $Z_3$ magnetic string correlation $|C_M|$ along along one axis of the dual lattice of an $L=64$ lattice. The line corresponds to an exponential fit with correlations length \note{$\chi\approx???$}.}
     \label{fig:vison_cor}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Monomer deconfinement}
 
-To study the confinement of electrically charged defects in the QDPM, we have Monte Carlo sampled the RK ground state doped with a single pair of monomers. We initialize the system with a monomer on each sub-lattice and supplement the local Monte Carlo updates with updates of the form:
+To study the confinement of $Z_3$ electrically charged defects in the QDPM, we have Monte Carlo sampled the RK ground state doped with a single pair of monomers. We initialize the system with a monomer on each sub-lattice and supplement the local Monte Carlo updates with updates of the form:
 \begin{equation}
 \monomermvA  \Longleftrightarrow \monomermvB
 \end{equation}
-which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$, where the positive and negative monomers live on different sub-lattices. 
-
-We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlation}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \sim L^{-4}$ at large separations. In \figref{fig:monomer_correlations}, the horizontal lines correspond to $L^{-4}$ for each system size; we find that the monomer correlations quickly decay to $L^{-4}$ indicating a deconfinement of monomers.
-
+which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$, where the positive and negative monomers live on different sub-lattices. We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlations}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \sim L^{-4}$ at large separations. \figref{fig:monomer_correlations} demonstrates that $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ decays to $L^{-4}$ for each system size, indicating a deconfinement of monomers.
 %%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monomer correlations}
-
+%\begin{table}
+%    \begin{tabular}{| l | c | c |}
+%  	\hline
+%     & $c$ & $\bar{c}$ \\
+%	\hline
+%    $i$ & $\monomermvA$ &  $\monomermvB$  \\
+%    \hline
+%  \end{tabular}
+%  \caption{The pair of local dimer \& monomer configurations $c\leftrightarrow\bar{c}$ generate
+%  minimal local monomer dynamics. Monomers always remain on their origonal sublattice. }
+%  \label{tab:pentamerMoves}
+%\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[]
         \centering
         \includegraphics[width=1.0\columnwidth]{monomer_cor_log.pdf}
-        \caption{ The monomer-monomer correlations function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ along a coordinate axis in the QDPM RK ground state doped with a single pair of monomers on lattices up to \note{$L=48$}. The horizontal lines correspond to $L^{-4}$ for the system size corresponding to the color. \note{Owen: Do you have data for $L=64$? Can you make the subscripts in the y-axis label bold math? Maybe we should renomalize this plot by a factor of $L^2$. This is only one sub-lattice--what about the other sublattice?}}
+        \caption{ The monomer-monomer correlations function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ along a coordinate axis in the QDPM RK ground state doped with a single pair of monomers on lattices up to $L=64$. The horizontal lines correspond to $L^{-4}$ for the system size corresponding to the color. \note{Owen: Make the subscripts in the y-axis label bold math. Extend the horizontal lines all the way across the plot. Remove the legend bounding box and use one symbol for each legend entry. Remove the black boundaries of the symbols.}}
         \label{fig:monomer_correlations}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-    \begin{tabular}{| l | c | c |}
-  	\hline
-     & $c$ & $\bar{c}$ \\
-	\hline
-    $i$ & $\monomermvA$ &  $\monomermvB$  \\
-    \hline
-  \end{tabular}
-  \caption{The pair of local dimer \& monomer configurations $c\leftrightarrow\bar{c}$ generate
-  minimal local monomer dynamics. Monomers always remain on their origonal sublattice. }
-  \label{tab:pentamerMoves}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
