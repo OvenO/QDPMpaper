@@ -716,26 +716,20 @@ We have plotted the finite size scaling of the intensity of these peaks in  \fig
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[t]
         \centering
-        \includegraphics[width=1.0\columnwidth]{dimer_gry_scale_qdpm.pdf}
-        \caption{({\it left}) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=16$ lattice. The origin corresponds to the blue link, and $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off the given scale. ({\it right}) The magnitude of the $Z_3$ magnetic string correlation function $|C_M(\bm{r}_{\bm{0}p})|$, where the the correlations is with respect to the blue plaquette. \note{Owen:What if we put the dimer structure factor on the right panel here, and move the vison correlation to the left pannel of figure 6, and put the top panel of figure 7 below these two?}}
-        \label{fig:dimer_vison_heatmap}
-    \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-   \begin{figure}[t]
-        \centering
-        \includegraphics[width=1.0\columnwidth]{qdpm_dmr_vis_HM.pdf}
-        \caption{({\it left}) The horizontal dimer density structure factor $S_d(\bm{k})$ for the QDPM RK ground state on an $L=64$ lattice. The lack of $x\leftrightarrow y$ rotational symmetry is due to the fact that horizontal links have been isolated. ({\it right}) \note{Owen: Is this the real part or $\sqrt{S_M^* S_M}$}}
-        \label{fig:structure_factor} 
-    \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{figure}[t]
-        \centering
-        \includegraphics[width=1.0\columnwidth]{vis_dmr_qdpm_struc_fac_32x32.pdf}
-        \caption{ The horizontal dimer-dimer structure factor $S_d(\bm{k})$ ({\it top}) and the magnitude of the $Z_3$ magnetic string structure factor $|S_M|$ ({\it bottom})
-        shown along a path in $k$ space for an $L=64$ lattice. Statistical errors are smaller than the symbols. \note{Owen: Make the k's in the y-axis bold. Switch the y-axis from $S_v\rightarrow S_M$.}}
-        \label{fig:structure_factor_path}
+        \includegraphics[width=1.0\columnwidth]{dimer_3way.pdf}
+        \caption
+        {
+            (a) Gray scale of the dimer-dimer correlation function $\langle n_{\bm{0}}
+            n_{\bm{r}}\rangle$ on an $L=32$ lattice. The origin corresponds to the orange link, and
+            $\bm{r}$ varies over all other links of the lattice. Red links have correlations that are off
+            the given scale. 
+            (b) The horizontal dimer density structure factor $S_d(\bm{k})$ for the
+            QDPM RK ground state on an $L=64$ lattice. The lack of $x\leftrightarrow y$ rotational
+            symmetry is due to the fact that horizontal links have been isolated. 
+            (c) The horizontal dimer-dimer structure factor $S_d(\bm{k})$ shown along a
+            path in $k$ space for an $L=64$ lattice. Statistical errors are smaller than the symbols.
+        }
+        \label{fig:dimer_3way}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -765,6 +759,8 @@ where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$Z_3$ magnetic string correlations}
 
+
+
 To investigate the $Z_3$ gauge theory description of the QDPM RK ground state, we study the $Z_3$ magnetic string correlation function as defined in \eqref{eq:Sgamma} \& \eqref{eq:SQDPM}:
 \begin{equation}
 C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3} i \left( \Phi_{\gamma_{pp'}} -\tilde{\Phi}_{\gamma_{pp'}} \right) \right] \right \rangle
@@ -774,6 +770,24 @@ where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on 
 S_M\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{p,p'} e^{-i \bm{k} \cdot r_{pp'}} C_M\left( \bm{r}_{pp'}\right)
 \end{equation}
 and plot the magnitude $|S_M$ in \figref{fig:structure_factor}. We have chosen d a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{fig:BKGD_dimers}\note{Where should we show the background dimerization??}; this chose breaks the translational symmetry and thus requires doubling the unit cell the $x$-direction. \note{Owen: What are the effects of the background dimerization?}. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$) \note{(Owen: What about $(\pi,\pi)$??)}. We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit. While the vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, the vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice; \note{we find this decays exponentially with distance, with a correlation length $\chi\approx???$}. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=1.0\columnwidth]{vison_3way.pdf}
+        \caption
+        {
+            (a) Color scale of the magnetic string correlation function 
+            on an $L=32$ lattice. The origin corresponds to the orange circle and it has been removed from
+            the color scale.
+            (b) The magnitude of the $Z_3$ magnetic string correlation function
+            $|C_M(\bm{r}_{\bm{0}p})|$, where the correlations is with respect to the orange plaquette.
+            (c) The magnitude of the $Z_3$ magnetic string structure factor $|S_M|$ shown along a
+            path in $k$ space for an $L=64$ lattice. Statistical errors are smaller than the symbols.
+        }
+        \label{fig:vison_3way}
+    \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
