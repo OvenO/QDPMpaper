@@ -924,7 +924,7 @@ where the product is over all links $l$ that cross $\tilde{\gamma}$ and $v_l$ ($
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.8\linewidth]{example_elec_string.pdf}
+    \includegraphics[width=1.0\linewidth]{example_elec_string.pdf}
     \caption{ ({\it left}) An example of a charge free $Z_3$ electric string configuration. The electric string operator $S_\gamma^e$ represented by the thick gray line, oriented from the red to blue vertex. ({\it right}) An example of a $Z_3$ electric string configuration with a $+1$ ($-1$) electric charge at the red (blue) vertex; this string configuration results form the action of $S_\gamma^e$ on the left panel.  }
     \label{fig:example_elec_string}
 \end{figure}
@@ -957,7 +957,7 @@ Additionally, these string operators give rise to a topological degeneracy in sy
 
 To test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define 
 \begin{equation}
-\Mrot \equiv  \frac{2}{L^2} \left(N_h - N_v\right) \label{eq:Mrot},
+\Mrot \equiv  \frac{2}{L^2} \left(N_v - N_h\right) \label{eq:Mrot},
 \end{equation}
 where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. to To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define $\Mperp$ 
 \begin{align}
@@ -966,11 +966,11 @@ where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note th
 \end{align}
 where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is one if the plaquette $\Box$ has two horizontal (vertical) dimers, and zero otherwise. Similarly, we define $\Mpar$ to be given by \Eqref{eq:Mperp} with $r_x$ and $r_y$ swapped between terms. Additionally, we define order parameters that indicate ``columnar" and ``staggered" dimer order~\cite{Syljuasen2005}:
 \begin{align}
-\MstagSq \equiv  \frac{1}{L^2} \biggl[ &\biggl( \sum_{\ell_h} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2  \notag\\
+\MstagSq \equiv  \frac{2}{L^4} \biggl[ &\biggl( \sum_{\ell_h} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2  \notag\\
 +&\biggl( \sum_{\ell_v} (-1)^{r_x+r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2\biggr]\label{eq:Mstag},
 \end{align}
 \begin{align}
-\McolSq \equiv  \frac{1}{L^2} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
+\McolSq \equiv  \frac{2}{L^4} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
 + &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
 \end{align}
 where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation in \figref{fig:order_params}.
