@@ -54,15 +54,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.8101935"
-     inkscape:cx="142.18938"
+     inkscape:cx="56.286961"
      inkscape:cy="61.542856"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:window-width="1262"
      inkscape:window-height="677"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="23"
      inkscape:window-maximized="0"
      units="cm"
      inkscape:showpageshadow="false" />
@@ -84,7 +84,7 @@
      inkscape:label="dimers">
     <g
        transform="translate(0,-900.32833)"
-       style="fill:#999999"
+       style="fill:#666666"
        id="g4541">
       <ellipse
          ry="3.0695913"
@@ -92,27 +92,27 @@
          cy="1042.7772"
          cx="25.455561"
          id="path5318"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="967.34991"
          cx="25.455561"
          id="path5322"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="1023.9351"
          cx="25.455561"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5497" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="986.53467"
          cx="25.455561"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5501" />
       <ellipse
          ry="3.0695913"
@@ -120,27 +120,27 @@
          cy="1005.0635"
          cx="49.920238"
          id="path5503"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="1042.7772"
          cx="74.245911"
          id="path5505"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="1042.7772"
          cx="123.31994"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5509" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="1023.9203"
          cx="98.357437"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5525" />
       <ellipse
          ry="3.0695913"
@@ -148,20 +148,20 @@
          cy="1024.1943"
          cx="147.86145"
          id="path5527"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="967.25513"
          cx="147.95267"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5615" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="948.2793"
          cx="99.17614"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path5631" />
       <ellipse
          ry="2.4737387"
@@ -169,7 +169,7 @@
          cy="37.781879"
          cx="-939.10645"
          inkscape:transform-center-y="-19.245987"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3440"
          transform="matrix(0,-1,1,0,0,0)" />
       <ellipse
@@ -180,7 +180,7 @@
          inkscape:transform-center-y="-19.24591"
          transform="matrix(0,-1,1,0,0,0)"
          id="path3456"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="2.4737387"
          rx="9.1648865"
@@ -188,7 +188,7 @@
          cx="-976.68036"
          transform="matrix(0,-1,1,0,0,0)"
          id="path3458"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245936" />
       <ellipse
          ry="2.4737387"
@@ -197,7 +197,7 @@
          cx="-939.21472"
          transform="matrix(0,-1,1,0,0,0)"
          id="path3460"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245918" />
       <ellipse
          ry="3.0695913"
@@ -205,14 +205,14 @@
          cy="1005.2773"
          cx="123.76555"
          id="path3352"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="2.4737387"
          rx="9.1648865"
          cy="62.287506"
          cx="-996.21826"
          inkscape:transform-center-y="-19.245967"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3361"
          transform="matrix(0,-1,1,0,0,0)" />
       <ellipse
@@ -222,14 +222,14 @@
          cx="-1014.5051"
          transform="matrix(0,-1,1,0,0,0)"
          id="path3366"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.246028" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="1005.2773"
          cx="74.300812"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3368" />
       <ellipse
          ry="2.4737387"
@@ -237,7 +237,7 @@
          cy="111.50253"
          cx="-957.76276"
          inkscape:transform-center-y="-19.246001"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3372"
          transform="matrix(0,-1,1,0,0,0)" />
       <ellipse
@@ -246,13 +246,13 @@
          cy="948.2793"
          cx="123.77338"
          id="path3374"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="986.20667"
          cx="123.76555"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3376" />
       <ellipse
          ry="3.0695913"
@@ -260,7 +260,7 @@
          cy="929.37512"
          cx="74.43129"
          id="path3378"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="2.4737387"
          rx="9.1648865"
@@ -268,19 +268,19 @@
          cx="-938.58398"
          transform="matrix(0,-1,1,0,0,0)"
          id="path3438"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245973" />
       <ellipse
          transform="matrix(0,-1,1,0,0,0)"
          id="ellipse4565"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245987"
          cx="-901.60645"
          cy="37.781879"
          rx="9.1648865"
          ry="2.4737387" />
       <ellipse
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4567"
          cx="1.3844203"
          cy="910.7674"
@@ -292,27 +292,27 @@
          cy="910.7674"
          cx="74.235977"
          id="ellipse4658"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="3.0695913"
          rx="12.174762"
          cy="929.63635"
          cx="147.95267"
          id="path5443"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          ry="2.4737387"
          rx="9.1648865"
          cy="111.29356"
          cx="-901.60645"
          inkscape:transform-center-y="-19.245987"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4660"
          transform="matrix(0,-1,1,0,0,0)" />
       <ellipse
          transform="matrix(0,-1,1,0,0,0)"
          id="ellipse4669"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245987"
          cx="-901.60645"
          cy="135.79022"
@@ -324,11 +324,11 @@
          cy="160.50293"
          cx="-995.48969"
          inkscape:transform-center-y="-19.245964"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path3382"
          transform="matrix(0,-1,1,0,0,0)" />
       <g
-         style="fill:#999999"
+         style="fill:#666666"
          transform="translate(-0.4247267,0.04089702)"
          id="g4679">
         <ellipse
@@ -336,7 +336,7 @@
            rx="12.174762"
            cy="1023.6699"
            cx="197.61363"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4671" />
         <ellipse
            ry="2.4737387"
@@ -345,7 +345,7 @@
            cx="-1014.6053"
            transform="matrix(0,-1,1,0,0,0)"
            id="ellipse4673"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            inkscape:transform-center-y="-19.245918" />
         <ellipse
            ry="2.4737387"
@@ -353,7 +353,7 @@
            cy="209.94002"
            cx="-1033.1533"
            inkscape:transform-center-y="-19.246001"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4675"
            transform="matrix(0,-1,1,0,0,0)" />
         <ellipse
@@ -362,22 +362,22 @@
            cy="1023.6699"
            cx="222.21086"
            id="ellipse4677"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       </g>
       <g
-         style="fill:#999999"
+         style="fill:#666666"
          id="g4692"
          transform="translate(-0.4247267,-18.815803)">
         <ellipse
            id="ellipse4694"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            cx="197.61363"
            cy="1023.6699"
            rx="12.174762"
            ry="3.0695913" />
         <ellipse
            inkscape:transform-center-y="-19.245918"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4696"
            transform="matrix(0,-1,1,0,0,0)"
            cx="-1014.6053"
@@ -387,14 +387,14 @@
         <ellipse
            transform="matrix(0,-1,1,0,0,0)"
            id="ellipse4698"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            inkscape:transform-center-y="-19.246001"
            cx="-1033.1533"
            cy="209.94002"
            rx="9.1648865"
            ry="2.4737387" />
         <ellipse
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4700"
            cx="222.21086"
            cy="1023.6699"
@@ -404,7 +404,7 @@
       <ellipse
          transform="matrix(0,-1,1,0,0,0)"
          id="ellipse4702"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245964"
          cx="-1051.8373"
          cy="160.50293"
@@ -416,34 +416,34 @@
          cy="184.99088"
          cx="-1051.8373"
          inkscape:transform-center-y="-19.245964"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4704"
          transform="matrix(0,-1,1,0,0,0)" />
       <ellipse
          transform="matrix(0,-1,1,0,0,0)"
          id="ellipse4706"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:transform-center-y="-19.245964"
          cx="-976.9834"
          cy="184.99088"
          rx="9.1648865"
          ry="2.4737387" />
       <ellipse
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4708"
          cx="172.81189"
          cy="948.49316"
          rx="12.174762"
          ry="3.0695913" />
       <ellipse
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4710"
          cx="172.81189"
          cy="910.7674"
          rx="12.174762"
          ry="3.0695913" />
       <g
-         style="fill:#999999"
+         style="fill:#666666"
          transform="translate(-0.4247267,-94.255133)"
          id="g4712">
         <ellipse
@@ -451,7 +451,7 @@
            rx="12.174762"
            cy="1023.6699"
            cx="197.61363"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4714" />
         <ellipse
            ry="2.4737387"
@@ -460,7 +460,7 @@
            cx="-1014.6053"
            transform="matrix(0,-1,1,0,0,0)"
            id="ellipse4716"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            inkscape:transform-center-y="-19.245918" />
         <ellipse
            ry="2.4737387"
@@ -468,7 +468,7 @@
            cy="209.94002"
            cx="-1033.1533"
            inkscape:transform-center-y="-19.246001"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
            id="ellipse4718"
            transform="matrix(0,-1,1,0,0,0)" />
         <ellipse
@@ -477,11 +477,11 @@
            cy="1023.6699"
            cx="222.21086"
            id="ellipse4720"
-           style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       </g>
       <ellipse
          id="ellipse4724"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          cx="221.70169"
          cy="967.25513"
          rx="12.174762"
@@ -491,7 +491,7 @@
          rx="12.174762"
          cy="948.4726"
          cx="246.2847"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4726" />
       <ellipse
          ry="3.0695913"
@@ -499,10 +499,10 @@
          cy="910.7674"
          cx="246.2847"
          id="ellipse4728"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <ellipse
          id="ellipse4730"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          cx="246.2847"
          cy="986.03766"
          rx="12.174762"
@@ -512,10 +512,10 @@
          rx="12.174762"
          cy="1042.6782"
          cx="246.2847"
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4732" />
       <ellipse
-         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="ellipse4734"
          cx="1.8590782"
          cy="1005.0635"
