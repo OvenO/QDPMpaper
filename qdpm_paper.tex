@@ -391,7 +391,7 @@
 \affiliation{Department of Chemistry,  University of Waterloo, Ontario, N2L 3G1, Canada}
 
 \begin{abstract}
-We study the ground state of the quantum dimer-pentamer model (QDPM) on the square lattice. This model is a generalization of the square lattice quantum dimer model (QDM) as its configuration space comprises fully-packed hard-core dimer coverings as well as configurations containing pentamers, where four dimers touch a vertex. Thus in the QDPM, the fully-packed, hard-core constraint of the QDM is relaxed such that the local dimer number at each vertex is fixed modulo 3; correspondingly, the local $U(1)$ gauge symmetry of the QDM Hilbert space is reduced to a local $Z_3$ gauge symmetry in the QDPM. We construct a local Hamiltonian for which the Rokhsar-Kivelson (RK) state (the equal superposition of all configurations in a topological sector) is the exact ground state and has a 9-fold topological degeneracy on the torus. Using Monte Carlo calculations, we find no spontaneous symmetry breaking in the RK wavefunction and that its dimer-dimer correlation function decays exponentially. Additionally, we discuss the possibility of $Z_3$ topological order in the ground state of the QDPM.
+We introduce quantum dimer-pentamer model (QDPM) on the square lattice. This model is a generalization of the square lattice quantum dimer model (QDM) as its configuration space comprises fully-packed hard-core dimer coverings as well as dimer configurations containing pentamers, where four dimers touch a vertex. Thus in the QDPM, the fully-packed, hard-core constraint of the QDM is relaxed such that the local dimer number at each vertex is fixed modulo 3; correspondingly, the local $U(1)$ gauge symmetry of the QDM Hilbert space is reduced to a local $Z_3$ gauge symmetry in the QDPM. We construct a local Hamiltonian for which the Rokhsar-Kivelson (RK) equal superposition state is the exact ground state and has a 9-fold topological degeneracy on the torus. Using Monte Carlo calculations, we find no spontaneous symmetry breaking in the RK wavefunction and that its dimer-dimer correlation function decays exponentially. By doping the QDPM RK state with a pair of monomers, we demonstrate that $Z_3$ electric charges are deconfined. Additionally, we introduce a $Z_3$ magnetic string operator which shows no signatures of magnetic vortex condensation also decay exponentially. These numerical results suggest that the ground state of the QDPM is a dimer liquid with $Z_3$ topological order.
 \end{abstract}
 
 \maketitle
@@ -400,30 +400,28 @@ We study the ground state of the quantum dimer-pentamer model (QDPM) on the squa
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Over the last several decades, experimental and theoretical work has demonstrated that strongly interacting quantum many-body systems support exotic quantum phases of matter not described by the Landau symmetry breaking paradigm. One class of such quantum phases of matter are topologically ordered quantum liquids~\cite{Wen1990}, first realized experimentally via the fractional quantum Hall effect~\cite{Tsui1982,Laughlin1983,Wen1990a,Wen1995}. Despite the absence of conventional symmetry breaking and a local order parameter, topological quantum liquids possess a non-trivial quantum order that distinguishes them from trivial liquid phases~\cite{Nayak2008}. Although not detectable by local operators, topological order arises due to a non-local entanglement structure that leaves a signatures in the bipartite entanglement entropy~\cite{Levin2006a,Kitaev2006b}. Such topological phases may provide the basis for fault-tolerant quantum information processing~\cite{Freedman2001,Kitaev2003}.
+Strongly interacting quantum many-body systems are known to support a variety of exotic quantum phases of matter with no classical analogue. One class of such quantum phases of matter are topologically ordered quantum liquids; their non-trivial topological order can not be identified by a local order parameter as these phases of matter don't break conventional symmetries~\cite{Wen1990,Nayak2008}. Both because of of the exotic nature of topological phases and their potential use for quantum information processing~\cite{Freedman2001,Kitaev2003}, there is great interest in the development of theoretical models which display these phases and potentially provide candidate experimental systems in which to constructively engineer topological order~\cite{Duan2003,Jaksch2005,Lewenstein2007,Jiang2008d,Weimer2010a,Herdman2010c,Fowler2012a}. 
 
-Because of the exotic nature of topological phases and their potential use for quantum information processing, there is great interest in the development of theoretical models which display these phases. Such models offer the possibility of furthering the understanding of these phases as well as providing candidate experimental systems in which to constructively engineer topological order~\cite{Duan2003,Jaksch2005,Lewenstein2007,Jiang2008d,Weimer2010a,Herdman2010c,Fowler2012a}. A variety of exactly soluble lattice models are known to support ground states with topological order that ranges from the simplest variety, $Z_2$ topological order~\cite{Kitaev2003,Wen2003}, to those with non-Abelian anyonic excitations~\cite{Levin2005a,Kitaev2006a}; such models generally involve complex many-body interactions, and thus it is desirable to find simpler models supporting topological order that are closer to what is accessible experimentally.
-
-Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; the constraints inhibit the formation of symmetry breaking local order and given sufficient dynamics, may lead to a symmetric liquid ground state. One of the most basic of these is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
+A variety of exactly soluble lattice models are known to support ground states with topological order that ranges from the simplest variety, $Z_2$ topological order~\cite{Kitaev2003,Wen2003}, to those with non-Abelian anyonic excitations~\cite{Levin2005a,Kitaev2006a}; such models generally involve complex many-body interactions, and thus it is desirable to find simpler models supporting topological order that are closer to what is accessible experimentally. Among the simplest class of models displaying topological quantum liquid phases are those with local geometric constraints; the constraints inhibit the formation of symmetry breaking local order and given sufficient dynamics, may lead to a symmetric liquid ground state. One of the most basic of these is the quantum dimer model (QDM) describing dimer degrees of freedom living on the links of a lattice~\cite{Rokhsar1988,Moessner2008}; the hard-core, fully-packed QDM has a local constraint that requires exactly one dimer touching each vertex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
     \centering
-    \includegraphics[width=0.75\columnwidth]{QDPM_ex_config.pdf}
-    \caption{An example of an allowed configuration in the quantum dimer-pentamer model, in which pentamers (four dimers touching at a vertex) are allowed. \note{Owen: maybe we should stick with black and white for these cartoons}}
+    \includegraphics[width=0.9\columnwidth]{QDPM_ex_config.pdf}
+    \caption{An example of an allowed configuration in the quantum dimer-pentamer model. The local constraint requires that each vertex is touched by either one dimer or a four dimers (a pentamer).}
     \label{fig:QDPMex}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-While on non-bipartite lattices, the QDM posses a topologically ordered ground state~\cite{Moessner2001a,Fendley2002}, on the square lattice there is only a liquid ground state at an isolated critical quantum point~\cite{Leung1996,Syljuasen2006}. If the hard-core constraint of the QDM is relaxed to a parity constraint such that each vertex must have an odd (or even) number of dimers touching each vertex, the simplest non-trivial dynamics leads to a $Z_2$ topologically ordered ground state~\cite{Kitaev2003,Wen2003}. The existence of topologically ordered ground states in dimer-based models is intimately related to the local constraint which imposes a local gauge symmetry in the Hilbert space; the topological order that arises is directly related to a discrete gauge theory with the appropriate local gauge constraint~\cite{Moessner2001}.
+While on non-bipartite lattices, the QDM has a topologically ordered ground state~\cite{Moessner2001a,Fendley2002}, on the square lattice there is only a symmetric liquid ground state at an isolated critical quantum point~\cite{Leung1996,Syljuasen2006}. If the hard-core constraint of the QDM is relaxed such that only the parity of the number of dimer touching each vertex is fixed, the simplest non-trivial dynamics leads to a $Z_2$ topologically ordered ground state~\cite{Kitaev2003,Wen2003}. The existence of topologically ordered ground states in these models is intimately related to the local constraint which imposes a local gauge symmetry in the Hilbert space; the topological order that arises is directly related to a discrete gauge theory with the appropriate local gauge constraint~\cite{Moessner2001}.
 
-Given that these models with dimer degrees of freedom and local constraints posses the simplest non-trivial local (Ising) Hilbert space at each link, they provide a potentially simpler route to engineering exotic phases. The local constraints can often be enforced by a local potential energy penalty and the required dynamics are generally expected to arise at the lowest order non-trivial order in perturbation theory. We will refer to such models with dimer degrees of freedom on links and local constraints at vertices as \emph{generalized quantum dimer modes} (GQDMs). Previous work has demonstrated that GQDMs on the square lattice support gapped $Z_2$ topologically ordered phases as well as gapless quantum critical points. On non-bipartite lattices, GQDMs support $Z_2$ topological order~\cite{Moessner2001a,Misguich2002} as well as doubled-semion phases~\cite{Qi2014,Buerschaper2014a}. A full characterization of all exotic phases that can exist within this framework is thus desirable.
+Given that these models with dimer degrees of freedom and local constraints posses the simplest non-trivial local Hilbert space at each link, they provide a potentially simpler route to engineering exotic phases. The local constraints can be enforced by a local potential energy penalty and the minimal dynamics are often arise at the lowest order non-trivial order in perturbation theory from a related spin model. We will refer to such models with dimer degrees of freedom on links and local constraints as \emph{generalized quantum dimer modes} (GQDMs). Previous work has demonstrated that GQDMs on the square lattice support gapped $Z_2$ topologically ordered phases as well as gapless quantum critical points. On non-bipartite lattices, GQDMs support $Z_2$ topological order~\cite{Moessner2001a,Misguich2002} as well as doubled-semion phases~\cite{Qi2014,Buerschaper2014a}. A full characterization of all exotic phases that can exist within this framework is thus desirable.
 
-In this work we extend this paradigm to a new GQDM on the square lattice, what we term the \emph{quantum dimer-pentamer model} (QDPM). In the QDPM, the local constraint is relaxed from that of the QDM to allow either $1$ or $4$ dimers to touch each vertex, as shown in figure \figref{fig:QDPMex}. Correspondingly, the QDPM extends the Hilbert space of the QDM to include both fully-packed hard-core dimer configurations, as well as those with pentamers--four dimers touching a vertex. To give the system dynamics, the Hamiltonian includes terms that incorporate the simplest non-trivial dynamics that preserve the local constraint.
+In this work we extend this paradigm to a new GQDM on the square lattice, what we term the \emph{quantum dimer-pentamer model} (QDPM). In the QDPM, the local constraint is relaxed from that of the QDM to allow either $1$ or $4$ dimers to touch each vertex, as shown in figure \figref{fig:QDPMex}. Correspondingly, the QDPM extends the Hilbert space of the QDM to include both fully-packed hard-core dimer configurations, as well as those with pentamers--four dimers touching a vertex. We define a local Hamiltonian that provides the simplest non-trivial dynamics that preserve this local constraint. Consequently, the Hamiltonian has an exact local $Z_3$ symmetry and conserves a $Z_3$ topological winding number; thus the QDPM has a 9-fold topological ground state degeneracy on the torus.
 
-We present a numerical study of the ground state of the QDPM at an exactly soluble point and demonstrate the the soluble point represents a \textcolor{red}{gapped}, disordered quantum liquid phase.  Using Monte Carlo calculations, we explicitly demonstrate the absence of symmetry breaking order and the exponential decay of correlation functions; \textcolor{red}{by computing imaginary-time correlation functions, we find that the RK point is gapped in the thermodynamic limit}. By construction the QDPM has an exact local $Z_3$ symmetry and conserves a $Z_3$ topological winding number. Thus the QDPM has a 9-fold topological degeneracy on the torus. Thus we argue that the ground state of the QDPM posses $Z_3$ topological order.
+Additionally we present a numerical study of the ground state of the QDPM at an exactly soluble point. Using Monte Carlo calculations, we explicitly demonstrate the absence of symmetry breaking order and the exponential decay of correlation functions. Additionally, we define a $Z_3$ magnetic string operator, whose correlations display no evidence of magnetic vortex condensation. Finally, by a studying systems doped with a pair of  monomer defects, we demonstrate that monomers are deconfined in the QDPM. Thus we argue that the ground state of the QDPM is a $Z_3$ topologically ordered dimer liquid.
 
-This paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:MC} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point.
+This paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:numerics} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point. Finally, \secref{sec:discussion} discusses potential future work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -438,9 +436,8 @@ This paper is organized as follows. In \secref{sec:Background} we provide releva
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.8\linewidth]{example_local_constraints.pdf}
-    \caption{Clockwise from the upper left panel we show an example of a QDM with constraints: one
-    dimer ($n_0 = 1$), two dimers ($n_0 = 2$), and an even ($n_P = 0$) or odd ($n_P = 1$) number of dimers touching each vertex. \note{Owen: Maybe for consistency we should make all the dimers loos like the dimers in the upper-left.}}
+    \includegraphics[width=0.9\linewidth]{example_local_constraints.pdf}
+    \caption{Examples of GQDMs with different local constraints. Clockwise from the upper left panel; fixed dimer number: $n_d=1$, $n_d=2$;  fixed dimer parity: odd, even.}
     \label{fig:example_local_constraints}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -454,7 +451,7 @@ The Hamiltonian of a GQDM is of the form
 \begin{equation}
 H_{\rm{GQDM}} = -\sum_\nu t_\nu \hat{T}_{\nu} + \sum_\nu v_\nu \hat{V}_{\nu} \label{eq:HGQDM}
 \end{equation}
-where $\hat{T}_\nu$ are off-diagonal kinetic energy operators, $\hat{V}_\nu$ are diagonal the potential energy operators, $t_\nu$ and $v_\nu$ parametrize the strength of these terms, and each $\nu$ and represents a set of $n_\nu$ neighboring links. We will limit our discussion to $t_\nu >0$. $\hat{T}_\nu$ is constructed to favor a resonance between two distinct allowed dimerazations of $\nu$, $c_\nu$ and its compliment $\bar{c}_\nu$, and is written as:
+where $\hat{T}_\nu$ are off-diagonal kinetic energy operators, $\hat{V}_\nu$ are diagonal the potential energy operators, $t_\nu$ and $v_\nu$ parametrize the strength of these terms, and each $\nu$ and represents a set of  neighboring links. We will limit our discussion to $t_\nu >0$. $\hat{T}_\nu$ is constructed to generate resonances between two distinct allowed dimerazations of $\nu$, $c_\nu$ and its compliment $\bar{c}_\nu$, and is written as:
 \begin{equation}
 \hat{T}_{\nu} = \eket{c_\nu}\ebra{\bar{c}_\nu} + h.c.;
 \end{equation}
@@ -468,7 +465,7 @@ Therefore we may define a Hamiltonian for a GQDM using \Eqref{eq:HGQDM} and defi
 \end{equation}
  In general the $T_\nu$'s don't commute with each other or with the $V_\nu$'s, and thus the ground state of $H_{\rm{GQDM}}$ is not explicitly known.
 
-However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, the exact ground state is known when \Eqref{eq:HGQDM} can be written as the sum of projection operators
+However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, known as the Rokhsar-Kivelson (RK) points,the exact ground state is known when \Eqref{eq:HGQDM} can be written as the sum of projection operators
 \begin{equation}
 H_{\rm{RK}} = \sum_\nu \hat{h}_\nu \label{eq:HRK},
 \end{equation}
@@ -488,15 +485,9 @@ By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
 \left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
 \end{equation}
 
-If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM. 
-%Defects may be created in a GQDM by defining an ``electric string'' operator that creates pairs of defects and thus generating ``charged'' states that are outside the gauge invariant Hilbert space:
-%\begin{equation}
-%S_{vv'}^e \equiv \prod_{\ell \in \tilde{\gamma}_{vv'}} \sigma_\ell^x
-%\end{equation}
-%where $\tilde{\gamma}_{vv'}$ is an open string on the lattice from $v$ to $v'$. When acting on a gauge invariant state, $S_{\tilde{\gamma}}^e$ creates a neutral pair of charges $Q_v = \pm 1$ at the ends of $\tilde{\gamma}$ where the signs depend on the lattice and the initial configuration of vertices.
-One may determine if such electric charges are confined by introducing a pair of such defects and computing their spatial correlation function, thus determining the confined or deconfined nature of the GQDM ground state.
+If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM. One may determine if such electric charges are confined by introducing a pair of such defects and computing their spatial correlation function; if the free energy of defects a large distances remains finite, electric charges are deconfined in the GQDM ground state.
 
-The gauge symmetry allows one to construct a gauge invariant string operator $S_\gamma$ along an oriented path $\gamma$ path on the dual lattice. We first orient all the links of the square lattice such that they point from the $A$ sublattice to the $B$ sublattice (see \figref{fig:orientedSL}) and define an oriented dimer flux $\Phi_\gamma$ through the path:
+The gauge symmetry allows for the construction of a gauge invariant magnetic string operator $S_\gamma$ along an oriented path $\gamma$ path on the dual lattice. We first orient all the links of the square lattice such that they point from the $A$ sublattice to the $B$ sublattice (see \figref{fig:orientedSL}) and define an oriented dimer flux $\Phi_\gamma$ through the path:
 \begin{equation}
 \Phi_\gamma \equiv \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) n_\ell \label{eq:phi}
 \end{equation}
@@ -592,9 +583,9 @@ The QDM and QFPLM on the square lattice have isolated liquid ground states at th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fixed dimer parity constraints}
 
-We now consider relaxing the local constraint to a parity constraint such that only $Q_v^{Z_2} \equiv (Q_v \mod 2)$ is required to vanish; the resulting GQDM are the even and odd sectors are the  even \& odd Ising gauge theories (IGT) (and the closely related even and odd sector Toric Codes). In these cases, the local constraint requires $\alpha_v \in \{ 0, \pi\}$ in \Eqref{eq:Gv} and therefore the gauge symmetry is reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{TC}}$ is expanded accordingly:
+We now consider relaxing the local constraint to a parity constraint such that only $Q_v^{Z_2} \equiv (Q_v \mod 2)$ is required to vanish; the resulting GQDM are the even and odd sectors are the  even \& odd Ising gauge theories (IGT) (and the closely related even and odd sector Toric Codes). In these cases, the local constraint requires $\alpha_v \in \{ 0, \pi\}$ in \Eqref{eq:Gv} and therefore the gauge symmetry is reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{IGT}}$ is expanded accordingly:
 \begin{align}
-\mathcal{C}_{\rm{TC}} &\equiv \bigl\{ \left(c_{\Box,i},\bar{c}_{\Box,i}\right) \bigr\} \\
+\mathcal{C}_{\rm{IGT}} &\equiv \bigl\{ \left(c_{\Box,i},\bar{c}_{\Box,i}\right) \bigr\} \\
 &=\bigl\{
 \left(\vrtplqt,\hrzplqt\right),\left(\threeleftplqt,\oneleftplqt\right),\left(\twodownplqt,\twoupplqt\right),\left(\bplqt,\fplqt\right) \bigr\}
 \end{align}
@@ -624,8 +615,9 @@ We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Quantum Dimer Pentamer Model}
+\label{sec:QDPM}
 
-We define the Hilbert space of the QDPM to be an odd sector GQDM where vertices are constrained to be touched by a single dimer or the center of a pentamer, such that $n_v = 1,4$. For defect-free configurations in the QDPM, $Q_v$ only vanishes modulo $3$;  thus we may define a $Z_3$ charge,
+We define the Hilbert space of the QDPM to be a GQDM where vertices are constrained to be touched by a single dimer or the center of a pentamer, such that $n_v = 1,4$. For defect-free configurations in the QDPM, $Q_v$ only vanishes modulo $3$;  thus we may define a $Z_3$ charge,
 \begin{equation}
 Q_v^{Z_3} \equiv \left(Q_v~\rm{mod}~3\right)
 \end{equation}
@@ -841,22 +833,21 @@ which appear to provide ergodic dynamics in the monomer-dimer-pentamer configura
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
+\label{sec:discussion}
 
-We have introduced the quantum dimer-pentamer model on the square lattice and studied the ground state at the RK point. Using numerical calculations, we have demonstrated that the RK state of the QDPM is a dimer liquid, without spontaneously broken symmetry. The extensive topological degeneracy of the square lattice QDM has been reduced to a finite 9-fold degeneracy in the QDPM on a torus. We find that the dimer correlations decay exponentially with distance in contrast to the power-law decay of dimer correlations in the QDM. Additionally we also have demonstrated that monomer defects are deconfined in the QDPM, in contrast with the critical confinement of monomers in the QDM. Finally, we find that the $Z_3$ magnetic string correlations decay exponentially and display no evidence of $Z_3$ vortex condensation; this is consistent with $Z_3$ vortices being gapped quasiparticles excitations above the QDPM ground state. 
-
-The above results suggest a the low energy physics of the QDPM is described by a $Z_3$ gauge theory with a $Z_3$ topological ordered ground state. Thus we have demonstrated that systems with Ising degrees of freedom and local constraints can lead to $Z_N$ topological order for $N>2$, providing the a new stable phase of matter beyond the commonly seen $Z_2$ topological spin liqud.
+We have introduced the quantum dimer-pentamer model on the square lattice and studied the ground state at the RK point. Using numerical calculations, we have demonstrated that the RK state of the QDPM is a dimer liquid, without spontaneously broken symmetry. The extensive topological degeneracy of the square lattice QDM has been reduced to a finite 9-fold degeneracy in the QDPM on a torus. We find that the dimer correlations decay exponentially with distance in contrast to the power-law decay of dimer correlations in the QDM. Additionally we also have demonstrated that monomer defects are deconfined in the QDPM, in contrast with the critical confinement of monomers in the QDM. Finally, we find that the $Z_3$ magnetic string correlations decay exponentially and display no evidence of $Z_3$ vortex condensation; this is consistent with $Z_3$ vortices being gapped quasiparticles excitations above the QDPM ground state. These results suggest a the low energy physics of the QDPM is described by a $Z_3$ gauge theory with a $Z_3$ topological ordered ground state. Thus we have demonstrated that systems with Ising degrees of freedom and local constraints can lead to $Z_N$ topological order for $N>2$, providing the a new stable phase of matter beyond the commonly seen $Z_2$ topological spin liqud.
 
 Future work could directly probe the existence of a finite gap above the RK point by studying the imaginary time dynamics of correlations functions using Monte Carlo methods similar to those used in here~\cite{Henley1997,Henley2004a}; such an approach could be used to explore if the low energy excitations are best described by $Z_3$ magnetic vorticies~\cite{Ivanov2004,Ralko2007,Misguich2008d}. Additionally, one could conclusively demonstrate the existence of $Z_3$ topological order by computing the topological entanglement entropy in the QDPM ground state Monte Carlo methods~\cite{Levin2005a,Kitaev2006b,Hastings2010}. 
 
 A finite gap above the RK point suggests that a stable topologically ordered phase should exist surrounding the RK point. While the Monte Carlo techniques used in this manuscript are limited to the RK point, the phase diagram near the RK point can be explored in future work using quantum Monte Carlo methods, as the QDPM has no sign problem. Away from RK, the condensation of $Z_3$ magnetic vortices could drive a continuous phase transition out of the topologically order phase, analogous to vison condensation in $Z_2$ spin liquids~\cite{Jalabert1991,Ralko2007,Huh2011,Hao2014,Slagle2014}; if such a continuous transition exists in the QDPM it may provide access to a new universality of class of quantum transitions~\cite{XU2012}.
 
-Finally, given the stability of the topologically ordered phase, it may be possible to realize the QDPM in a more microscopically realistic spin model with two body interactions. The local constraints of the QDM can be realized in two-body spin-$1/2$ and Bose-Hubbard models, and the QDM Hamiltonian can arise perturbatively in the constrained low energy Hilbert space~\cite{Balents2002a,Zhitomirsky2005,Isakov2006c,Albuquerque2008}. Thus future work, it may be possible to engineer the QDPM in the low energy subspace of an experimentally realizable two-body model.
+Finally, given the stability of the topologically ordered phase, it may be possible to realize the QDPM in a more microscopically realistic spin model with two body interactions. The local constraints of the QDM can be realized in two-body spin-$1/2$ and Bose-Hubbard models, and the QDM Hamiltonian can arise perturbatively in the constrained low energy Hilbert space~\cite{Balents2002a,Zhitomirsky2005,Isakov2006c,Albuquerque2008}. Thus future work, it may be possible to engineer the QDPM in the low energy subspace of an experimentally realizable two-body model, providing a route to the experimental realization of a $Z_3$ topologically ordered spin liquid. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
 
-Our calculations were performed on the VACC....
+Computations were performed on the Vermont Advanced Computing Core supported by NASA (NNX-08AO96G).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
