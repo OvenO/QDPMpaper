@@ -229,6 +229,17 @@
          ry="1.6008199"
          transform="matrix(0,1,-1,0,0,0)" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4699">
+      <rect
+         style="opacity:1;fill:#666666;fill-opacity:1"
+         id="rect4701"
+         width="100.05561"
+         height="19.445436"
+         x="28.991379"
+         y="223.63631" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -237,16 +248,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="93.492564"
-     inkscape:cy="142.216"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="62.883309"
+     inkscape:cy="15.910994"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:window-width="1279"
      inkscape:window-height="599"
-     inkscape:window-x="-1"
-     inkscape:window-y="69"
+     inkscape:window-x="0"
+     inkscape:window-y="686"
      inkscape:window-maximized="0"
      units="cm"
      inkscape:showpageshadow="false" />
@@ -258,7 +269,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1089,42 +1100,46 @@
        cx="79.194267"
        style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="ellipse4653" />
-    <ellipse
-       transform="matrix(0,-1,1,0,0,0)"
-       id="ellipse4651"
-       style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       inkscape:transform-center-y="-17.834601"
-       cx="-238.12144"
-       cy="91.406044"
-       rx="8.8158607"
-       ry="2.3669803" />
-    <ellipse
-       ry="2.3669803"
-       rx="8.8158607"
-       cy="67.658386"
-       cx="-238.12144"
-       inkscape:transform-center-y="-17.834601"
-       style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="ellipse4655"
-       transform="matrix(0,-1,1,0,0,0)" />
-    <ellipse
-       transform="matrix(0,-1,1,0,0,0)"
-       id="ellipse4657"
-       style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       inkscape:transform-center-y="-17.834601"
-       cx="-238.09091"
-       cy="114.68484"
-       rx="8.8158607"
-       ry="2.3669803" />
-    <ellipse
-       ry="2.3669803"
-       rx="8.8158607"
-       cy="44.542095"
-       cx="-237.54033"
-       inkscape:transform-center-y="-17.834601"
-       style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="ellipse4659"
-       transform="matrix(0,-1,1,0,0,0)" />
+    <g
+       id="g4691"
+       clip-path="url(#clipPath4699)">
+      <ellipse
+         ry="2.3669803"
+         rx="8.8158607"
+         cy="91.406044"
+         cx="-238.12144"
+         inkscape:transform-center-y="-17.834601"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="ellipse4651"
+         transform="matrix(0,-1,1,0,0,0)" />
+      <ellipse
+         transform="matrix(0,-1,1,0,0,0)"
+         id="ellipse4655"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:transform-center-y="-17.834601"
+         cx="-238.12144"
+         cy="67.658386"
+         rx="8.8158607"
+         ry="2.3669803" />
+      <ellipse
+         ry="2.3669803"
+         rx="8.8158607"
+         cy="114.68484"
+         cx="-238.09091"
+         inkscape:transform-center-y="-17.834601"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="ellipse4657"
+         transform="matrix(0,-1,1,0,0,0)" />
+      <ellipse
+         transform="matrix(0,-1,1,0,0,0)"
+         id="ellipse4659"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:transform-center-y="-17.834601"
+         cx="-237.54033"
+         cy="44.542095"
+         rx="8.8158607"
+         ry="2.3669803" />
+    </g>
     <g
        id="g4805"
        clip-path="url(#clipPath4811)"
