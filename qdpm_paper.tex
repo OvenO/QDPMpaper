@@ -513,7 +513,7 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\columnwidth]{mag_loops_on_orntd_lat.pdf}
-    \caption{The A(B) sublattices of the square lattice are colored red (blue) and the link orientations are chosen to point from the A to the B sublattice. The narrow dark dimers are a static background dimerization used to fix the gauge, in this case chosen to be a columnar pattern; the wider light gray dimers are the physical degrees of freedom. $W_Y$ is a magnetic string operator with a non-trivial winding around one axis of the torus that measured the topological sector; $S_\gamma$ and $S_\Gamma$ are examples of open and closed string operators, respectively. Note the monomer defect which can be detected by $S_\Gamma$. \note{Owen: The sublattice coloring is inconsistent}}
+    \caption{The A(B) sublattices of the square lattice are colored red (blue) and the link orientations are chosen to point from the A to the B sublattice. The narrow dark dimers are a static background dimerization used to fix the gauge, in this case chosen to be a columnar pattern; the wider light gray dimers are the physical degrees of freedom. $W_Y$ is a magnetic string operator with a non-trivial winding around one axis of the torus that measured the topological sector; $S_\gamma$ and $S_\Gamma$ are examples of open and closed string operators, respectively. Note the monomer defect which can be detected by $S_\Gamma$.}
     \label{fig:orientedSL}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -676,17 +676,17 @@ We have demonstrated that ground state at the RK point of the QDPM has an exact 
 \section{Numerical Study of the RK ground state of the QDPM}
 \label{sec:numerics}
 
-To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves}. Below we present the results of calculations on $L\times L$ square lattices with periodic boundary conditions on systems up to $L=128$. 
+To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves} and single plaquette flips, as defined in \Eqref{eq:HQDM}. Below we present the results of calculations on $L\times L$ square lattices with periodic boundary conditions on systems of linear dimension up to $L=128$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Topological sectors}
 
-We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding numbers $\Phi_{X}$ and $\Phi_{Y}$. The histograms of these U(1) winding numbers is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors (the behavior of $\Phi_Y$ is identical to that of $\Phi_X$~\note{(Owen: can you confirm this?)}). We confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly Gaussian envelope with a width that increases with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM.
+We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding numbers $\Phi_{X}$ and $\Phi_{Y}$. The histograms of these U(1) winding numbers is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors $(\Phi_X,\Phi_Y)$. This confirms that $\Phi_X$ and $\Phi_Y$ are only conserved modulo $3$, rather than strictly conserved as they are in the QDM. We find that the histogram $P(\Phi)$ has a roughly Gaussian envelope with a width that increases with system size; this is expected as $\Phi = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM.
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[]
     \centering
     \includegraphics[width=1.0\linewidth]{u1_wind_qdpm.pdf}
-    \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in for the ground state of the RK point of the QDPM for three different lattice sizes. Different colors correspond to calculations initialized to different winding sectors, and the lines are fits to a Gaussian. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus.}
+    \caption{The histogram of the $U(1)$ topological winding numbers $\Phi_X$ and $\Phi_Y$ as measured in for the ground state of the RK point of the QDPM for three different lattice sizes. The colors correspond to calculations initialized to different topological sectors $(\Phi_X,\Phi_Y)$: blue $(0,0)$, red $(1,1)$, and purple $(-1,-1)$. The lines are fits to a Gaussian for each system size. Note that $\Phi$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus.}
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -698,13 +698,13 @@ We explicitly demonstrate how the extensive topological degeneracy of the QDM is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dimer density correlations}
 
-Here we discuss the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_3way} (a) we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=32$ lattice; here the origin $\bm{0}$ represents the orange link, and $\bm{r}$ varies over all other links of the lattice. In \figref{fig:dimer_3way} (b) we show the equal-time dimer-dimer structure factor, 
+We will now present a numerical study of the dimer density correlations in the RK ground state of the QDPM. In \figref{fig:dimer_3way} (a) we plot the bare dimer-dimer density correlation function $\langle n_{\bm{0}} n_{\bm{r}}\rangle$ on an $L=32$ lattice; here the origin $\bm{0}$ represents the orange link, and $\bm{r}$ varies over all other links of the lattice. These bare dimer correlations display only short range correlations no obvious symmetry breaking. In \figref{fig:dimer_3way} (b) we show the equal-time dimer-dimer structure factor, 
 \begin{equation}
 S_d\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{i,j} e^{-i \bm{k} \cdot \left(\bm{r}_i - \bm{r}_j\right)} \left \langle n_{\bm{r}_i} n_{\bm{r}_j} \right \rangle
 \end{equation}
 where we restrict the sum to horizontal links, for an $L=64$ lattice. 
-\figref{fig:dimer_3way} (c) shows $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers--the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
-We have plotted the finite size scaling of the intensity of these peaks in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit. These maxima at $(0,\pi)$ and $(\pi,\pi)$ are thus consistent with finite size effects due to short distance correlations. Thus we see no evidence of thermodynamic limit symmetry breaking.
+\figref{fig:dimer_3way} (c) shows $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers; the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
+We have plotted the finite size scaling of the intensity of the broad maximum of $S_d$ in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit; these maxima are therefore consistent with finite size effects due to short distance correlations. Thus we see no evidence of symmetry breaking in the thermodynamic limit.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[t]
@@ -729,7 +729,7 @@ We have plotted the finite size scaling of the intensity of these peaks in  \fig
 \begin{figure}[t]
     \centering
     \includegraphics[width=1.0\columnwidth]{peak_scaling.pdf}
-    \caption{Finite-size scaling of the maxima in the dimer ($S_d$) and magnetic string ($|S_M|$) structure factors. All maximum vanish in the thermodynamic limit, indicating that the RK state of the QDPM is a symmetric dimer liquid. \note{Owen: We don't need the absolute value bars for $S_d$ since it's real.}}
+    \caption{Finite-size scaling of the maxima in the dimer ($S_d$) and magnetic string ($S_M$) structure factors. All maximum vanish in the thermodynamic limit, indicating that the RK state of the QDPM is a symmetric dimer liquid. }
     \label{fig:bragg_scaling}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -738,13 +738,13 @@ Additionally we have studied the nature of the decay of the connected dimer-dime
   \begin{equation}
     C_{\mathrm{d}} \left(r\right) \equiv \langle n_{\bm{0}} n_{\bm{r}} \rangle - \langle n_{\bm{0}} \rangle   \langle n_{\bm{r}} \rangle   
 \end{equation}
-where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, for $r$ perpendicular to the orientation of the dimers for an $L=64$ lattice. We find that $C_d$ decays exponentially with distance having a correlations length  $\chi\approx 1.1$. Additionally, $C_d$ displays a sub-lattice oscillation that is consistent with the finite-size maximum in $S_d$ at $(0,\pi)$. Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the QDM.
+where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, for $\bm{r}$ perpendicular to the orientation of the dimers for an $L=64$ lattice. We find that $C_d$ decays exponentially with distance having a correlations length  $\chi\approx 1$. Additionally, $C_d$ displays a sub-lattice oscillation that is consistent with the finite-size maximum in $S_d$ at $(0,\pi)$. Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the QDM.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_parallel.pdf}
-    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in directions perpendicular (circles) and parallel (squares) to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx 1.1$.}
+    \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, in the direction perpendicular to the dimer orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx 1$.}
     \label{fig:spatial_dmr_cor}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -759,13 +759,13 @@ To investigate the $Z_3$ gauge theory description of the QDPM RK ground state, w
 C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3} i \left( \Phi_{\gamma_{pp'}} -\tilde{\Phi}_{\gamma_{pp'}} \right) \right] \right \rangle
 \end{equation}
 where $p$ and $p'$ are two plaquettes, and $\gamma_{pp'}$ is any open string on the dual lattice
-connecting $p$ and $p'$. In \figref{fig:vison_3way} (a), we have plotted $|C_M|$ for an $L=32$ lattice. Note, that while $C_M$ depends on the choice of the background dimerization which fixes the gauge, $|C_M|$ is independent of the background dimerization. Additionally, we have computed the magnetic string structure factor
+connecting $p$ and $p'$. In \figref{fig:vison_3way} (a), we have plotted $|C_M|$ for an $L=32$ lattice. Note, that while $C_M$ depends on the choice of the background dimerization which fixes the gauge, $|C_M|$ is independent of the background dimerization. We find that$C_M$ only displays short range correlations, and no obvious symmetry breaking. 
+
+Additionally, we have computed the magnetic string structure factor
 \begin{equation}
-S_M\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{p,p'} e^{-i \bm{k} \cdot r_{pp'}} C_M\left( \bm{r}_{pp'}\right)
+S_M\left( \bm{k} \right) \equiv \frac{1}{ L^2} \sum_{p,p'} e^{-i \bm{k} \cdot \bm{r}_{pp'}} C_M\left( \bm{r}_{pp'}\right)
 \end{equation}
-and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis
-%, as shown in \figref{fig:BKGD_dimers}
-\note{Where should we show the background dimerization??}; this chose breaks the translational symmetry and thus requires doubling the unit cell the $x$-direction. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$) \note{(Owen: What about $(\pi,\pi)$??)}. We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit.  While the vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, the vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice; we find this decays exponentially with distance, with a correlation length $\chi\approx 2.90$. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
+and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{mag_loops_on_orntd_lat.pdf}; this chose breaks the translational symmetry and thus requires doubling the unit cell the $x$-direction. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$) \note{(Owen: What about $(\pi,\pi)$??)}. We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit.  While the vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, the vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice; we find this decays exponentially with distance, with a correlation length $\chi\approx 2.90$. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[t]
