@@ -421,7 +421,7 @@ In this work we extend this paradigm to a new GQDM on the square lattice, what w
 
 Additionally we present a numerical study of the ground state of the QDPM at an exactly soluble point. Using Monte Carlo calculations, we explicitly demonstrate the absence of symmetry breaking order and the exponential decay of correlation functions. Additionally, we define a $Z_3$ magnetic string operator, whose correlations display no evidence of magnetic vortex condensation. Finally, by a studying systems doped with a pair of  monomer defects, we demonstrate that monomers are deconfined in the QDPM. Thus we argue that the ground state of the QDPM is a $Z_3$ topologically ordered dimer liquid.
 
-This paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:numerics} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point. Finally, \secref{sec:discussion} discusses potential future work.
+This paper is organized as follows. In \secref{sec:Background} we provide relevant background for the QDM and related models. In \secref{sec:QDPM} we present the details of the QPDM. \secref{sec:numerics} provides the results of a Monte Carlo study of the ground state of the QDPM at its exactly soluble point. Finally, \secref{sec:discussion} discusses potential future studies of the QDPM.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -441,35 +441,35 @@ This paper is organized as follows. In \secref{sec:Background} we provide releva
     \label{fig:example_local_constraints}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link has either $0$ or $1$ dimers. Given an Ising spin $\sigma_\ell$ on each link $\ell$ we define the number of dimers on the link $n_\ell \equiv 1/2+\sigma_\ell^z$, where $\sigma_\ell^i$ are the associated Pauli matrices. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. We define a $U(1)$ charge $Q_v$ at each vertex $v$ of the lattice in terms of the number of dimers touching $v$, $n_v\equiv \sum_{\ell \in v}n_\ell$:
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link is either unoccupied or occupied by a single dimer. Given an Ising spin $\sigma_\ell$ on each link $\ell$ we define the number of dimers on the link $n_\ell \equiv 1/2+\sigma_\ell^z$, where $\sigma_\ell^i$ are the associated Pauli matrices. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. We define a $U(1)$ charge $Q_v$ at each vertex $v$ of the lattice in terms of the number of dimers touching $v$, $n_v\equiv \sum_{\ell \in v}n_\ell$:
 \begin{equation}
 Q_v \equiv \pm \left( n_v - c_P \right)
 \end{equation}
-where $c_P = 2$, ($c_P=1$) for models in the even (odd) sector of the constraint, and the $+$($-$) sign corresponds to vertices on the $A$($B$) sublattice. A local dimer number constraint requires $Q_v$ to vanish for all vertices; a dimer parity constraint requires only $(Q_v\mod 2)$ to vanish.
+where $c_P = 2$, ($c_P=1$) for models in the even (odd) sector of the constraint, and the $+$($-$) sign corresponds to vertices on the $A$($B$) sublattice. A local dimer number constraint requires $Q_v$ to vanish for all vertices; a dimer parity constraint requires $(Q_v\mod 2)$ to vanish.
  
 The Hamiltonian of a GQDM is of the form
 \begin{equation}
-H_{\rm{GQDM}} = -\sum_\nu t_\nu \hat{T}_{\nu} + \sum_\nu v_\nu \hat{V}_{\nu} \label{eq:HGQDM}
+H_{\rm{GQDM}} = -\sum_\nu t_\nu  {T}_{\nu} + \sum_\nu v_\nu  {V}_{\nu} \label{eq:HGQDM}
 \end{equation}
-where $\hat{T}_\nu$ are off-diagonal kinetic energy operators, $\hat{V}_\nu$ are diagonal the potential energy operators, $t_\nu$ and $v_\nu$ parametrize the strength of these terms, and each $\nu$ and represents a set of  neighboring links. We will limit our discussion to $t_\nu >0$. $\hat{T}_\nu$ is constructed to generate resonances between two distinct allowed dimerazations of $\nu$, $c_\nu$ and its compliment $\bar{c}_\nu$, and is written as:
+where ${T}_\nu$ are off-diagonal kinetic energy operators, ${V}_\nu$ are diagonal potential energy operators, $t_\nu$ and $v_\nu$ parametrize the strength of these terms, and each $\nu$ and represents a set of  neighboring links. We will limit our discussion to $t_\nu >0$. $ t{T}_\nu$ is constructed to generate resonances between two distinct allowed dimerazations of $\nu$, $c_\nu$ and its compliment $\bar{c}_\nu$, and is written as:
 \begin{equation}
-\hat{T}_{\nu} = \eket{c_\nu}\ebra{\bar{c}_\nu} + h.c.;
+ {T}_{\nu} = \eket{c_\nu}\ebra{\bar{c}_\nu} + h.c.;
 \end{equation}
-in the simplest case, $\hat{T_\nu}$ involves the minimum non-trivial dimer dynamics that preserve the constraint. Similarly, the potential energy term provides an energy cost for states with these local configurations:
+in the simplest case, $ t{T_\nu}$ involves the minimum non-trivial dimer dynamics that preserve the constraint. Similarly, the potential energy term provides an energy cost for states with these local configurations:
 \begin{equation}
-\hat{V}_{\nu} = \eket{c_\nu}\ebra{c_\nu} +  \eket{\bar{c}_\nu}\ebra{\bar{c}_\nu}.
+ {V}_{\nu} = \eket{c_\nu}\ebra{c_\nu} +  \eket{\bar{c}_\nu}\ebra{\bar{c}_\nu}.
 \end{equation}
-Therefore we may define a Hamiltonian for a GQDM using \Eqref{eq:HGQDM} and defining a set of dimer resonances $\{(c_\nu,\bar{c}_\nu)\}$ and corresponding potential and kinetic energy strenghts $\{(t_\nu,v_\nu)\}$:
+Therefore we may define a Hamiltonian for a GQDM using \Eqref{eq:HGQDM} and defining a set of dimer resonances $\{(c_\nu,\bar{c}_\nu)\}$ and their corresponding strengths $\{(t_\nu,v_\nu)\}$:
 \begin{equation}
 \HGQDM \biggl( \bigl\{\left(c_\nu,\bar{c}_\nu\right)\},\{\left(t_\nu,v_\nu\right)\bigr\}\biggr).
 \end{equation}
- In general the $T_\nu$'s don't commute with each other or with the $V_\nu$'s, and thus the ground state of $H_{\rm{GQDM}}$ is not explicitly known.
+ In general the $[T_\nu, T_{\nu'}] \neq 0 $ and $[T_\nu,V_{\nu'}]\neq0$ when $\nu$ and $\nu'$ share links, and thus the ground state of $H_{\rm{GQDM}}$ is not explicitly known.
 
-However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, known as the Rokhsar-Kivelson (RK) points,the exact ground state is known when \Eqref{eq:HGQDM} can be written as the sum of projection operators
+However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, known as the Rokhsar-Kivelson (RK) points, when \Eqref{eq:HGQDM} can be written as the sum of projection operators
 \begin{equation}
-H_{\rm{RK}} = \sum_\nu \hat{h}_\nu \label{eq:HRK},
+H_{\rm{RK}} = \sum_\nu  {h}_\nu \label{eq:HRK},
 \end{equation}
-where all $h_\nu$ are projectors with eigenvalues $\{0,1\}$; a zero energy ground state of \Eqref{eq:HRK} is simultaneously annihilated by all $\hat{h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
+where all $h_\nu$ are projectors with eigenvalues $\{0,1\}$, the exact ground state is known to be the zero energy state of \Eqref{eq:HRK} that is simultaneously annihilated by all ${h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
 \begin{equation}
 \eket{\Phi_{\RK}^{\Omega}} = \sum_{C \in \Omega} \eket{C}
 \end{equation} 
@@ -485,7 +485,7 @@ By construction, the Hamiltonian is gauge invariant and thus commutes with $G_v$
 \left[ H_{\rm{GQDM}}, G_v \right] = 0. \notag
 \end{equation}
 
-If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM. One may determine if such electric charges are confined by introducing a pair of such defects and computing their spatial correlation function; if the free energy of defects a large distances remains finite, electric charges are deconfined in the GQDM ground state.
+If a defect is introduced which violates the local constraint at a vertex, this can be viewed as an ``electric charge'' living on the vertex, within the context of the original GQDM. One may determine if such electric charges are confined by introducing a pair of such defects and computing their spatial correlation function; if the free energy of defects at large distances remains finite, electric charges are deconfined in the GQDM ground state.
 
 The gauge symmetry allows for the construction of a gauge invariant magnetic string operator $S_\gamma$ along an oriented path $\gamma$ path on the dual lattice. We first orient all the links of the square lattice such that they point from the $A$ sublattice to the $B$ sublattice (see \figref{fig:orientedSL}) and define an oriented dimer flux $\Phi_\gamma$ through the path:
 \begin{equation}
@@ -493,11 +493,11 @@ The gauge symmetry allows for the construction of a gauge invariant magnetic str
 \end{equation}
 where $\mathrm{sgn}(\ell,\gamma)$ is positive (negative) if $\ell$ is oriented to the right with respect to the orientation of $\gamma$. Additionally, we define background flux $\tilde{\Phi}_\ell$
 \begin{equation}
-\tilde{\Phi}_\gamma \equiv - \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) \tilde{n}_\ell \label{eq:phiBackground}
+\tilde{\Phi}_\gamma \equiv  \sum_{\ell \in \gamma} \rm{sgn}\left(\ell,\gamma\right) \tilde{n}_\ell \label{eq:phiBackground}
 \end{equation}
-where $n_\ell$ is the number operator for a static background dimer configuration which is chosen to fix the gauge, and the total charge enclosed in a closed loop $\Gamma$ is $Q_\Gamma = \Phi_\Gamma+ \tilde{\Phi}_\Gamma$. (Alternately can think of the source of $\tilde{\Phi}_\Gamma$ to be static charges of charge $+c_0$ ($-c_0$) sitting at the verticies of the $A$($B$) sub-lattice.).
+where $n_\ell$ is the number operator for a static background dimer configuration which is chosen to fix the gauge. With this gauge fixing, the total charge enclosed in a closed loop $\Gamma$ is $Q_\Gamma = \Phi_\Gamma- \tilde{\Phi}_\Gamma$. An alternative physical picture is that there are static charges of charge $+c_0$ ($-c_0$) sitting at the vertices of the $A$($B$) sub-lattice, which are the source of the non-vanishing $\Phi_\Gamma$ flux through a closed loop.
 
-We define the string operator is defined as
+We now may define the string operator
 \begin{equation}
 S_\gamma \left( \alpha \right) \equiv e^{i \alpha \left( \Phi_\gamma - \tilde{\Phi}_\gamma \right)} \label{eq:Sgamma}
 \end{equation}
@@ -513,10 +513,7 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\columnwidth]{mag_loops_on_orntd_lat.pdf}
-    \caption{$\Phi_i$: a nontrivial string winding around the system in one of the two possible
-        directions. $\Phi_2$: an open
-    magnetic string with two different charged (colored) visons at the end points. $\Phi_3$ a trivial closed
-    string. The colors red and blue distinguish the two different sublattices that orient the links. \note{Owen: Add a dimer/pentamer-ization to the figure. Also, add a monomer defect in the magnetic loop, to demonstrate the fractional statistics of defects.}}
+    \caption{The A(B) sublattices of the square lattice are colored red (blue) and the link orientations are chosen to point from the A to the B sublattice. The narrow dark dimers are a static background dimerization used to fix the gauge, in this case chosen to be a columnar pattern; the wider light gray dimers are the physical degrees of freedom. $W_Y$ is a magnetic string operator with a non-trivial winding around one axis of the torus that measured the topological sector; $S_\gamma$ and $S_\Gamma$ are examples of open and closed string operators, respectively. Note the monomer defect which can be detected by $S_\Gamma$. \note{Owen: The sublattice coloring is inconsistent}}
     \label{fig:orientedSL}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -524,13 +521,13 @@ where $\Gamma_{X,Y}$ are topologically non-trivial closed loops that wind once a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fixed dimer number constraints}
 
-The two unique fixed-number constraints on the square lattice are lead to QDM in the odd sector and the quantum full-packed loop model (QFPLM) in the even sector. For configurations that satisfy these a number constraints, $Q_v$ strictly vanishes, and thus all states in the Hilbert space are invariant under $G_v$ for $0 \leq \alpha_v \leq 2 \pi$ in \Eqref{eq:Gv}; this represents a local $U(1)$ gauge symmetry. 
+The two unique fixed-number constraints on the square lattice are lead to QDM in the odd sector ($n_v = 1$) and the quantum full-packed loop model (QFPLM) in the even sector ($n_v = 2$). For configurations that satisfy these a number constraints, $Q_v$ strictly vanishes, and thus all states in the Hilbert space are invariant under $G_v$ for $0 \leq \alpha_v \leq 2 \pi$ in \Eqref{eq:Gv}; this represents a local $U(1)$ gauge symmetry~\cite{Moessner2001}. 
 
 The Hamiltonian for these models gives dynamics to parallel dimers on the plaquettes $\bplqt$ of the lattice:
 \begin{equation}
 \HQDM\left(t,v\right) \equiv \HGQDM \biggl( \bigl\{ \left(\vrtplqt,\hrzplqt\right) \bigr\},\bigl\{ \left(t,v\right) \bigr\} \biggr)  \label{eq:HQDM}
 \end{equation}
-where we have taken $t_\bplqt = t$ \& $v_\bplqt =v$ $\forall \bplqt$.
+where we have chosen $t_\bplqt = t$, $v_\bplqt =v, \forall \bplqt$.
 %\begin{align}
 %    \label{}
 %   \HQDM = &-t\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\hrzplqt} +h.c. \biggr) \notag\\
@@ -540,41 +537,41 @@ In this case of a fixed number constraint, the Hamiltonian conserves $Q_v$ and t
 \begin{equation}
 \left[ \Phi_\Gamma, \HQDM \right] = 0
 \end{equation}
-and therefore we can define two conserved topological winding numbers $\Phi_{x}$ \& $\Phi_{y}$ which are the dimer flux through topologically non-trivial loops that wind around each axis of the lattice when the system has periodic boundary conditions (see \figref{fig:orientedSL}). On an lattice of dimensions $L_x\times L_y$, the eigenvalues of $\Phi_{x/y}$ are integers in the range
+and therefore we can define two conserved topological winding numbers $\Phi_{X}$ \& $\Phi_{Y}$ which are the dimer flux through topologically non-trivial loops that wind around each axis of the lattice when the system has periodic boundary conditions (see \figref{fig:orientedSL}). On an lattice of dimensions $L_x\times L_y$, the eigenvalues of $\Phi_X$ and $\Phi_Y$ are integers in the range
 \begin{equation}
--L_{x/y}/2 \leq  \Phi_{x/y} \leq L_{x/y}/2,
+-L_{x}/2 \leq  \Phi_{X} \leq L_{x}/2,
 \end{equation}
-thus there are $\mathcal{O} (L_x L_y)$ distinct topological sectors. 
+and similarly for $\Phi_Y$, thus there are $\mathcal{O} (L_x L_y)$ distinct topological sectors. 
 
-At the Rokhsar-Kivelson point $t=v$, we may write $\HQDM$ in the form of \Eqref{eq:HRK} by defining projection operators  $\hat{h}_\nu \equiv \hat{P}^\dagger_{\nu} \hat{P}_{\nu}$, with
+At the Rokhsar-Kivelson point $t=v$, we may write $\HQDM$ in the form of \Eqref{eq:HRK} by defining projection operators  $ {h}_\nu \equiv  {P}^\dagger_{\nu} {P}_{\nu}$, with
 \begin{equation}
-\hat{P}^\dagger_\nu \equiv \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
+ {P}^\dagger_\nu \equiv \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
 \end{equation} 
-Since the plaquette flip term in \Eqref{eq:HQDM} is ergodic in each of topological sector $(\Phi_x,\Phi_y)$ on the square lattice (\textcolor{red}{is this known for the FPLM???})~\cite{????}, each topological sector corresponds to a unique RK ground state where $\Omega$ is labeled by $(\Phi_x,\Phi_y)$. Thus the equal superposition RK points of the QDM and QFPLM have an \emph{extensively} degenerate ground states.
+Since the plaquette flip term in \Eqref{eq:HQDM} is ergodic in each of topological sector $(\Phi_x,\Phi_y)$ on the square lattice~\cite{????}, each topological sector corresponds to a unique RK ground state where $\Omega$ is labeled by $(\Phi_x,\Phi_y)$. Thus the  RK points of the QDM and QFPLM have an \emph{extensively} degenerate ground states.
 
-Defects in these models correspond to states with $Q_v \neq 0$; a table of the charges associated with defects in the QDM and QFPLM is listed in \tabref{tab:defects}.
+Defects in these models that violate the local dimer number constraint and thus carry non-zero U(1) electric charge. \tabref{tab:defects} lists all the possible defects and their associated U(1) charges in QDM and QFPLM. When a defect lives on sublattice A, it has the opposite charge that the same defect on sublattice B has. Note that in the QDM, the maximum charge is $\pm 3$, and there are six distinct possible non-trivial electric charges of defects.
 
-The QDM and QFPLM on the square lattice have isolated liquid ground states at the RK point surrounded by symmetry broken phases~\cite{Rokhsar1988,Leung1996,Syljuasen2005,Syljuasen2006,Syljuasen2004,Moessner2008}. The RK point of these models have been shown to have power-law decaying dimer-dimer and monomer-monomer correlation functions and gapless excitations~\cite{Fisher1961,Kasteleyn1961,Fisher1966a,Fisher1963,Kasteleyn1963a,Sutherland1988b,Sutherland1988a,Kohmoto1988a,Liang1988,Sutherland1988,Kohmoto1988,Levitov1990,Leung1996,Henley1997,Henley1997,Henley2004a,Pollmann2006}. Thus, such fixed number constrained models on bipartite lattices are expected to have an isolated unstable gapless critical quantum liquid points with logarithmically confined defect and an extensive topological degeneracy. These features of fixed number constrained models are consistent with the effective U(1) gauge theory description of the RK point~\cite{Fradkin2004,Fradkin1990,Moessner2001}; in 2+1D pure U(1) gauge theories are always confining and thus the lack of an extended deconfined topologically ordered phase near the RK point~\cite{PolyakovBook}.
+The QDM and QFPLM on the square lattice have isolated liquid ground states at the RK point surrounded by symmetry broken phases~\cite{Rokhsar1988,Leung1996,Syljuasen2005,Syljuasen2006,Syljuasen2004,Moessner2008}. The RK point of these models have been shown to have power-law decaying dimer-dimer and monomer-monomer correlation functions and gapless excitations~\cite{Fisher1961,Kasteleyn1961,Fisher1966a,Fisher1963,Kasteleyn1963a,Sutherland1988b,Sutherland1988a,Kohmoto1988a,Liang1988,Sutherland1988,Kohmoto1988,Levitov1990,Leung1996,Henley1997,Henley1997,Henley2004a,Pollmann2006}. The algebraic decay of monomer correlations is indicative of the logarithmic confinement of electric charges in these models. Thus, such fixed number constrained models on bipartite lattices are expected to have an isolated unstable gapless critical quantum liquid points with logarithmically confined defect and an extensive topological degeneracy. These features of fixed number constrained models are consistent with the effective U(1) gauge theory description of the RK point~\cite{Fradkin2004,Fradkin1990,Moessner2001}; in 2+1D pure U(1) gauge theories are always confining and thus the lack of an extended deconfined topologically ordered phase near the RK point~\cite{PolyakovBook}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
   \begin{tabular}{| l | c | c | c | c | c |}
   	\hline
     %type & $n_v$ & $Q_v^{\rm{QDM}}$ & $Q_v^{\rm{FPLM}}$  & $Q_v^{Z_3}$ & \\
-    type & $n_v$ & $Q_v^{\rm{QDM}}$ & $Q_v^{\rm{FPLM}}$  & $Q_v^{QDPM}$ & \\
+    type & $n_v$& configuration & $Q_v$ & $Q_v^{Z_2}$  & $Q_v^{\rm{Z_3}}$  \\
 	\hline
-    monomer & $0$ & -1 & -2 &  -1 & $\svrtmon$  \\
+    monomer & $0$& $\svrtmon$ & -1 & 1 &  -1   \\
 	\hline
-    dimer & $1$ & 0 & -1 &   0 & $\svrtdmr$ \\
+    dimer  & $1$ & $\svrtdmr$& 0 & 0 &   0  \\
 	\hline
-    trimer & $2$ & 1 & 0 &   1 & $\svrttrmr$ $\svrttrmrtwo$ \\
+    trimer  & $2$ & $\svrttrmr$ $\svrttrmrtwo$& 1 & 1 &   1  \\
 	\hline
-    tetramer & $3$ & 2 & 1 &   -1 & $\svrtquat$ \\
+    tetramer & $3$& $\svrtquat$  & 2 & 0 &   -1  \\
 	\hline
-    pentamer & $4$ & 3 & 2 &  0 & $\svrtpent$  \\
+    pentamer & $4$& $\svrtpent$ & 3 & 1 &  0   \\
 	\hline
   \end{tabular}
-  \caption{Defects where $n_v$ dimers touch a vertex and their associated $U(1)$ charges on the A sub-lattice in both the QDM, QFPLM, and QDPM. Defects on the B sub-lattice have opposite charge.}
+  \caption{Local dimer configurations where $n_v$ dimers touch a vertex; only one representative of symmetry related configurations is shown. $Q_v$, $Q_v^{Z_2}$, and the $Q_v^{Z_3}$ are the associated $U(1)$, $Z_2$ and $Z_3$ charges on the A sub-lattice in the odd sector theories (QDM, odd IGT, QDPM). Defects on the B sub-lattice have opposite charge, with the exception of $Q_v^{Z_2}$, as there is only one type of non-trivial $Z_2$ charge.}
   \label{tab:defects}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -583,13 +580,13 @@ The QDM and QFPLM on the square lattice have isolated liquid ground states at th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fixed dimer parity constraints}
 
-We now consider relaxing the local constraint to a parity constraint such that only $Q_v^{Z_2} \equiv (Q_v \mod 2)$ is required to vanish; the resulting GQDM are the even and odd sectors are the  even \& odd Ising gauge theories (IGT) (and the closely related even and odd sector Toric Codes). In these cases, the local constraint requires $\alpha_v \in \{ 0, \pi\}$ in \Eqref{eq:Gv} and therefore the gauge symmetry is reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{IGT}}$ is expanded accordingly:
+We now consider relaxing the local constraint to a parity constraint such that only $Q_v^{Z_2} \equiv (Q_v \mod 2)$ is required to vanish; the resulting GQDM are the even and odd sectors are the  even \& odd Ising gauge theories (IGT) with constraints $n_v \in \{0,2,4\}$ and $n_v \in \{1,3\}$, respectively. In these cases, the local constraint requires $\alpha_v \in \{ 0, \pi\}$ in \Eqref{eq:Gv} and therefore the gauge symmetry is reduced from $U(1)$ to $Z_2$. The set of allowed dimer resonances $\mathcal{C}_{\rm{IGT}}$ is expanded accordingly:
 \begin{align}
 \mathcal{C}_{\rm{IGT}} &\equiv \bigl\{ \left(c_{\Box,i},\bar{c}_{\Box,i}\right) \bigr\} \\
 &=\bigl\{
 \left(\vrtplqt,\hrzplqt\right),\left(\threeleftplqt,\oneleftplqt\right),\left(\twodownplqt,\twoupplqt\right),\left(\bplqt,\fplqt\right) \bigr\}
 \end{align}
-where we implicitly include rotational symmetry related resonances. We will limit or discussion to $v_\bplqt=0$ such that the corresponding Hamiltonian is
+where we implicitly include symmetry related resonances. We will limit or discussion to $v_\bplqt=0$ such that the corresponding Hamiltonian is
 \begin{equation}
 \HIGT\left(t\right) \equiv \HGQDM \biggl( \mathcal{C}_{\rm{IGT}},\bigl\{ \left(t,0\right) \bigr\} \biggr).
 \end{equation}
@@ -599,17 +596,17 @@ h_\Box \equiv \frac{1}{2} \left( \mathbb{1} - \sum_i \eket{c_{\Box,i}}\ebra{\bar
 \end{equation}
 such that $\HIGT$ takes the form of \Eqref{eq:HRK} (up to a constant), and the RK state is the ground state for all values of $t$.
 
-The increased dynamics of $\HIGT$ vs. $\HQDM$ no longer conserve the dimer flux $\Phi_\Gamma$ through a closed curve; only $\Phi_\Gamma \mod 2$ is preserved by $\HIGT$. Consequently, to define the string and loop operators which commute with $\HIGT$ (for closed strings) we fix $\alpha = \pi$ in \Eqref{eq:Sgamma}:
+The increased dynamics of $\HIGT$ vs. $\HQDM$ no longer conserve the dimer flux $\Phi_\Gamma$ through a closed curve; only $\Phi_\Gamma \mod 2$ is preserved by $\HIGT$. Consequently, to define the string and loop operators that commute with $\HIGT$ (for closed strings) we fix $\alpha = \pi$ in \Eqref{eq:Sgamma}:
 \begin{equation}
 S_\gamma^{\rm{IGT}} \equiv S_\gamma \left( \pi \right), \quad W_{X,Y}^{\rm{IGT}} \equiv W_{X,Y} \left( \pi \right).
 \end{equation}
-Thus the $W_{X,Y}^{\rm{IGT}}$ have two eigenvalues $\pm 1$, and the topological sectors on the torus can be labeled as $\Omega: (\pm 1,\pm1)$; consequently the extensive degeneracy of the fixed number constrained models has been reduced to a finite ground state degeneracy in the fixed parity models.
+Thus the $W_{X,Y}^{\rm{IGT}}$ have two eigenvalues $\pm 1$, and the topological sectors on the torus can be labeled as~$\Omega: (\pm 1,\pm1)$; consequently the extensive degeneracy of the fixed number constrained models has been reduced to a finite ground state degeneracy in the fixed parity models.
 
-Defects in the Ising Gauge theories have $Q_v^{Z_2} = 1$ and we identify these defects as $Z_2$ electric charges on the corresponding vertices. 
+Defects violating the dimer parity constraint in the IGT's have $Q_v^{Z_2} = 1$, as listed in \tabref{tab:defects}; we identify these defects as $Z_2$ electric charges on the corresponding vertices. Note that there is only one non-trivial charge in $Z_2$ gauge theory, thus there is no distinction between the charges of defects living on the two sublattices.
 
-The ground states of $\HIGT$ are fourfold degenerate on the torus and have exponentially decaying dimer-dimer and monomer-monomer correlations (\textcolor{red}{Is this known for both sectors}) and a finite energy gap; such features demonstrated the deconfined topologically ordered nature of the ground state of the IGTs.
+The ground states of $\HIGT$ are fourfold degenerate on the torus, and have exponentially decaying dimer-dimer and monomer-monomer correlations and a finite energy gap; such features demonstrate the deconfined topologically ordered nature of the ground state of the IGTs.
 
-We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs (monomers and pentamers in the even sector and tetramers in the odd sector) relative to the number constrained models have $Q_v = \pm 2$. It is known that coupling a $U(1)$ gauge field to a charge $q$ matter field can result in an $Z_q$ gauge theory~\cite{Fradkin1979}; thus in the IGTs we have addded dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory.
+We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs relative to the models with a dimer number constraint (monomers and pentamers in the even sector and tetramers in the odd sector, see \tabref{tab:defects}) have charge U(1) charge $Q_v = \pm 2$. It is known that coupling a $U(1)$ gauge field to a dynamics charge $q$ matter field can result in an $Z_q$ gauge theory~\cite{Fradkin1979}; as in the IGT's we have added dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -617,32 +614,35 @@ We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs
 \section{The Quantum Dimer Pentamer Model}
 \label{sec:QDPM}
 
-We define the Hilbert space of the QDPM to be a GQDM where vertices are constrained to be touched by a single dimer or the center of a pentamer, such that $n_v = 1,4$. For defect-free configurations in the QDPM, $Q_v$ only vanishes modulo $3$;  thus we may define a $Z_3$ charge,
+We define the Hilbert space of the QDPM to be a GQDM where vertices are constrained to be touched by a single dimer or the center of a pentamer, such that $n_v \in \{1,4\}$. For defect-free configurations in the QDPM, $Q_v$ only vanishes modulo $3$;  thus we may define a $Z_3$ charge,
 \begin{equation}
 Q_v^{Z_3} \equiv \left(Q_v~\rm{mod}~3\right)
 \end{equation}
  which strictly vanishes at each vertex, representing the local constraint. All states in the QDPM are invariant under an exact local $Z_3$ gauge symmetry given by \Eqref{eq:Gv} with $\alpha_v \in \{0,\pm 2\pi/3\}$. Thus introducing pentamers in the QDM reduces the gauge symmetry from $U(1)$ to $Z_3$.
 
-The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice (see \tabref{tab:pentamer_moves}). Thus we may write $\HQDPM$ as the following:
+The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice; these local dynamics involving pentamers are illustrated in  \tabref{tab:pentamer_moves}. Thus we may write $\HQDPM$ as the following:
 \begin{equation}
-\HQDPM \equiv \HQDM + H_{\rm{pent}}
+\HQDPM \equiv \HQDM + H_{\rm{pen}}
 \end{equation}
-where $H_{\rm{pent}}$ only involves the pentamer resonances in \tabref{tab:pentamer_moves} and their
-rotational symmetry related resonances. 
+where $H_{\rm{pen}}$ only involves the pentamer resonances in \tabref{tab:pentamer_moves} and those related by symmetry:
+\begin{align}
+H_{\rm{pen}} \equiv \HGQDM \biggl( &\bigl\{ \left(c_a,\bar{c}_a\right),\left(c_b,\bar{c}_b\right),\left(c_c,\bar{c}_c\right) \bigr\},\biggr.\notag\\
+\biggl. &\bigl\{ \left(t_a,v_a\right),\left(t_b,v_b\right),\left(t_c,v_c\right) \bigr\} \biggr)  \label{eq:Hpen}
+\end{align} 
  
 \begin{table}
     \begin{tabular}{| l | c | c |}
   	\hline
-     & $c$ & $\bar{c}$ \\
+    $\nu$ & $c_\nu$ & $\bar{c}_\nu$ \\
 	\hline
-    $i$ & $\pentmvcreate$ &  $\pentmvanal$  \\
+    $a$ & $\pentmvcreate$ &  $\pentmvanal$  \\
 	\hline
-    $ii$ &$\penmvhrzleft$&$\penmvhrzright$ \\
+    $b$ &$\penmvhrzleft$&$\penmvhrzright$ \\
 	\hline
-    $iii$ &$\penmvdiagup$& $\penmvdiagdown$\\
+    $c$ &$\penmvdiagup$& $\penmvdiagdown$\\
 	\hline
   \end{tabular}
-  \caption{The pairs of local dimer \& pentamer configurations $c\leftrightarrow\bar{c}$ generate minimal local dynamics that create/annihilate pairs ($i$) of pentamers and translate single pentamers ($ii$ \& $iii$). Note that pentamers always stay on the same sublattice which is associated with their $U(1)$ charge. }
+  \caption{The pairs of local dimer \& pentamer configurations $c_\nu\leftrightarrow\bar{c}_\nu$ generate minimal local dynamics that create/annihilate pairs ($a$) of pentamers and translate single pentamers ($b$ \& $c$). Note that pentamers always stay on the same sublattice which is associated with their $U(1)$ charge. }
   \label{tab:pentamer_moves}
 \end{table}
 
@@ -660,15 +660,15 @@ and for closed curves $\Gamma$
 \left[ S_\Gamma^{\rm{QDPM}}, \HQDPM \right] = 0.
 \end{equation}
 
-Our numerical simulations (discussed below in \secref{sec:numerics}) suggest that the dynamics of $\HQDPM$ are ergodic in each topological sector. The exact zero energy ground state at the RK point, where $t_i=v_i, i \in \{ 0,1,2,3\}$, is the RK state, where the superposition is taken to be over all states in the topological sector $\Omega$ which are labeled by the topological loop operators
+Our numerical simulations (discussed below in \secref{sec:numerics}) suggest that the dynamics of $\HQDPM$ are ergodic in each topological sector $\Omega$ that are labeled by the topological loop operators:
 \begin{equation}
-\Omega = \left(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}} \right)
+\Omega = \left(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}} \right).
 \end{equation}
-Since the $W_{X,Y}^{\rm{QDPM}}$ operators have eigenvalues $\{0,1,-1\}$...
+The exact zero energy ground state at the RK point, where $t_i=v_i, i \in \{ 0,1,2,3\}$, is the RK state, where the superposition is taken to be over all states in the topological sector. Since the $W_{X,Y}^{\rm{QDPM}}$ operators have eigenvalues $\{1,e^{i2\pi/3},e^{-i2\pi/3}\}$, the RK point of the QDPM is therefore 9-fold degenerate on the torus.
 
-Defects in the QDPM (monomers, trimers, and tetramers) carry a $Z_3$ electric charge $Q_v^{Z_3} = \pm 1$, where the sign depends on the sub-lattice and type of defect (see \ref{tab:defects}).
+Defects in the QDPM include monomers, trimers, and tetramers. As these dimer configurations violate the local constraint at the vertex, these defects carry a non-vanishing $Z_3$ electric charge $Q_v^{Z_3} = \pm 1$, where the sign depends on the sub-lattice and type of defect. \tabref{tab:defects} lists the $Z_3$ charge for these defects on one sublattice; defects of the same type carry opposite charge when living on opposite sublattices.
 
-Thus we have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory.  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a critically correlated or confining symmetry broken phase, which we do below.
+We have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory (see \ref{sec:Z3GT} for details of $Z_3$ gauge theory).  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a critically correlated or confining symmetry broken phase, which we discuss below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -676,18 +676,17 @@ Thus we have demonstrated that ground state at the RK point of the QDPM has an e
 \section{Numerical Study of the RK ground state of the QDPM}
 \label{sec:numerics}
 
-To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves}. Below we present the results of calculations on $L\times L$ lattices with periodic boundary conditions on systems up to $L=64$. 
+To determine the nature of the ground state at the RK point of the QDPM, we have used Monte Carlo sampling of $\ket{\Psi_{\rm{RK}}}$, using local updates corresponding to the dimer resonances shown in \tabref{tab:pentamer_moves}. Below we present the results of calculations on $L\times L$ square lattices with periodic boundary conditions on systems up to $L=128$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Topological sectors}
 
-We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding number $\Phi_{X/Y}$ . $\Phi_X$ is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors (the behavior of $\Phi_Y$ is identical to that of $\Phi_X$~\note{(Owen: can you confirm this?)}). We confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly Gaussian envelope with a width that increases with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM.
+We explicitly demonstrate how the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding numbers $\Phi_{X}$ and $\Phi_{Y}$. The histograms of these U(1) winding numbers is shown in \figref{fig:u1_wind_qdpm}, where the different colors represent calculations that were initialized to different winding sectors (the behavior of $\Phi_Y$ is identical to that of $\Phi_X$~\note{(Owen: can you confirm this?)}). We confirm that $\Phi_{X/Y}$ is only conserved modulo $3$, rather than strictly conserved as it is in the QDM. We find that $P(\Phi_{X/Y})$ has a roughly Gaussian envelope with a width that increases with system size--this is expected as $\Phi_{X/Y} = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors. For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled by $\Phi_{X/Y} \mod 3$, or equivalently $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$, in contrast with the extensive degeneracy of the QDM.
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[]
     \centering
     \includegraphics[width=1.0\linewidth]{u1_wind_qdpm.pdf}
-    \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in the QDPM on a
-    $L=32$ lattice. Different colors correspond to calculations initialized to different winding sectors, and the lines are fits to a Gaussian. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus, that is labeled by $(W_X^{\rm{QDPM}},W_Y^{\rm{QDPM}})$. \note{Owen: Can you plot $P\left(\Phi_Y\right)$ on this plot also? Maybe with open symbols?}}
+    \caption{The histogram of the $U(1)$ winding number $\Phi_X$ as measured in for the ground state of the RK point of the QDPM for three different lattice sizes. Different colors correspond to calculations initialized to different winding sectors, and the lines are fits to a Gaussian. Note that $\Phi_X$ is conserved modulo $3$, resulting in a $9$-fold topological degeneracy on a torus.}
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -856,7 +855,7 @@ Computations were performed on the Vermont Advanced Computing Core supported by 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$Z_3$ Gauge theory on the square lattice}
-
+\label{sec:Z3GT}
 Here we will review a string-net implementation of $Z_3$ gauge theory on the square lattice~\cite{Horn1979}. We define a three -dimensional Hilbert space on each link, corresponding to the presence or absence of an oriented string segment that carries $Z_3$ electric flux which are eigenstates of the Hermitian $Z_3$ electric flux operator $E_{vv'}$
 \begin{align}
         & E_{vv'}  \eket{\vvemptylink} = 0
