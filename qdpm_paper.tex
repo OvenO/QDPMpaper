@@ -8,6 +8,7 @@
 \usepackage{bbold}
 \usepackage{setspace}
 \usepackage{epstopdf}
+\usepackage{placeins}
 %\usepackage{scalerel}
 \epstopdfsetup{update} % only regenerate pdf files when eps file is newer
 \linespread{1}
@@ -21,6 +22,7 @@
 \newcommand{\figref}[1]{Fig. \ref{#1}}
 \newcommand{\secref}[1]{Sec. \ref{#1}}
 \newcommand{\tabref}[1]{Tab. \ref{#1}}
+\newcommand{\appref}[1]{Appendix \ref{#1}}
 \newcommand{\note}[1]{\textcolor{red}{#1}}
 
 %\newcommand*{\hprs}{%
@@ -606,7 +608,7 @@ Defects violating the dimer parity constraint in the IGT's have $Q_v^{Z_2} = 1$,
 
 The ground states of $\HIGT$ are fourfold degenerate on the torus, and have exponentially decaying dimer-dimer and monomer-monomer correlations and a finite energy gap; such features demonstrate the deconfined topologically ordered nature of the ground state of the IGTs.
 
-We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs relative to the models with a dimer number constraint  have charge U(1) charge $Q_v = \pm 2$ (see \tabref{tab:defects}). It is known that coupling a $U(1)$ gauge field to a dynamics charge $q$ matter field can result in an $Z_q$ gauge theory~\cite{Fradkin1979}; as in the IGT's we have added dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory.
+We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs relative to the models with a dimer number constraint  have charge U(1) charge $Q_v = \pm 2$ (see \tabref{tab:defects}). It is known that coupling a $U(1)$ gauge field to a dynamics charge $q$ matter field can result in an $Z_q$ gauge theory~\cite{Fradkin1979}; as in the IGT's we have added dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory (see \appref{sec:Z3GT} for a review of $Z_3$ gauge theory).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -697,7 +699,7 @@ S_d\left( \bm{k} \right) \equiv \frac{1}{ L^4} \sum_{i,j} e^{-i \bm{k} \cdot \le
 \end{equation}
 where we restrict the sum to horizontal links, for a $L=64$ lattice. 
 \figref{fig:dimer_3way} (c) shows the magnitude \note{(Owen: Is $S_d$ real \& positive?)} of $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers; the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
-We have plotted the finite size scaling of the intensity of the broad maximum of $S_d$ in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit; these maxima are therefore consistent with finite size effects due to short distance correlations. Thus we see no evidence of symmetry breaking in the thermodynamic limit.
+We have plotted the finite size scaling of the intensity of the broad maximum of $S_d$ in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit; these maxima are therefore consistent with finite size effects due to short distance correlations. In \appref{sec:dimer_order_parameters} we additionally have plotted order parameters that specifically test for rotational and translational symmetry breaking; in all cases we find no symmetry breaking in the thermodynamic limit. Thus we see no evidence of symmetry breaking in the thermodynamic limit.
 
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[t]
@@ -878,7 +880,7 @@ G_v \ket{\psi} = e^{\pm 2\pi/3 i} \ket{\psi}
 \end{equation}
 which corresponds to the presence of a $Z_3$ charge of $\pm1$ at vertex $v$. A vertex with a positive (negative) charge has a net outward (inward) string flux of 1 modulo 3, or net inward (outward) flux of 2. \figref{fig:example_elec_string} shows examples of charged and charge free string configurations.
 
-To provide dynamics, we define a unitary operator electric flux ladder operator $Q^\dagger_{vv'}$ that increments the electric flux:
+To provide dynamics, we define a unitary operator electric flux ladder operator $Q^\dagger_{vv'}$ that cyclically increments the electric flux:
 \begin{align}
         & Q^\dagger_{vv'}  \eket{\vvemptylink} = \eket{\rightarrowlink}
         ,
@@ -907,7 +909,7 @@ where the product is over all links $l$ that cross $\tilde{\gamma}$ and $v_l$ ($
 \begin{figure}[t]
     \centering
     \includegraphics[width=1.0\linewidth]{example_elec_string.pdf}
-    \caption{ ({\it left}) An example of a charge free $Z_3$ electric string configuration. The electric string operator $S_\gamma^e$ represented by the thick gray line, oriented from the red to blue vertex. ({\it right}) An example of a $Z_3$ electric string configuration with a $+1$ ($-1$) electric charge at the red (blue) vertex; this string configuration results form the action of $S_\gamma^e$ on the left panel.  }
+    \caption{ ({\it left}) An example of a charge free $Z_3$ electric string configuration. The electric string operator $S_\gamma^e$ represented by the thick gray line, oriented from the white to black vertex. ({\it right}) An example of a $Z_3$ electric string configuration with a $+1$ ($-1$) electric charge at the red (blue) vertex; this string configuration results form the action of $S_\gamma^e$ on the left panel.  }
     \label{fig:example_elec_string}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -921,11 +923,12 @@ where the product is over all links $l$ that cross $\tilde{\gamma}$ and $v_l$ ($
 %\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-Note that  $S_e$ and $S_m$ do not commute if their corresponding strings intersect--this underlies the non-trivial statics of electric charges and magnetic vortices. Consider the magnetic string operator $S_m(\tilde{\Gamma})$ defined by an oriented \emph{closed} loop $\tilde{\Gamma}$ on the dual lattice. This operator corresponds to the creation of a vortex-antivortex pair, winding of the vortex around $\Gamma$, and annihilation of the vortex pair. A state with definite electric charge inside $\Gamma$ will be an eigenstate of $S_m(\tilde{\Gamma})$, with eigenvalue $e^{ i 2 \pi/3 q}$, where $q=0,\pm1$ is the net $Z_3$ electric charge (modulo 3) inside $\tilde{\Gamma}$. For $\Gamma$ winding around an isolated electric charge, we see that electric charges and magnetic vortices are anyons with relative braiding statics with a statistical phase of $e^{\pm i 2\pi/3}$.
+Note that  $S_e$ and $S_m$ do not commute if their corresponding strings intersect--this underlies the non-trivial statics of electric charges and magnetic vortices. Consider the magnetic string operator $S_m(\tilde{\Gamma})$ defined by an oriented \emph{closed} loop $\tilde{\Gamma}$ on the dual lattice. This operator corresponds to the creation of a vortex-antivortex pair, winding of the vortex around $\tilde{\Gamma}$, and annihilation of the vortex pair. A state with definite electric charge inside $\tilde{\Gamma}$ will be an eigenstate of $S_m(\tilde{\Gamma})$, with eigenvalue $e^{ i 2 \pi/3 q}$, where $q=0,\pm1$ is the net $Z_3$ electric charge (modulo 3) inside $\tilde{\Gamma}$. Thus for $\tilde{\Gamma}$ winding around an isolated electric charge, we see that electric charges and magnetic vortices are anyons with relative braiding statics with a statistical phase of $e^{\pm i 2\pi/3}$.
 
-Additionally, these string operators give rise to a topological degeneracy in systems of non-trivial topology. For example, consider the charge free sector on a torus. We can consider two topologically non-trivial closed loops $\tilde{\Gamma}_{X/Y}$ which have single winding around the $x/y$ directions of the torus. Since $S_m(\Gamma_{X/Y})$ commutes with $H_{Z_3}$, we can label the energy eigenstates by the eigenvalues of $S_m(\Gamma_{X/Y})$: $\{1,e^{\pm i 2\pi/3}\}$. Thus $H_{Z_3}$ has a 9-fold ground state degeneracy on the torus, and the ground states subspace can be labeled by the $Z_3$ electric flux winding about each axis of the torus.
+Additionally, these string operators give rise to a topological degeneracy in systems of non-trivial topology. For example, consider the charge free sector on a torus. We can consider two topologically non-trivial closed loops $\tilde{\Gamma}_{x}$ \& $\tilde{\Gamma}_{Y}$ which have a single winding around the $x$ or $y$ directions of the torus. Since $S_m(\tilde{\Gamma}_{X})$ commutes with $H_{Z_3}$, we can label the energy eigenstates by the eigenvalues of $S_m(\tilde{\Gamma}_{X})$, and similarly for $\tilde{\Gamma}_Y$: $\{1,e^{ i 2\pi/3},e^{- i 2\pi/3}\}$. Thus $H_{Z_3}$ has a 9-fold ground state degeneracy on the torus, and the ground states subspace can be labeled by the $Z_3$ electric flux winding about each axis of the torus.
             
-\section{Additional numerical results on the QDPM RK ground state}
+\section{Dimer order parameters QDPM RK ground state}
+\label{sec:dimer_order_parameters}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure}
@@ -937,11 +940,11 @@ Additionally, these string operators give rise to a topological degeneracy in sy
 %\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-To test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define 
+To explicitly test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define~\cite{Syljuasen2005} 
 \begin{equation}
 \Mrot \equiv  \frac{2}{L^2} \left(N_v - N_h\right) \label{eq:Mrot},
 \end{equation}
-where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. to To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define $\Mperp$ 
+where $N_v$ ($N_h$) is the total number of vertical (horizontal) dimers; note that $\exval{M_{\rm{rot}}^2 } \neq 0$ implies there is rotational symmetry breaking. To capture translational symmetry breaking by one lattice site in a direction perpendicular to the majority of the dimers we define~\cite{Syljuasen2005}
 \begin{align}
 \Mperp \equiv  \frac{8}{L^2} \sum_{\Box} \Bigl(  &(-1)^{r_x} \theta\left(\Mrot \right) \Pi_\Box^v \notag\\
 + &(-1)^{r_y}\theta\left(-\Mrot \right) \Pi_\Box^h\Bigr) \label{eq:Mperp},
@@ -955,17 +958,17 @@ where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is 
 \McolSq \equiv  \frac{4}{L^4} \biggl[  &\biggl( \sum_{\ell_h} (-1)^{r_x} n_d \left(\vec{r}_{\ell_h}\right) \biggr)^2 \notag \\
 + &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
 \end{align}
-where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation in \figref{fig:order_params}.
+where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation shown in \figref{fig:order_params}.
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[]
+\begin{figure}[t!]
     \centering
     \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
-    \caption{The symmetry breaking order parameters.}
+    \caption{Symmetry breaking order parameters defined in the text computed for the RK point of the QDPM. In all cases we find they vanish in the thermodynamic limit, demonstrating the lack of symmetry breaking.}
     \label{fig:order_params}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-
+\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
