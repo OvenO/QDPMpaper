@@ -443,7 +443,7 @@ This paper is organized as follows. In \secref{sec:Background} we provide releva
     \label{fig:example_local_constraints}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link is either unoccupied or occupied by a single dimer. Given an Ising spin $\sigma_\ell$ on each link $\ell$ we define the number of dimers on the link $n_\ell \equiv 1/2+\sigma_\ell^z$, where $\sigma_\ell^i$ are the associated Pauli matrices. The Hilbert space consists of configurations of dimers on the square lattice that satisfy a local constraint at each vertex. We define a $U(1)$ charge $Q_v$ at each vertex $v$ of the lattice in terms of the number of dimers touching $v$, $n_v\equiv \sum_{\ell \in v}n_\ell$:
+Here we will provide background about generalized quantum dimer models on the square lattice. We consider systems with Ising-like dimer degrees of freedom on each link, such that each link is either unoccupied or occupied by a single dimer. Given an Ising spin $\sigma_\ell$ on each link $\ell$ we define the number of dimers on the link $n_\ell \equiv 1/2+\sigma_\ell^z$, where $\sigma_\ell^i$ are the associated Pauli matrices. The Hilbert space is spanned by an orthonormal basis of dimerizations of the square lattice that satisfy a local constraint at each vertex. We define a $U(1)$ charge $Q_v$ at each vertex $v$ of the lattice in terms of the number of dimers touching $v$, $n_v\equiv \sum_{\ell \in v}n_\ell$:
 \begin{equation}
 Q_v \equiv \pm \left( n_v - c_P \right)
 \end{equation}
@@ -472,7 +472,7 @@ However, at the special points in the $\{(t_\nu,v_\nu)\}$ parameter space, known
 H_{\rm{RK}} = \sum_\nu  {h}_\nu \label{eq:HRK},
 \end{equation}
 where all $h_\nu$ are projectors with eigenvalues $\{0,1\}$, the exact ground state is known to be
-the zero energy state of \Eqref{eq:HRK} that is simultaneously annihilated by all ${\bar{h}}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
+the zero energy state of \Eqref{eq:HRK} that is simultaneously annihilated by all ${h}_\nu$. Such a zero energy state, known as the RK state, may be formed from an equal superposition of all dimerizations that are connected by $\{T_\nu\}$:
 \begin{equation}
 \eket{\Phi_{\RK}^{\Omega}} = \sum_{C \in \Omega} \eket{C}
 \end{equation} 
@@ -538,7 +538,7 @@ where we have chosen $t_\bplqt = t$, $v_\bplqt =v, \forall \bplqt$.
 %\end{align}
 In this case of a fixed number constraint, the Hamiltonian conserves $Q_v$ and therefore the dimer flux through any closed loop such that:
 \begin{equation}
-\left[ \Phi_\Gamma, \HQDM \right] = 0,
+\left[ \Phi_\Gamma, \HQDM \right] = 0.
 \end{equation}
 We can define two conserved topological winding numbers $\Phi_{X}$ \& $\Phi_{Y}$ which are the dimer flux through topologically non-trivial loops that wind around each axis of the lattice when the system has periodic boundary conditions (see \figref{fig:orientedSL}). On a lattice of dimensions $L_x\times L_y$, the eigenvalues of $\Phi_X$ and $\Phi_Y$ are integers in the range
 \begin{equation}
@@ -546,9 +546,9 @@ We can define two conserved topological winding numbers $\Phi_{X}$ \& $\Phi_{Y}$
 \end{equation}
 and similarly for $\Phi_Y$, thus there are $\mathcal{O} (L_x L_y)$ distinct topological sectors. 
 
-At the Rokhsar-Kivelson point $t=v$, we may write $\HQDM$ in the form of \Eqref{eq:HRK} by defining projection operators  $ {h}_\nu \equiv  {P}^\dagger_{\nu} {P}_{\nu}$, with
+At the Rokhsar-Kivelson point $t=v$, we may write $\HQDM$ in the form of \Eqref{eq:HRK} by defining projection operators  $ {h}_\nu $:
 \begin{equation}
- {P}^\dagger_\nu \equiv \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr).
+ {h}_\nu \equiv \biggl( \eket{ c_\nu} - \eket{\bar{c}_\nu} \biggr)\biggl( \ebra{ c_\nu} - \ebra{\bar{c}_\nu} \biggr).
 \end{equation} 
 Since the plaquette flip term in \Eqref{eq:HQDM} is ergodic in each of topological sector $(\Phi_x,\Phi_y)$ on the square lattice~\cite{????}, each topological sector corresponds to a unique RK ground state where $\Omega$ is labeled by $(\Phi_x,\Phi_y)$. Thus the  RK points of the QDM and QFPLM have an \emph{extensively} degenerate ground states.
 
@@ -599,7 +599,7 @@ h_\Box \equiv \frac{1}{2} \left( \mathbb{1} - \sum_i \eket{c_{\Box,i}}\ebra{\bar
 \end{equation}
 such that $\HIGT$ takes the form of \Eqref{eq:HRK} (up to a constant), and the RK state is the ground state for all values of $t$.
 
-The increased dynamics of $\HIGT$ vs. $\HQDM$ no longer conserve the dimer flux $\Phi_\Gamma$ through a closed curve; only $\Phi_\Gamma \mod 2$ is preserved by $\HIGT$. Consequently, to define the string and loop operators that commute with $\HIGT$ (for closed strings) we fix $\alpha = \pi$ in \Eqref{eq:Sgamma}:
+The additional dynamics of $\HIGT$ vs. $\HQDM$ no longer conserve the dimer flux $\Phi_\Gamma$ through a closed curve; only $\Phi_\Gamma \mod 2$ is preserved by $\HIGT$. Consequently, to define the string and loop operators that commute with $\HIGT$ (for closed strings) we fix $\alpha = \pi$ in \Eqref{eq:Sgamma}:
 \begin{equation}
 S_\gamma^{Z_2} \equiv S_\gamma \left( \pi \right), \quad W_{X,Y}^{Z_2} \equiv W_{X,Y} \left( \pi \right).
 \end{equation}
@@ -664,7 +664,7 @@ The exact zero energy ground state at the RK point, where $t_i=v_i, i \in \{ 1,2
 
 Defects in the QDPM include monomers, trimers, and tetramers. As these dimer configurations violate the local constraint at the vertex, these defects carry a non-vanishing $Z_3$ electric charge $Q_v^{Z_3} = \pm 1$, where the sign depends on the sub-lattice and type of defect. \tabref{tab:defects} lists the $Z_3$ charge for these defects on one sublattice; defects of the same type carry opposite charge when living on opposite sublattices.
 
-We have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory (see \ref{sec:Z3GT} for details of $Z_3$ gauge theory).  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a confined symmetry broken or critical state, which we discuss below.
+We have demonstrated that ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory (see \appref{sec:Z3GT} for details of $Z_3$ gauge theory).  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a confined symmetry broken or critical state, which we discuss below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -841,7 +841,7 @@ Finally, given the stability of the topologically ordered phase, it may be possi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
 
-Computations were performed on the Vermont Advanced Computing Core supported by NASA (NNX-08AO96G).
+We thank T. J. Volkoff for discussions and a careful reading of the manuscript. Computations were performed on the Vermont Advanced Computing Core supported by NASA (NNX-08AO96G).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
