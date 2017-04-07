@@ -14,33 +14,11 @@
 \linespread{1}
 \usepackage[export]{adjustbox}
 
-%\newcommand*\bplqt{\includegraphics[height=1.6ex] {Symbols/blank_plqt}}
-%\newcommand*\bhrzmv{\includegraphics[height=1.6ex]{Symbols/blank_hrzmv}}
-%\newcommand*\bdiag{\includegraphics[height=1.6ex] {Symbols/blank_diag}}
-%\newcommand*\bstr{\includegraphics[height=1.6ex] {Symbols/blank_str}}
-
 \newcommand{\figref}[1]{Fig. \ref{#1}}
 \newcommand{\secref}[1]{Sec. \ref{#1}}
 \newcommand{\tabref}[1]{Tab. \ref{#1}}
 \newcommand{\appref}[1]{Appendix \ref{#1}}
 \newcommand{\note}[1]{\textcolor{red}{#1}}
-
-%\newcommand*{\hprs}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.2ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/hrzprestar} }
-%}
-%\newcommand*{\hspr}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.2ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/hrzstarpair} }
-%}
 
 \newcommand*{\bplqt}{%
   \text{% change size in subscripts or superscripts
@@ -58,30 +36,6 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/full_plqt} }
 }
-%\newcommand*{\bhrzmv}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.2ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/blank_hrzmv} }
-%}
-%\newcommand*{\bdiag}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.2ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/blank_diag} }
-%}
-%\newcommand*{\bstr}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.2ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/blank_str} }
-%}
 \newcommand*{\vvemptylink}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -170,30 +124,6 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/vrtplqt.pdf} }
 }
-%\newcommand*{\threedownplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/threedownplqt.pdf} }
-%}
-%\newcommand*{\threeupplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/threeupplqt.pdf} }
-%}
-%\newcommand*{\threerightplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/threerightplqt.pdf} }
-%}
 \newcommand*{\threeleftplqt}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -202,30 +132,6 @@
       raise=\fontdimen22\textfont2,% but raise it to the formula axis
     ]{Symbols/threeleftplqt.pdf} }
 }
-%\newcommand*{\onedownplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/onedownplqt.pdf} }
-%}
-%\newcommand*{\oneupplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/oneupplqt.pdf} }
-%}
-%\newcommand*{\onerightplqt}{%
-%  \text{% change size in subscripts or superscripts
-%    \includegraphics[
-%      height=1.5ex,% adjust to suit
-%      valign=M,% center vertically
-%      raise=\fontdimen22\textfont2,% but raise it to the formula axis
-%    ]{Symbols/onerightplqt.pdf} }
-%}
 \newcommand*{\oneleftplqt}{%
   \text{% change size in subscripts or superscripts
     \includegraphics[
@@ -530,13 +436,7 @@ The Hamiltonian for these models gives dynamics to parallel dimers on the plaque
 \begin{equation}
 \HQDM\left(t,v\right) \equiv \HGQDM \biggl( \bigl\{ \left(\vrtplqt,\hrzplqt\right) \bigr\},\bigl\{ \left(t,v\right) \bigr\} \biggr)  \label{eq:HQDM}
 \end{equation}
-where we have chosen $t_\bplqt = t$, $v_\bplqt =v, \forall \bplqt$.
-%\begin{align}
-%    \label{}
-%   \HQDM = &-t\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\hrzplqt} +h.c. \biggr) \notag\\
-%    					&+v\sum_{\bplqt} \biggl( \eket{\vrtplqt} \ebra{\vrtplqt} +\eket{\hrzplqt} \ebra{\hrzplqt} \biggr). \label{eq:HQDM}
-%\end{align}
-In this case of a fixed number constraint, the Hamiltonian conserves $Q_v$ and therefore the dimer flux through any closed loop such that:
+where we have chosen $t_\bplqt = t$, $v_\bplqt =v, \forall \bplqt$. In this case of a fixed number constraint, the Hamiltonian conserves $Q_v$ and therefore the dimer flux through any closed loop such that:
 \begin{equation}
 \left[ \Phi_\Gamma, \HQDM \right] = 0.  \notag
 \end{equation}
@@ -764,7 +664,7 @@ S_M\left( \bm{k} \right) \equiv \frac{1}{ L^4} \sum_{p,p'} e^{-i \bm{k} \cdot \b
 and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{fig:orientedSL}; this choice breaks the translational symmetry of the lattice and thus requires doubling the unit cell the $x$-direction. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$). We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit. We have additionally studied $S_M$ using different background dimerization and find that the location of the finite-size peaks depend on the gauge choice; however in all cases we find that these peaks vanish in the thermodynamic limit. The vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, and the additional vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice which we find decays exponentially with distance, with a correlation length $\chi\approx 3$. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
 
 %%%%%%%%%%%%%%%%%%%%%%%
-    \begin{figure}[t]
+    \begin{figure}
         \centering
         \includegraphics[width=1.0\columnwidth]{vison_3way.pdf}
         \caption
@@ -798,21 +698,6 @@ To study the confinement of $Z_3$ electrically charged defects in the QDPM, we h
 which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$ (see \tabref{tab:defects}) and the positive and negative monomers live on different sub-lattices. We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlations}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \sim L^{-4}$ at large separations. \figref{fig:monomer_correlations} demonstrates that $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ decays to $L^{-4}$ for each system size, indicating a deconfinement of monomers. This is in contrast with the QDM where monomer correlations decay as a power-law. Thus we find that $Z_3$ electric charges are deconfined in the QDPM.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{table}
-%    \begin{tabular}{| l | c | c |}
-%  	\hline
-%     & $c$ & $\bar{c}$ \\
-%	\hline
-%    $i$ & $\monomermvA$ &  $\monomermvB$  \\
-%    \hline
-%  \end{tabular}
-%  \caption{The pair of local dimer \& monomer configurations $c\leftrightarrow\bar{c}$ generate
-%  minimal local monomer dynamics. Monomers always remain on their origonal sublattice. }
-%  \label{tab:pentamerMoves}
-%\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[]
@@ -915,15 +800,6 @@ where the product is over all links $l$ that cross $\tilde{\gamma}$ and $v_l$ ($
     \label{fig:example_elec_string}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=1.0\columnwidth]{spatial_cors_perp.pdf}
-%    \caption{Correlation function between perpendicular dimers on the same (blue) and different (red) 
-%    sub-lattice for a $L=64$ lattice.}
-%    \label{fig:spatial_dmr_cor}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%
 
 Note that  $S_e$ and $S_m$ do not commute if their corresponding strings intersect--this underlies the non-trivial statistics of electric charges and magnetic vortices. Consider the magnetic string operator $S_m(\tilde{\Gamma})$ defined by an oriented \emph{closed} loop $\tilde{\Gamma}$ on the dual lattice. This operator corresponds to the creation of a vortex-antivortex pair, winding of the vortex around $\tilde{\Gamma}$, and annihilation of the vortex pair. A state with definite electric charge inside $\tilde{\Gamma}$ will be an eigenstate of $S_m(\tilde{\Gamma})$, with eigenvalue $e^{ i 2 \pi/3 q}$, where $q=0,\pm1$ is the net $Z_3$ electric charge (modulo 3) inside $\tilde{\Gamma}$.  Thus for $\tilde{\Gamma}$ winding around an isolated electric charge, we see that electric charges and magnetic vortices are anyons with relative braiding statistics with a statistical phase of $e^{\pm i 2\pi/3}$.
 
@@ -932,15 +808,6 @@ Additionally, these string operators give rise to a topological degeneracy in sy
 \section{Dimer order parameters QDPM RK ground state}
 \label{sec:dimer_order_parameters}
 %
-%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=1.0\columnwidth]{spatial_cors_end_to_end_parallel.pdf}
-%    \caption{Correlation function between parallel dimers (end-to-end) on the same (blue) and different (red) 
-%    sub-lattice for a $L=64$ lattice.}
-%    \label{fig:spatial_dmr_cor}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%
 
 To explicitly test for the possibility of translational and rotational symmetry breaking corresponding to the features in $S_d$ at the Brillouin zone edges, we define several order parameters which would capture such potential symmetry breaking. For rotational symmetry breaking we define~\cite{Syljuasen2005} 
 \begin{equation}
