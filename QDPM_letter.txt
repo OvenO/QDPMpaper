@@ -2,14 +2,9 @@ Dear Editors,
 
 We have submitted for your consideration our manuscript "$Z_3$ topological order in the quantum dimer-pentamer model". In this paper we introduce the quantum dimer-pentamer model (QDPM), a generalization of the well studied quantum dimer model on the square lattice. Quantum dimer models have been widely studied over the last three decades, in part because they often have have spin liquid ground states. The QDPM relaxes the local constraint of the dimer model, to allow for pentamers, where four dimers touch at a vertex.
 
-Using numerical calculations, we demonstrate that the QDPM has a disordered liquid ground state with
-exponentially decaying correlations. We argue that this dimer-pentamer liquid phase has $Z_3$
-topological order, in contrast with the commonly seen $Z_2$ topological of quantum dimer models on
-non-bipartite lattices.
+Using numerical calculations, we demonstrate that the QDPM has a disordered liquid ground state with exponentially decaying correlations. We argue that this dimer-pentamer liquid phase has $Z_3$ topological order, in contrast with the commonly seen $Z_2$ topological of quantum dimer models on non-bipartite lattices.
 
-We believe this work adds to the literature on quantum dimer models and will be of interest to the
-quantum spin liquid community. We hope you agree and will support its publication in Physical Review
-B.
+We believe this work adds to the literature on quantum dimer models and will be of interest to the quantum spin liquid community. We hope you agree and will support its publication in Physical Review B.
 
 Sincerely,
 	O. Myers
