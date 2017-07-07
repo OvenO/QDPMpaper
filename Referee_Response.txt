@@ -1,0 +1,89 @@
+Dear Editor,
+
+We are resubmitting our manuscript "$Z_3$ topological order in the quantum dimer-pentamer model". We thank the referees for the constructive comments, corrections and suggestions, which we have responded to below. We also have included a list of changes to the manuscript. We hope that you agree that with these changes our manuscript is now suitable for publication in Physical Review B.
+
+sincerely,
+O. Meyers
+C. M. Herdman 
+
+
+Responses to First Referee:
+
+We thank the First Referee for his/her comments. Here we directly respond to the following particular comments (with the referee's comment in quotes):
+
+"Definition of Q_v and c_P It is quite difficult to see what the 
+authors mean by $Q_v$ and $c_P$ from the text. I guess the definition 
+of $n_\ell$ in page 2 should read $n_\ell = (1+\sigma^z_\ell)/2$ if 
+$\sigma^z_\ell$ takes value $\pm 1$."
+
+Yes, we appreciate the referee catching this error.
+
+
+"The definition of $c_P$ is 
+cryptic because "the even (odd) sector of the constraint" seems not 
+defined. I was only able to see the assignment of $Q_v$ to each 
+configuration from TABLE I. It would be better to touch on TABLE I 
+earlier."
+
+We have clarified the definition of the even and odd sectors of the constraint and the choice of $c_P$ in the text.
+
+
+"The authors conclude that the processes involved in the QDPM 
+Hamiltonian are ergodic in each topological sector. This is in marked 
+contrast to the QDM on either bipartite or non-bipartite lattice, in 
+which we usually have staggered configurations that cannot be reached 
+by applying local Hamiltonians repeatedly. Such staggered 
+configurations also appear in a recently proposed quantum trimer model 
+on a square lattice that exhibits $Z_3$ topological order. I just 
+wonder why the authors can exclude such "frozen" configurations from 
+the ground states of QDPM. For instance, the state in which all the 
+bonds are occupied (all the vertices are of pentamer type) is an 
+allowed configuration and does not cost any energy."
+
+We did not intend to claim that we have proven the the QDPM is ergodic in each topological sector, but simply that our numerics are consistent with such ergodicity, as we see no evidence of a lack of ergodicity. We have clarified this in the text by explicitly acknowledging the possibility of "frozen" configurations. However, the particular configurations the referee mentions (all links occupied--i.e. pentamers on each vertex) does indeed have dynamics in the QDPM (refer to Table II, move "\nu_1"). Additionally, as mentioned in the manuscript, the "staggered" configuration which are frozen in the QDM do have dynamics in the QDPM (notice all moves in Table II involve staggered regions).
+
+
+"The authors discuss that the monomer-monomer correlation decays 
+algebraically as $<m_0 m_r> \sim L^{-4}$ with the data in Fig. 10. But 
+it is not easy to see this power from the figure. I also wonder 
+whether the coefficient of $L^{-4}$ is independent of $L$ or not."
+
+To be clear: the horizontal lines in Fig. 10 are exactly $L^{-4}$ for each system size with a coefficient of unity. This figure demonstrates that the monomer-monomer correlations decay to the exact constant $N^{-2}$ (with $N=L^2$) as $r \rightarrow \infty$, which corresponds to completely uncorrelated monomers on a lattice with $N$ sites, and thus demonstrates monomer deconfinement.
+
+
+Responses to Second Referee:
+
+We thank the Second Referee for his/her comments. Here we directly respond to the following particular comments (with the referee's comment in quotes):
+
+"I found several minor typos or grammar errors. I think the authors could revise them and polish the manuscript."
+
+We have corrected several typos based on the referees comments--these corrections are listed below.
+
+"I am a little bit worried about "ergodicity" of the model. For example, a staggered region can hop into a pair pentamer (Table II, v1 case). But, again this pair can not be split into or hop into another configuration including some "flippable" plaquettes in the same topological sector. Therefore, the dynamics still seems to happen only between several (maybe quite a lot in large system sizes, but still does not connect to others) configurations and thus not ergodic. If the authors have concrete answer or evidence, they may add some discussion in details in the manuscript."
+
+Owen: Can we include a figure regarding this?
+
+
+List of Changes:
+
+Page 1: Sec. I 1st Paragraph: Both because of of the exotic ... -> Both because of the exotic ...
+
+Page 2: Sec. II A. 1st Paragraph: 
+
+--$n_\ell \equiv 1/2+\sigma_\ell^z$ ==> $n_\ell \equiv 1/2(1+\sigma_\ell^z)$
+
+--Definition of even/odd sectors clarified to read:"...where $c_p$ is a constant, and we define the even (odd) sector of the constraint to have $c_P = 2$ ($c_P=1$); the $+$($-$) sign..."
+
+--References to Tab. I and Fig. 1 added
+
+Page 5: Sec. II 2nd Paragraph: ... weaker correlations that the QDM, -> ... weaker correlations than the QDM,
+
+Page 6: Sec. IV A
+
+--Clarified the discussion of ergodicity as follows:
+
+"We find no evidence of a lack of ergodicity within each of the 9 topological sectors, although we cannot rule out the possibility of isolated ``frozen" configurations which are not accessed by the dynamics described in \tabref{tab:pentamer_moves}; in particular we note that the QDPM gives dynamics to ``staggered" dimer configurations that are frozen in the QDM."
+
+Page 9: Sec. V, 2nd Paragraph: These results suggest a the low energy physics ... -> These results suggest that the low energy physics ...
+
+
