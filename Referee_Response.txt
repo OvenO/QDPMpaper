@@ -3,7 +3,7 @@ Dear Editor,
 We are resubmitting our manuscript "$Z_3$ topological order in the quantum dimer-pentamer model". We thank the referees for the constructive comments, corrections and suggestions, which we have responded to below. We also have included a list of changes to the manuscript. We hope that you agree that with these changes our manuscript is now suitable for publication in Physical Review B.
 
 sincerely,
-O. Meyers
+O. Myers
 C. M. Herdman 
 
 
