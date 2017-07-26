@@ -40,7 +40,7 @@ the ground states of QDPM. For instance, the state in which all the
 bonds are occupied (all the vertices are of pentamer type) is an 
 allowed configuration and does not cost any energy."
 
-We did not intend to claim that we have proven the the QDPM is ergodic in each topological sector, but simply that our numerics are consistent with such ergodicity, as we see no evidence of a lack of ergodicity. We have clarified this in the text by explicitly acknowledging the possibility of "frozen" configurations. However, the particular configurations the referee mentions (all links occupied--i.e. pentamers on each vertex) does indeed have dynamics in the QDPM (refer to Table II, move "\nu_1"). Additionally, as mentioned in the manuscript, the "staggered" configuration which are frozen in the QDM do have dynamics in the QDPM (notice all moves in Table II involve staggered regions).
+We did not intend to claim that we have proven the the QDPM is ergodic in each topological sector, but simply that our numerics are consistent with such ergodicity, as we see no evidence of a lack of ergodicity. We have clarified this in the text by explicitly acknowledging the possibility of "frozen" configurations. However, the particular configurations the referee mentions (all links occupied--i.e. pentamers on each vertex) does indeed have dynamics in the QDPM (refer to Table II, move "\nu_1"). Additionally, as mentioned in the manuscript, the "staggered" configuration which are frozen in the QDM do have dynamics in the QDPM (see Fig. 4 in the new version of the manuscript).
 
 
 "The authors discuss that the monomer-monomer correlation decays 
@@ -61,7 +61,7 @@ We have corrected several typos based on the referees comments--these correction
 
 "I am a little bit worried about "ergodicity" of the model. For example, a staggered region can hop into a pair pentamer (Table II, v1 case). But, again this pair can not be split into or hop into another configuration including some "flippable" plaquettes in the same topological sector. Therefore, the dynamics still seems to happen only between several (maybe quite a lot in large system sizes, but still does not connect to others) configurations and thus not ergodic. If the authors have concrete answer or evidence, they may add some discussion in details in the manuscript."
 
-Owen: Can we include a figure regarding this?
+We have added a new figure (Fig. 4 in the new manuscript) that illustrates how pentamers can give dynamics to staggered regions, and convert regions with no flippable plaquettes to maximally flippable columnar configurations. While we cannot prove ergodicity, or rule out other "frozen" configurations, we hope this new figure helps illustrate the increased dynamics of the QDPM over the QDM.
 
 
 List of Changes:
@@ -77,6 +77,8 @@ Page 2: Sec. II A. 1st Paragraph:
 --References to Tab. I and Fig. 1 added
 
 Page 5: Sec. II 2nd Paragraph: ... weaker correlations that the QDM, -> ... weaker correlations than the QDM,
+
+Page 6. Right column: Figure 4 added.
 
 Page 6: Sec. IV A
 

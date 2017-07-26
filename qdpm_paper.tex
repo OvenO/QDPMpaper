@@ -523,7 +523,7 @@ Q_v^{Z_3} \equiv \left(Q_v~\rm{mod}~3\right)  \notag
 \end{equation}
  which strictly vanishes at each vertex, representing the local constraint. All states in the QDPM are invariant under an exact local $Z_3$ gauge symmetry given by \Eqref{eq:Gv} with $\alpha_v \in \{0,\pm 2\pi/3\}$. Thus introducing pentamers in the QDM reduces the gauge symmetry from $U(1)$ to $Z_3$.
 
-The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice; these local dynamics involving pentamers are illustrated in  \tabref{tab:pentamer_moves}. Note that pentamers give dynamics to ``staggered" regions with no flippable plaquettes; thus we expect the QDPM to have weaker correlations than the QDM, where the dynamics are more constrained. We may write $\HQDPM$ as the following:
+The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice; these local dynamics involving pentamers are illustrated in  \tabref{tab:pentamer_moves}. Note that pentamers give dynamics to ``staggered" regions with no flippable plaquettes (see \figref{fig:stag_to_flip} for an illustration of this); thus we expect the QDPM to have weaker correlations than the QDM, where the dynamics are more constrained. We may write $\HQDPM$ as the following:
 \begin{equation}
 \HQDPM \equiv \HQDM + H_{\rm{pen}}  \notag
 \end{equation}
@@ -549,7 +549,7 @@ H_{\rm{pen}} \equiv \HGQDM \biggl( &\bigl\{ \left(c_{\nu_1},\bar{c}_{\nu_1}\righ
   \label{tab:pentamer_moves}
 \end{table}
 
- 
+
 Because of the terms involving pentamers, $\HQDPM$ conserves $Q_v^{Z_3}$ rather than $Q_v$, and thus $\Phi_\Gamma$ does not commute with the Hamiltonian for closed loops $\Gamma$. The appropriate string and loop operator corresponds to \Eqref{eq:Sgamma} with $\alpha = 2\pi/3$:
 \begin{equation}
 S_\gamma^{Z_3} \equiv S_\gamma \left( 2\pi/3\right), \quad W_{X}^{Z_3} \equiv W_{X} \left( 2\pi/3\right) \label{eq:SQDPM}
@@ -565,6 +565,15 @@ The exact zero energy ground state at the RK point, where $t_i=v_i, i \in \{ 1,2
 Defects in the QDPM include monomers, trimers, and tetramers. As these dimer configurations violate the local constraint at the vertex, these defects carry a non-vanishing $Z_3$ electric charge $Q_v^{Z_3} = \pm 1$, where the sign depends on the sub-lattice and type of defect. \tabref{tab:defects} lists the $Z_3$ charge for these defects on one sublattice; defects of the same type carry opposite charge when living on opposite sublattices.
 
 We have demonstrated that the ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory (see \appref{sec:Z3GT} for details of $Z_3$ gauge theory).  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a confined symmetry broken or critical state, which we discuss below.
+
+ %%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{StagToFlip.pdf}
+    \caption{ An illustration of how the QDPM gives dynamics to dimer configurations that are frozen in the QDM; in the QDPM, ``staggered" configurations with no flippable plaquettes can be transformed into columnar regions with the maximum number of flippable plaquettes. The transitions from panels (a)-(d) involve the pentamer moves $\nu_1$ and $\nu_2$ from \tabref{tab:pentamer_moves}; the transitions from (d)-(g) involve flipping dimers around the highlighted plaquettes. }
+    \label{fig:stag_to_flip}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%% 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -828,8 +837,10 @@ where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is 
 + &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
 \end{align}
 where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation shown in \figref{fig:order_params}.
+
+\vspace{1pt}
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t!]
+\begin{figure}[t]
     \centering
     \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
     \caption{Symmetry breaking order parameters defined in the text computed for the RK point of the QDPM. The lines are fits to $L^{-1}$ scaling. In all cases we find they vanish in the thermodynamic limit, demonstrating the lack of symmetry breaking.}
@@ -837,7 +848,7 @@ where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical)
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\FloatBarrier
+%\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
