@@ -509,7 +509,7 @@ Defects violating the dimer parity constraint in the IGT's have $Q_v^{Z_2} = 1$,
 
 The ground states of $\HIGT$ are fourfold degenerate on the torus, and have exponentially decaying dimer-dimer and monomer-monomer correlations and a finite energy gap; such features demonstrate the deconfined topologically ordered nature of the ground state of the IGTs.
 
-We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs relative to the models with a dimer number constraint  have U(1) charge $Q_v = \pm 2$ (see \tabref{tab:defects}). It is known that when a $U(1)$ gauge field is coupled to a dynamic charge $q$ matter field, this results in a $Z_q$ gauge theory when the matter field condenses~\cite{Fradkin1979}; as in the IGT's we have added dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory (see \appref{sec:Z3GT} for a review of $Z_3$ gauge theory).
+We may understand the emergence of the $Z_2$ topologically ordered phase of IGTs from the QDM and QFPLM from the following picture. The additional vertex configurations that are allowed in the IGTs relative to the models with a dimer number constraint  have U(1) charge $Q_v = \pm 2$ (see \tabref{tab:defects}). It is known that when a $U(1)$ gauge field is coupled to a dynamic charge $q$ matter field, this results in a $Z_q$ gauge theory when the matter field condenses~\cite{Fradkin1979}; as in the IGT's we have added dynamic charge 2 defects to the underlying $U(1)$ symmetric model, and we may expect a $Z_2$ gauge theory to result. We note that pentamers are charge $\pm3$ objects in the QDM (see \tabref{tab:defects}); thus below we investigate whether introducing pentamers into the QDM leads to an effective $Z_3$ gauge theory, as suggested in Ref. \onlinecite{Herdman2013} (see \appref{sec:Z3GT} for a review of $Z_3$ gauge theory).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -523,7 +523,7 @@ Q_v^{Z_3} \equiv \left(Q_v~\rm{mod}~3\right)  \notag
 \end{equation}
  which strictly vanishes at each vertex, representing the local constraint. All states in the QDPM are invariant under an exact local $Z_3$ gauge symmetry given by \Eqref{eq:Gv} with $\alpha_v \in \{0,\pm 2\pi/3\}$. Thus introducing pentamers in the QDM reduces the gauge symmetry from $U(1)$ to $Z_3$.
 
-The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice; these local dynamics involving pentamers are illustrated in  \tabref{tab:pentamer_moves}. Note that pentamers give dynamics to ``staggered" regions with no flippable plaquettes (see \figref{fig:stag_to_flip} for an illustration of this); thus we expect the QDPM to have weaker correlations than the QDM, where the dynamics are more constrained. We may write $\HQDPM$ as the following:
+The Hamiltonian of the QDPM is defined by \Eqref{eq:HGQDM} including both plaquette flips as well as local dimer resonances that create and destroy pairs of pentamers, and allow single pentamers to translate on the same sub-lattice; these local dynamics involving pentamers are illustrated in  \tabref{tab:pentamer_moves}. Note that pentamers give dynamics to ``staggered" regions with no flippable plaquettes that are frozen in the QDM (see \figref{fig:stag_to_flip} for an illustration of this); thus we expect the QDPM to have weaker correlations than the QDM, where the dynamics are more constrained. We may write $\HQDPM$ as the following:
 \begin{equation}
 \HQDPM \equiv \HQDM + H_{\rm{pen}}  \notag
 \end{equation}
@@ -549,6 +549,14 @@ H_{\rm{pen}} \equiv \HGQDM \biggl( &\bigl\{ \left(c_{\nu_1},\bar{c}_{\nu_1}\righ
   \label{tab:pentamer_moves}
 \end{table}
 
+ %%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[]
+    \centering
+    \includegraphics[width=1\linewidth]{StagToFlip.pdf}
+    \caption{ An illustration of how the QDPM gives dynamics to dimer configurations that are frozen in the QDM. The transitions from panels (a)-(e) involve the pentamer moves $\nu_1$ and $\nu_2$ from \tabref{tab:pentamer_moves}; the transitions from (e)-(g) involve flipping dimers around the highlighted plaquettes. }
+    \label{fig:stag_to_flip}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%% 
 
 Because of the terms involving pentamers, $\HQDPM$ conserves $Q_v^{Z_3}$ rather than $Q_v$, and thus $\Phi_\Gamma$ does not commute with the Hamiltonian for closed loops $\Gamma$. The appropriate string and loop operator corresponds to \Eqref{eq:Sgamma} with $\alpha = 2\pi/3$:
 \begin{equation}
@@ -566,14 +574,6 @@ Defects in the QDPM include monomers, trimers, and tetramers. As these dimer con
 
 We have demonstrated that the ground state at the RK point of the QDPM has an exact $Z_3$ gauge symmetry and a corresponding $9$-fold topological degeneracy on the torus. We emphasize that despite the exact $Z_3$ local gauge symmetry of the QDPM, there is not an exact mapping to a $Z_3$ gauge theory on the square lattice, as the QDPM has Ising degrees of freedom on the links, rather than the 3 dimensional local Hilbert space of a $Z_3$ gauge theory (see \appref{sec:Z3GT} for details of $Z_3$ gauge theory).  It remains to address whether this RK state is in the deconfined $Z_3$ topologically ordered phase of a $Z_3$ gauge theory, or a confined symmetry broken or critical state, which we discuss below.
 
- %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t!]
-    \centering
-    \includegraphics[width=0.75\linewidth]{StagToFlip.pdf}
-    \caption{ An illustration of how the QDPM gives dynamics to dimer configurations that are frozen in the QDM; in the QDPM, ``staggered" configurations with no flippable plaquettes can be transformed into columnar regions with the maximum number of flippable plaquettes. The transitions from panels (a)-(d) involve the pentamer moves $\nu_1$ and $\nu_2$ from \tabref{tab:pentamer_moves}; the transitions from (d)-(g) involve flipping dimers around the highlighted plaquettes. }
-    \label{fig:stag_to_flip}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%% 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -586,7 +586,8 @@ To determine the nature of the ground state at the RK point of the QDPM, we have
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Topological sectors}
 
-We explicitly demonstrate that the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding numbers $\Phi_{X}$ and $\Phi_{Y}$, which is shown in \figref{fig:u1_wind_qdpm}. The different colors represent calculations that were initialized to different winding sectors $(\Phi_X,\Phi_Y)$, and we find that $\Phi_X$ and $\Phi_Y$ are not  strictly conserved (as they are in the QDM), but are only conserved modulo $3$. The histogram $P(\Phi)$ has a Gaussian shape with a width that increases with system size; this is expected as $\Phi = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors, although we cannot rule out the possibility of isolated ``frozen" configurations which are not accessed by the dynamics described in \tabref{tab:pentamer_moves}; in particular we note that the QDPM gives dynamics to ``staggered" dimer configurations that are frozen in the QDM~\cite{Moessner2008}. For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled $(W_X^{Z_3},W_Y^{Z_3})$, in contrast with the extensive degeneracy of the QDM.
+We explicitly demonstrate that the extensive topological degeneracy of the QDM is reduced to a finite degeneracy in the QDPM by computing the histogram of $U(1)$ topological winding numbers $\Phi_{X}$ and $\Phi_{Y}$, which is shown in \figref{fig:u1_wind_qdpm}. The different colors represent calculations that were initialized to different winding sectors $(\Phi_X,\Phi_Y)$, and we find that $\Phi_X$ and $\Phi_Y$ are not  strictly conserved (as they are in the QDM), but are only conserved modulo $3$. The histogram $P(\Phi)$ has a Gaussian shape with a width that increases with system size; this is expected as $\Phi = \pm L/2$ correspond to ordered configurations and thus there are fewer dimer configurations near these limits. We find no evidence of a lack of ergodicity within each of the 9 topological sectors, although we cannot rule out the possibility of isolated ``frozen" configurations which are not accessed by the dynamics described in \tabref{tab:pentamer_moves}; in particular we note that the QDPM gives dynamics to ``staggered" dimer configurations that are frozen in the QDM (see \figref{fig:stag_to_flip}). For the remainder of the paper we present results in the $(0,0)$ topological sector, but we see no qualitative dependence between topological sectors for any of the results presented here.  Thus we find that the QDPM has a \emph{finite} $9$-fold degeneracy on the torus, where the topological sectors are labeled $(W_X^{Z_3},W_Y^{Z_3})$, in contrast with the extensive degeneracy of the QDM.
+
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[]
     \centering
@@ -595,10 +596,6 @@ We explicitly demonstrate that the extensive topological degeneracy of the QDM i
     \label{fig:u1_wind_qdpm}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dimer density correlations}
@@ -610,7 +607,6 @@ S_d\left( \bm{k} \right) \equiv \frac{1}{ L^4} \sum_{i,j} e^{-i \bm{k} \cdot \le
 where we restrict the sum to horizontal links, for a $L=64$ lattice. 
 \figref{fig:dimer_3way} (c) shows $S_d(\bm{k})$ for a particular path through the Brillouin zone. The dimer structure factor displays broad maxima at $\bm{k} = (0, \pm \pi)$ and $\bm{k} = (\pm \pi, \pm \pi)$. The lack of rotational symmetry of $S_d(\bm{k})$ is due to the fact that we have isolated horizontal dimers; the correlations between vertical dimers display the same behavior, rotated by $\pi/2$.
 We have plotted the finite size scaling of the intensity of the broad maximum of $S_d$ in  \figref{fig:bragg_scaling}, which we find to vanish in the thermodynamic limit; these maxima are therefore consistent with finite size effects due to short distance correlations. In \appref{sec:dimer_order_parameters} we additionally have plotted order parameters that specifically test for rotational and translational symmetry breaking; in all cases we find no symmetry breaking in the thermodynamic limit. 
-
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[t]
         \centering
@@ -631,7 +627,7 @@ We have plotted the finite size scaling of the intensity of the broad maximum of
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=1.0\columnwidth]{peak_scaling.pdf}
     \caption{Finite-size scaling of the maxima in the dimer ($S_d$) and magnetic string ($S_M$) structure factors. The lines are fits to $L^{-2}$ scaling. All maxima vanish in the thermodynamic limit, indicating that the RK state of the QDPM is a symmetric dimer liquid. }
@@ -644,9 +640,8 @@ Additionally we have studied the nature of the decay of the connected dimer-dime
     C_{\mathrm{d}} \left(r\right) \equiv \langle n_{\bm{0}} n_{\bm{r}} \rangle - \langle n_{\bm{0}} \rangle   \langle n_{\bm{r}} \rangle   \notag
 \end{equation}
 where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fig:spatial_dmr_cor}, $C_d$ between parallel links is plotted as a function of separation, for $\bm{r}$ perpendicular to the orientation of the dimers for a $L=64$ lattice. We find that $C_d$ decays exponentially with distance having a correlation length  $\chi\approx 1$. Additionally, $C_d$ displays a sub-lattice oscillation that is consistent with the finite-size maximum in $S_d$ at $(0,\pi)$. Thus we find that the RK point of the QDPM is a symmetric dimer liquid with exponentially decaying dimer correlations, in contrast with the power-law decaying correlations of the QDM.
-
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_parallel.pdf}
     \caption{The dimer-dimer density correlation function $C_d$ between parallel links in the QDPM RK ground state on a $L=64$ lattice, along the direction perpendicular to the link orientation.  The lines represent the best fit to an exponential decay with correlation length $\chi\approx 1$.}
@@ -654,10 +649,9 @@ where $r$ is the distance between the links $\bm{0}$ and $\bm{r}$. In \figref{fi
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$Z_3$ magnetic string correlations}
-
-
 
 To investigate the $Z_3$ gauge theory description of the QDPM RK ground state, we study the $Z_3$ magnetic string correlation function as defined in \eqref{eq:Sgamma} \& \eqref{eq:SQDPM}:
 \begin{equation}
@@ -665,13 +659,6 @@ C_M \left( \bm{r}_{pp'} \right) \equiv \left \langle \exp \left[ \frac{2 \pi}{3}
 \end{equation}
 where $p$ and $p'$ are two plaquettes, $\bm{r}_{pp'}$ is the displacement between $p$ and $p'$,  and $\gamma_{pp'}$ is any open string on the dual lattice
 connecting $p$ and $p'$. In \figref{fig:vison_3way} (a), we have plotted $|C_M|$ for a $L=32$ lattice. Note that while $C_M$ depends on the choice of the background dimerization which fixes the gauge, $|C_M|$ is independent of the background dimerization. We find only short range magnetic string correlations that display no obvious symmetry breaking. 
-
-Additionally, we have computed the magnetic string structure factor
-\begin{equation}
-S_M\left( \bm{k} \right) \equiv \frac{1}{ L^4} \sum_{p,p'} e^{-i \bm{k} \cdot \bm{r}_{pp'}} C_M\left( \bm{r}_{pp'}\right)  \notag
-\end{equation}
-and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{fig:orientedSL}; this choice breaks the translational symmetry of the lattice and thus requires doubling the unit cell the $x$-direction. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$). We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit. We have additionally studied $S_M$ using different background dimerization and find that the location of the finite-size peaks depend on the gauge choice; however in all cases we find that these peaks vanish in the thermodynamic limit. The vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, and the additional vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice which we find decays exponentially with distance, with a correlation length $\chi\approx 3$. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
-
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}
         \centering
@@ -687,8 +674,13 @@ and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a 
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
 
+Additionally, we have computed the magnetic string structure factor
+\begin{equation}
+S_M\left( \bm{k} \right) \equiv \frac{1}{ L^4} \sum_{p,p'} e^{-i \bm{k} \cdot \bm{r}_{pp'}} C_M\left( \bm{r}_{pp'}\right)  \notag
+\end{equation}
+and plot the magnitude $|S_M|$ in \figref{fig:vison_3way} (b). We have chosen a columnar background dimerization comprising horizontal background dimers stacked in columns along the $y$-axis, as shown in \figref{fig:orientedSL}; this choice breaks the translational symmetry of the lattice and thus requires doubling the unit cell the $x$-direction. While $|C_M|$ displays no obvious symmetry breaking, there are peaks in $|S_M|$ at $(0,0)$ \& $(0,\pi$). We have plotted the finite-size scaling of these peaks in \figref{fig:bragg_scaling} which demonstrates that these peaks vanish in the thermodynamic limit. We have additionally studied $S_M$ using different background dimerization and find that the location of the finite-size peaks depend on the gauge choice; however in all cases we find that these peaks vanish in the thermodynamic limit. The vanishing of the $(0,\pi)$ peak demonstrates the restoration of rotational and translational symmetries in the thermodynamic limit, and the additional vanishing of the $(0,0)$ peak demonstrates the lack of magnetic vortex condensation, which is a mechanism for destroying topological order and breaking lattice symmetries~\cite{Jalabert1991,Ralko2007,Huh2011}. \figref{fig:vison_cor} shows the decay of $|C_M|$ along one of the axes of the dual lattice which we find decays exponentially with distance, with a correlation length $\chi\approx 3$. These exponentially decaying magnetic string correlations are therefore consistent with a symmetric dimer liquid with no magnetic vortex condensation.
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[]
     \centering
     \includegraphics[width=1.0\columnwidth]{spatial_cors_z3_vis.pdf}
     \caption{ The magnitude of the $Z_3$ magnetic string correlation $|C_M|$ along one axis of the dual lattice of a $L=64$ lattice. The line corresponds to an exponential fit with correlations length $\chi\approx 3$.}
@@ -704,9 +696,7 @@ To study the confinement of $Z_3$ electrically charged defects in the QDPM, we h
 \begin{equation}
 \monomermvA  \Longleftrightarrow \monomermvB  \notag
 \end{equation}
-which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$ (see \tabref{tab:defects}) and the positive and negative monomers live on different sub-lattices. We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlations}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \sim L^{-4}$ at large separations. \figref{fig:monomer_correlations} demonstrates that $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ decays to $L^{-4}$ for each system size, indicating a deconfinement of monomers. This is in contrast with the QDM where monomer correlations decay as a power-law. Thus we find that $Z_3$ electric charges are deconfined in the QDPM.
-
-
+which appear to provide ergodic dynamics in the monomer-dimer-pentamer configuration space. Notice that monomers remain on the same sub-lattice, which is consistent with their assignment of a $Z_3$ electric charge of $\pm1$ (see \tabref{tab:defects}) and the positive and negative monomers live on different sub-lattices. We then can test for the confinement of monomers by studying the monomer-monomer density correlation function $\langle m_{\bm{0}} m_{\bm{r}} \rangle$, which is plotted in \figref{fig:monomer_correlations}. If the monomers are confined, we expect $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ to decay to zero at large distances; conversely if monomers are deconfined, we expect the monomers to be randomly distributed on the lattice, such that $\langle m_{\bm{0}} m_{\bm{r}} \rangle \simeq L^{-4}$ at large separations. \figref{fig:monomer_correlations} demonstrates that $\langle m_{\bm{0}} m_{\bm{r}} \rangle$ decays to $L^{-4}$ for each system size, indicating a deconfinement of monomers. This is in contrast with the QDM where monomer correlations decay as a power-law. Thus we find that $Z_3$ electric charges are deconfined in the QDPM.
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure}[]
@@ -837,17 +827,14 @@ where $\theta(x)$ is the Heaviside function, and $\Pi_\Box^h$ ($\Pi_\Box^v$) is 
 + &\biggl( \sum_{\ell_v} (-1)^{r_y} n_d \left(\vec{r}_{\ell_v}\right) \biggr)^2  \biggr]\label{eq:Mcol},
 \end{align}
 where the sums over $\ell_h$ ($\ell_v$) are taken over all horizontal (vertical) links. In \figref{fig:order_params} we have plotted the finite-size scaling of these order parameters; we find in all cases that while finite size systems display symmetry breaking due to finite-size effects, these order parameters all vanish in the thermodynamic limit, as demonstrated by the extrapolation shown in \figref{fig:order_params}.
-
-\vspace{1pt}
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\begin{figure}[b]
     \centering
     \includegraphics[width=1.0\linewidth]{order_params_plot.pdf}
     \caption{Symmetry breaking order parameters defined in the text computed for the RK point of the QDPM. The lines are fits to $L^{-1}$ scaling. In all cases we find they vanish in the thermodynamic limit, demonstrating the lack of symmetry breaking.}
     \label{fig:order_params}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
-
 %\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
